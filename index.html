@@ -232,6 +232,126 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/25/js基础-第一节/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/25/js基础-第一节/" itemprop="url">js基础--第一节</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-25T11:09:14+08:00">
+                2018-11-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"> 1.Javascript 能够直接写入 HTML 输出流中。    </span><br><span class="line"></span><br><span class="line">例如：&lt;script&gt;document.write(&quot;&lt;p&gt;This  a paragraph.&lt;/p&gt;&quot;);&lt;/script&gt;   </span><br><span class="line"></span><br><span class="line">提示：您只能在 HTML 输出中使用 document.write。如果您在文档加载后使用该方法，会覆盖整个文档。</span><br><span class="line">2.JavaScript：对事件作出反应       </span><br><span class="line"></span><br><span class="line"> &lt;button type=&quot;button&quot; onclick=&quot;alert(&apos;Welcome!&apos;)&quot;&gt;点击这里&lt;/button&gt;</span><br><span class="line">3.JavaScript：改变 HTML 内容         </span><br><span class="line"></span><br><span class="line">  x=document.getElementById(&quot;demo&quot;)  //查找元素  x.innerHTML=&quot;Hello JavaScript&quot;;    //改变内容</span><br><span class="line">4.isNaN() 函数用于检查其参数是否是非数字值。      </span><br><span class="line"></span><br><span class="line"> 返回值：如果 x 是特殊的非数字值 NaN（或者能被转换为这样的值），返回的值就是 true。如果 x 是其他值,则返回 false。</span><br><span class="line">5.只能在 HTML 输出流中使用 document.write。 如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。</span><br><span class="line">6.请使用 document.write() 仅仅向文档输出写内容。如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖：</span><br><span class="line">7.对代码行进行折行</span><br><span class="line">您可以在文本字符串中使用反斜杠对代码行进行换行。下面的例子会正确地显示：</span><br><span class="line"></span><br><span class="line">document.write(&quot;Hello \</span><br><span class="line">World!&quot;);</span><br><span class="line">不过，您不能像这样折行：</span><br><span class="line"></span><br><span class="line">document.write \</span><br><span class="line"></span><br><span class="line">(&quot;Hello World!&quot;);</span><br><span class="line">8.JavaScript 变量     变量必须以字母开头  变量也能以 $ 和 _ 符号开头（不过我们不推荐这么做）  变量名称对大小写敏感（y 和 Y 是不同的变量）</span><br><span class="line">提示：JavaScript 语句和 JavaScript 变量都对大小写敏感。</span><br><span class="line">当您向变量分配文本值时，应该用双引号或单引号包围这个值。</span><br><span class="line"></span><br><span class="line">当您向变量赋的值是数值时，不要使用引号。如果您用引号包围数值，该值会被作为文本来处理。</span><br><span class="line">使用 var 关键词来声明变量：   var carname;</span><br><span class="line"></span><br><span class="line">9.创建名为 cars 的数组：   </span><br><span class="line"></span><br><span class="line"> var cars=new Array();  或者 (condensed array):   var cars=new Array(&quot;Audi&quot;,&quot;BMW&quot;,&quot;Volvo&quot;);</span><br><span class="line"></span><br><span class="line">或者 (literal array):   var cars=[&quot;Audi&quot;,&quot;BMW&quot;,&quot;Volvo&quot;];</span><br><span class="line"></span><br><span class="line">10.声明新变量时，可以使用关键词 &quot;new&quot; 来声明其类型：     var carname=new String;    var x=      new Number;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/22/强于昨天的自己，便是进步/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1519,129 +1639,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/18/网页-高级标签/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/18/网页-高级标签/" itemprop="url">网页 高级标签</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-18T16:20:04+08:00">
-                2018-08-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>排序标签</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol   type=&quot;A&quot;&gt;     //  1../A../a../i../I..   (type的值表示选项按什么类型来表示)</span><br><span class="line"></span><br><span class="line">           &lt;li&gt;中国&lt;/li&gt;    </span><br><span class="line">           &lt;li&gt;美国&lt;/li&gt;</span><br><span class="line"></span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<p>上面代码表示出来为：    A  中国       B   美国</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">当&lt;ol   type=&quot;A&quot;     reversed=&quot;reversed&quot;&gt;  加上reversed=&quot;reversed&quot;时，排序为：倒序排序</span><br><span class="line"></span><br><span class="line">当&lt;ol    type=&quot;A&quot;     start=&quot;2&quot;&gt;   加上start=&quot;2&quot;时，表示从大写字母的（B）第二个开始排序</span><br><span class="line"></span><br><span class="line">&lt;ul    type=&quot;disc&quot;&gt;   //disc/square/circle  表示选项前面排序框的表示格式</span><br><span class="line"></span><br><span class="line">             &lt;li&gt;中国&lt;/li&gt;</span><br><span class="line"></span><br><span class="line">             &lt;li&gt;美国&lt;/li&gt;</span><br><span class="line"></span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1692,7 +1689,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
