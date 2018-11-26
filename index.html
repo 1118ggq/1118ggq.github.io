@@ -232,6 +232,149 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/26/js基础-第四节/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/26/js基础-第四节/" itemprop="url">js基础-第四节</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-26T21:35:17+08:00">
+                2018-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1-通过标签名查找-HTML-元素"><a href="#1-通过标签名查找-HTML-元素" class="headerlink" title="1.通过标签名查找 HTML 元素"></a>1.通过标签名查找 HTML 元素</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">查找 id=&quot;main&quot; 的元素，然后查找 &quot;main&quot; 中的所有 &lt;p&gt; 元素：  </span><br><span class="line">（自己做测试反正没成功，不懂什么原因）</span><br><span class="line"></span><br><span class="line">var x=document.getElementById(&quot;main&quot;);</span><br><span class="line">var y=x.getElementsByTagName(&quot;p&quot;);</span><br></pre></td></tr></table></figure>
+<h3 id="2-document-write-用于直接向-HTML-输出流写内容"><a href="#2-document-write-用于直接向-HTML-输出流写内容" class="headerlink" title="2.document.write() 用于直接向 HTML 输出流写内容"></a>2.document.write() 用于直接向 HTML 输出流写内容</h3><p>  修改 HTML 内容的方法时使用 innerHTML 属性。   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例：document.getElementById(id).innerHTML=new HTML</span><br></pre></td></tr></table></figure>
+<p>改变 HTML 元素的属性： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(id).attribute=new value</span><br></pre></td></tr></table></figure>
+<p>  改变 HTML 元素的样式，请使用这个语法：   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(id).style.property=new style</span><br></pre></td></tr></table></figure>
+<p>3.用户点击某个元素时执行代码，请向一个 HTML 事件</p>
+<p>​    属性添加 JavaScript 代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onclick=JavaScript</span><br></pre></td></tr></table></figure>
+<h3 id="4-onload-和-onunload-事件"><a href="#4-onload-和-onunload-事件" class="headerlink" title="4.onload 和 onunload 事件"></a>4.onload 和 onunload 事件</h3><p>onload 和 onunload 事件会在用户进入或离开页面时被触发。</p>
+<p>onload 事件可用于检测访问者的浏览器类型和浏览器版本，</p>
+<p>并基于这些信息来加载网页的正确版本。</p>
+<p>onload 和 onunload 事件可用于处理 cookie。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body onload=&quot;checkCookies()&quot;&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="5-onchange-事件常结合对输入字段的验证来使用。"><a href="#5-onchange-事件常结合对输入字段的验证来使用。" class="headerlink" title="5.onchange 事件常结合对输入字段的验证来使用。"></a>5.onchange 事件常结合对输入字段的验证来使用。</h3><p>当用户改变输入字段的内容时，会调用 upperCase() 函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">function myFunction()</span><br><span class="line">&#123;</span><br><span class="line">var x=document.getElementById(&quot;fname&quot;);</span><br><span class="line">x.value=x.value.toUpperCase();</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">请输入英文字符：&lt;input type=&quot;text&quot; id=&quot;fname&quot; onchange=&quot;myFunction()&quot;&gt;</span><br><span class="line">&lt;p&gt;当您离开输入字段时，会触发将输入文本转换为大写的函数。&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="6-onmouseover-和-onmouseout-事件"><a href="#6-onmouseover-和-onmouseout-事件" class="headerlink" title="6.onmouseover 和 onmouseout 事件"></a>6.onmouseover 和 onmouseout 事件</h3><p>onmouseover 和 onmouseout 事件可用于在用户</p>
+<p>的鼠标移至 HTML 元素上方或移出元素时触发函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div onmouseover=&quot;mOver(this)&quot; onmouseout=&quot;mOut(this)&quot; style=&quot;background-color:green;width:120px;height:20px;padding:40px;color:#ffffff;&quot;&gt;把鼠标移到上面&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">function mOver(obj)</span><br><span class="line">&#123;</span><br><span class="line">obj.innerHTML=&quot;谢谢&quot;</span><br><span class="line">&#125;</span><br><span class="line">function mOut(obj)</span><br><span class="line">&#123;</span><br><span class="line">obj.innerHTML=&quot;把鼠标移到上面&quot;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="7-onmousedown、onmouseup-以及-onclick-事件"><a href="#7-onmousedown、onmouseup-以及-onclick-事件" class="headerlink" title="7.onmousedown、onmouseup 以及 onclick 事件"></a>7.onmousedown、onmouseup 以及 onclick 事件</h3><p>onmousedown, onmouseup 以及 onclick 构成了鼠标点击事件的所有部分。</p>
+<p>首先当点击鼠标按钮时，会触发 onmousedown 事件，当释放鼠标按钮时，</p>
+<p>会触发 onmouseup 事件，最后，当完成鼠标点击时，会触发 onclick 事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div onmousedown=&quot;mDown(this)&quot; onmouseup=&quot;mUp(this)&quot; style=&quot;background-color:green;color:#ffffff;width:90px;height:20px;padding:40px;</span><br><span class="line">font-size:12px;&quot;&gt;请点击这里&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">function mDown(obj)</span><br><span class="line">&#123;</span><br><span class="line">obj.style.backgroundColor=&quot;#1ec5e5&quot;;</span><br><span class="line">obj.innerHTML=&quot;请释放鼠标按钮&quot;</span><br><span class="line">&#125;</span><br><span class="line">function mUp(obj)</span><br><span class="line">&#123;</span><br><span class="line">obj.style.backgroundColor=&quot;green&quot;;</span><br><span class="line">obj.innerHTML=&quot;请按下鼠标按钮&quot;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/25/js基础-第三节/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1489,175 +1632,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/18/主流浏览器的简介/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/18/主流浏览器的简介/" itemprop="url">主流浏览器的简介</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-18T17:42:49+08:00">
-                2018-08-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>浏览器分为 <strong>shell（外壳）</strong>和  <strong>内核</strong>两个重要的部分。</p>
-<p>当今世界常见的主流浏览器</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">名称</td>
-<td>内核</td>
-</tr>
-<tr>
-<td style="text-align:center">IE</td>
-<td>trident</td>
-</tr>
-<tr>
-<td style="text-align:center">Firefox（火狐）</td>
-<td>Gecko</td>
-</tr>
-<tr>
-<td style="text-align:center">Google Chrome</td>
-<td>webkit  /blink</td>
-</tr>
-<tr>
-<td style="text-align:center">safari</td>
-<td>webkit</td>
-</tr>
-<tr>
-<td style="text-align:center">Opera</td>
-<td>Presto</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-<p>一个网页主要由三大部分组成</p>
-<p> HTML           CSS          JavaScript</p>
-<p>结构       +     行为    +    样式</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1708,7 +1682,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
