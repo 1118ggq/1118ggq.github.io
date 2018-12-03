@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1.确定浏览器窗口的尺寸：（浏览器的视口，不包括工具栏和滚动条） 12345678var w=window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;var h=window.innerHeight|| document.documentElement.clientHeight|| d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js基础-第六节">
+<meta property="og:url" content="http://yoursite.com/2018/12/03/js基础-第六节/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="1.确定浏览器窗口的尺寸：（浏览器的视口，不包括工具栏和滚动条） 12345678var w=window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;var h=window.innerHeight|| document.documentElement.clientHeight|| d">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-03T14:16:14.630Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js基础-第六节">
+<meta name="twitter:description" content="1.确定浏览器窗口的尺寸：（浏览器的视口，不包括工具栏和滚动条） 12345678var w=window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;var h=window.innerHeight|| document.documentElement.clientHeight|| d">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/12/03/js基础-第六节/"/>
+
+
+
+
+
+  <title>js基础-第六节 | 个人博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">成长历程</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/js基础-第六节/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">js基础-第六节</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-03T22:08:47+08:00">
+                2018-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="1-确定浏览器窗口的尺寸："><a href="#1-确定浏览器窗口的尺寸：" class="headerlink" title="1.确定浏览器窗口的尺寸："></a>1.确定浏览器窗口的尺寸：</h4><p>（浏览器的视口，不包括工具栏和滚动条）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var w=window.innerWidth</span><br><span class="line">|| document.documentElement.clientWidth</span><br><span class="line">|| document.body.clientWidth;</span><br><span class="line"></span><br><span class="line">var h=window.innerHeight</span><br><span class="line">|| document.documentElement.clientHeight</span><br><span class="line">|| document.body.clientHeight;</span><br><span class="line">（包含所有的浏览器）</span><br></pre></td></tr></table></figure>
+<h4 id="其他-Window-方法："><a href="#其他-Window-方法：" class="headerlink" title="其他 Window 方法："></a>其他 Window 方法：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">window.open() - 打开新窗口</span><br><span class="line">window.close() - 关闭当前窗口</span><br><span class="line">window.moveTo() - 移动当前窗口</span><br><span class="line">window.resizeTo() - 调整当前窗口的尺寸</span><br></pre></td></tr></table></figure>
+<h4 id="2-Window-Screen"><a href="#2-Window-Screen" class="headerlink" title="2.Window Screen"></a>2.Window Screen</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">screen.availWidth - 可用的屏幕宽度</span><br><span class="line">screen.availHeight - 可用的屏幕高度</span><br></pre></td></tr></table></figure>
+<h4 id="3-Window-Location"><a href="#3-Window-Location" class="headerlink" title="3.Window Location"></a>3.Window Location</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">location.hostname 返回 web 主机的域名</span><br><span class="line">location.pathname 返回当前页面的路径和文件名</span><br><span class="line">location.port 返回 web 主机的端口 （80 或 443）</span><br><span class="line">location.protocol 返回所使用的 web 协议（http:// 或 https://）</span><br><span class="line">location.href 属性返回当前页面的 URL</span><br><span class="line">location.assign() 方法加载新的文档</span><br></pre></td></tr></table></figure>
+<h4 id="4-Window-History"><a href="#4-Window-History" class="headerlink" title="4.Window History"></a>4.Window History</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">window.history 对象包含浏览器的历史</span><br><span class="line">history.back() - 与在浏览器点击后退按钮相同</span><br><span class="line">history.forward() - 与在浏览器中点击按钮向前相同</span><br></pre></td></tr></table></figure>
+<h4 id="5-Window-Navigator"><a href="#5-Window-Navigator" class="headerlink" title="5.Window Navigator"></a>5.Window Navigator</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.navigator 对象包含有关访问者浏览器的信息。</span><br></pre></td></tr></table></figure>
+<h4 id="6-JavaScript-中创建三种消息框："><a href="#6-JavaScript-中创建三种消息框：" class="headerlink" title="6.JavaScript 中创建三种消息框："></a>6.JavaScript 中创建三种消息框：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">警告框：常用于确保用户可以得到某些信息。     </span><br><span class="line">语法：  alert(&quot;文本&quot;)</span><br><span class="line"></span><br><span class="line">确认框：用于使用户可以验证或者接受某些信息。  </span><br><span class="line">语法：  confirm(&quot;文本&quot;)</span><br><span class="line"></span><br><span class="line">提示框：经常用于提示用户在进入页面前输入某个值。 </span><br><span class="line">语法： prompt(&quot;文本&quot;,&quot;默认值&quot;)</span><br></pre></td></tr></table></figure>
+<h4 id="7-JavaScript-计时事件"><a href="#7-JavaScript-计时事件" class="headerlink" title="7.JavaScript 计时事件"></a>7.JavaScript 计时事件</h4><p>两个关键方法是:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">setTimeout()         未来的某时执行代码</span><br><span class="line">clearTimeout()        取消setTimeout()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">setTimeout()语法</span><br><span class="line"></span><br><span class="line">var t=setTimeout(&quot;javascript语句&quot;,毫秒)</span><br><span class="line">setTimeout() 方法会返回某个值。在上面的语句中，值被储存在名为 t 的变量中。假如你希望取消这个 setTimeout()，你可以使用这个变量名来指定它。</span><br><span class="line">setTimeout() 的第一个参数是含有 JavaScript 语句的字符串。这个语句可能诸如 &quot;alert(&apos;5 seconds!&apos;)&quot;，或者对函数的调用，诸如 alertMsg()&quot;。</span><br><span class="line">第二个参数指示从当前起多少毫秒后执行第一个参数。</span><br><span class="line">提示：1000 毫秒等于一秒。</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/03/js基础-第五节/" rel="next" title="js基础-第五节">
+                <i class="fa fa-chevron-left"></i> js基础-第五节
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/03/js基础-第七节/" rel="prev" title="js基础-第七节">
+                js基础-第七节 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">郭高勤</p>
+              <p class="site-description motion-element" itemprop="description">只为更优秀的自己</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-确定浏览器窗口的尺寸："><span class="nav-number">1.</span> <span class="nav-text">1.确定浏览器窗口的尺寸：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他-Window-方法："><span class="nav-number">2.</span> <span class="nav-text">其他 Window 方法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Window-Screen"><span class="nav-number">3.</span> <span class="nav-text">2.Window Screen</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Window-Location"><span class="nav-number">4.</span> <span class="nav-text">3.Window Location</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-Window-History"><span class="nav-number">5.</span> <span class="nav-text">4.Window History</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Window-Navigator"><span class="nav-number">6.</span> <span class="nav-text">5.Window Navigator</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-JavaScript-中创建三种消息框："><span class="nav-number">7.</span> <span class="nav-text">6.JavaScript 中创建三种消息框：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-JavaScript-计时事件"><span class="nav-number">8.</span> <span class="nav-text">7.JavaScript 计时事件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">❤❤郭高勤</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://1118ggq.github.io">个人专属-ggq</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash;  My bolog
+  </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
