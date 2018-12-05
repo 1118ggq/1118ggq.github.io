@@ -232,6 +232,647 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/25/js基础-第三节/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/25/js基础-第三节/" itemprop="url">js基础-第三节</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-25T21:31:57+08:00">
+                2018-11-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="1-必填（或必选）项目"><a href="#1-必填（或必选）项目" class="headerlink" title="1.必填（或必选）项目"></a>1.必填（或必选）项目</h5><p>​        下面的函数用来检查用户是否已填写表单中的必填（或必选）项目。</p>
+<p>假如必填或必选项为空，那么警告框会弹出，并且函数的返回值为 false，</p>
+<p>否则函数的返回值则为 true（意味着数据没有问题）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">function validate_required(field,alerttxt)</span><br><span class="line">&#123;</span><br><span class="line">with (field)</span><br><span class="line">  &#123;</span><br><span class="line">  if (value==null||value==&quot;&quot;)</span><br><span class="line">    &#123;alert(alerttxt);return false&#125;</span><br><span class="line">  else &#123;return true&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function validate_form(thisform)</span><br><span class="line">&#123;</span><br><span class="line">with (thisform)</span><br><span class="line">  &#123;</span><br><span class="line">  if (validate_required(email,&quot;Email must be filled out!&quot;)==false)</span><br><span class="line">    &#123;email.focus();return false&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;form action=&quot;submitpage.htm&quot; onsubmit=&quot;return validate_form(this)&quot; method=&quot;post&quot;&gt;</span><br><span class="line">Email: &lt;input type=&quot;text&quot; name=&quot;email&quot; size=&quot;30&quot;&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt; </span><br><span class="line">&lt;/form&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="2-E-mail-验证"><a href="#2-E-mail-验证" class="headerlink" title="2.E-mail 验证"></a>2.E-mail 验证</h5><p>下面的函数检查输入的数据是否符合电子邮件地址的基本语法。</p>
+<p>意思就是说，输入的数据必须包含 @ 符号和点号(.)。同时，@ 不可以是</p>
+<p>邮件地址的首字符，并且 @ 之后需有至少一个点号：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">function validate_email(field,alerttxt)</span><br><span class="line">&#123;</span><br><span class="line">with (field)</span><br><span class="line">&#123;</span><br><span class="line">apos=value.indexOf(&quot;@&quot;)</span><br><span class="line">dotpos=value.lastIndexOf(&quot;.&quot;)</span><br><span class="line">if (apos&lt;1||dotpos-apos&lt;2) </span><br><span class="line">  &#123;alert(alerttxt);return false&#125;</span><br><span class="line">else &#123;return true&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function validate_form(thisform)</span><br><span class="line">&#123;</span><br><span class="line">with (thisform)</span><br><span class="line">&#123;</span><br><span class="line">if (validate_email(email,&quot;Not a valid e-mail address!&quot;)==false)</span><br><span class="line">  &#123;email.focus();return false&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;form action=&quot;submitpage.htm&quot;onsubmit=&quot;return validate_form(this);&quot; method=&quot;post&quot;&gt;</span><br><span class="line">Email: &lt;input type=&quot;text&quot; name=&quot;email&quot; size=&quot;30&quot;&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt; </span><br><span class="line">&lt;/form&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="3-indexOf-方法"><a href="#3-indexOf-方法" class="headerlink" title="3.indexOf() 方法"></a>3.indexOf() 方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">可返回某个指定的字符串值在字符串中首次出现的位置。</span><br><span class="line">说明：该方法将从头到尾地检索字符串 stringObject，看它是否含有子串 searchvalue。</span><br><span class="line">开始检索的位置在字符串的 fromindex 处或字符串的开头（没有指定 fromindex 时）。</span><br><span class="line">如果找到一个 searchvalue，则返回 searchvalue 的第一次出现的位置。</span><br><span class="line">stringObject 中的字符位置是从 0 开始的。</span><br><span class="line"></span><br><span class="line">注释：indexOf() 方法对大小写敏感！</span><br><span class="line">注释：如果要检索的字符串值没有出现，则该方法返回 -1。</span><br></pre></td></tr></table></figure>
+<h5 id="4-lastIndexOf-方法"><a href="#4-lastIndexOf-方法" class="headerlink" title="4.lastIndexOf() 方法"></a>4.lastIndexOf() 方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">可返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。</span><br><span class="line"></span><br><span class="line">返回值：如果在 stringObject 中的 fromindex 位置之前存在 searchvalue，</span><br><span class="line">则返回的是出现的最后一个 searchvalue 的位置。</span><br><span class="line"></span><br><span class="line">说明：该方法将从尾到头地检索字符串 stringObject，看它是否含有</span><br><span class="line">子串 searchvalue。开始检索的位置在字符串的 fromindex 处或字符串</span><br><span class="line">的结尾（没有指定 fromindex 时）。如果找到一个 searchvalue，</span><br><span class="line">则返回 searchvalue 的第一个字符在 stringObject 中的位置。</span><br><span class="line">stringObject 中的字符位置是从 0 开始的。</span><br><span class="line"></span><br><span class="line">注释：lastIndexOf() 方法对大小写敏感！</span><br><span class="line">注释：如果要检索的字符串值没有出现，则该方法返回 -1。</span><br></pre></td></tr></table></figure>
+<h5 id="5-js-form表单onsubmit事件用法详解"><a href="#5-js-form表单onsubmit事件用法详解" class="headerlink" title="5.js form表单onsubmit事件用法详解"></a>5.js form表单onsubmit事件用法详解</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> onsubmit 属性只在&lt;form&gt; 表单中使用。</span><br><span class="line"></span><br><span class="line">onsubmit事件是当表单提交时进行相关js操作的一个事件。</span><br><span class="line"></span><br><span class="line">onsubmit 事件会在表单中的确认按钮被点击时发生。</span><br><span class="line">当该事件触发的函数中返回false时，表单就不会被提交。</span><br><span class="line"></span><br><span class="line">onsubmit经常用于表单验证。请看下面实例。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">function submitFun(obj)&#123;</span><br><span class="line">      if(obj.category.value==&apos;&apos;)&#123;</span><br><span class="line">          alert(&quot;请输入&quot;);</span><br><span class="line">          return false;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;form onsubmit=&quot;return submitFun(this);&quot;&gt;</span><br><span class="line">&lt;input type=&quot;text&quot; name=&quot;category&quot; /&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;提交&quot;/&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>当”提交”按钮被点击时，依然会执行submitFun()函数，在submitFun()函</p>
+<p>数中，我们对表单输入框进行了空验证，如果为空，提示输入并return false,</p>
+<p>这样表单就不会提交（上面已经说到：当该事件触发的函数中返回false时，</p>
+<p>表单就不会被提交）。 同时，这里要注意onsubmit=”return submitFun(this);”，</p>
+<p>不能掉了return，否则表单永远会提交。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/25/js基础-第二节/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/25/js基础-第二节/" itemprop="url">js基础-第二节</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-25T19:00:39+08:00">
+                2018-11-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1.创建 JavaScript 对象<br>JavaScript 中的几乎所有事务都是对象：</p>
+<p>字符串、数字、数组、日期、函数，等等。</p>
+<p>你也可以创建自己的对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">本例创建名为 &quot;person&quot; 的对象，并为其添加了四个属性：</span><br><span class="line">person=new Object();</span><br><span class="line">person.firstname=&quot;Bill&quot;;</span><br><span class="line">person.lastname=&quot;Gates&quot;;</span><br><span class="line">person.age=56;</span><br><span class="line">person.eyecolor=&quot;blue&quot;;</span><br></pre></td></tr></table></figure>
+<p>2.访问对象属性的语法是：</p>
+<p>objectName.propertyName</p>
+<p>通过下面的语法调用方法：</p>
+<p>objectName.methodName()</p>
+<p>使用 String 对象的 toUpperCase() 方法来把文本转换为大写：<br>3.如果您把值赋给尚未声明的变量，该变量将被自动作为全局变量声明。<br>4.===    全等（值和类型）<br> 5.在 JavaScript 中，我们可使用以下条件语句：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if 语句 - 只有当指定条件为 true 时，使用该语句来执行代码</span><br><span class="line"></span><br><span class="line">if...else 语句 - 当条件为 true 时执行代码，当条件为 false 时执行其他代码</span><br><span class="line">if...else if....else 语句 - 使用该语句来选择多个代码块之一来执行</span><br><span class="line">switch 语句 - 使用该语句来选择多个代码块之一来执行</span><br></pre></td></tr></table></figure>
+<p>6.break 语句用于跳出循环。<br>         continue 用于跳过循环中的一个迭代。<br>7.<strong>JavaScript 标签</strong></p>
+<p>如需标记 JavaScript 语句，请在语句之前加上冒号：         例如   label:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">cars=[&quot;BMW&quot;,&quot;Volvo&quot;,&quot;Saab&quot;,&quot;Ford&quot;];</span><br><span class="line">list:</span><br><span class="line">&#123;</span><br><span class="line">document.write(cars[0] + &quot;&lt;br&gt;&quot;);</span><br><span class="line">document.write(cars[1] + &quot;&lt;br&gt;&quot;);</span><br><span class="line">document.write(cars[2] + &quot;&lt;br&gt;&quot;);</span><br><span class="line">break list;</span><br><span class="line">document.write(cars[3] + &quot;&lt;br&gt;&quot;);</span><br><span class="line">document.write(cars[4] + &quot;&lt;br&gt;&quot;);</span><br><span class="line">document.write(cars[5] + &quot;&lt;br&gt;&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>8.语句<br>break 和 continue 语句仅仅是能够跳出代码块的语句。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">语法</span><br><span class="line">break labelname;</span><br><span class="line">continue labelname;</span><br><span class="line"></span><br><span class="line">continue 语句（带有或不带标签引用）只能用在循环中。</span><br><span class="line">break 语句（不带标签引用），只能用在循环或 switch 中。</span><br><span class="line">通过标签引用，break 语句可用于跳出任何 JavaScript 代码块：</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/25/js基础-第一节/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/25/js基础-第一节/" itemprop="url">js基础--第一节</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-25T11:09:14+08:00">
+                2018-11-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"> 1.Javascript 能够直接写入 HTML 输出流中。    </span><br><span class="line"></span><br><span class="line">例如：&lt;script&gt;document.write(&quot;&lt;p&gt;This  a paragraph.&lt;/p&gt;&quot;);&lt;/script&gt;   </span><br><span class="line"></span><br><span class="line">提示：您只能在 HTML 输出中使用 document.write。如果您在文档加载后使用该方法，</span><br><span class="line">会覆盖整个文档。</span><br><span class="line">2.JavaScript：对事件作出反应       </span><br><span class="line"></span><br><span class="line"> &lt;button type=&quot;button&quot; onclick=&quot;alert(&apos;Welcome!&apos;)&quot;&gt;点击这里&lt;/button&gt;</span><br><span class="line">3.JavaScript：改变 HTML 内容         </span><br><span class="line"></span><br><span class="line">  x=document.getElementById(&quot;demo&quot;)  //查找元素  </span><br><span class="line">  x.innerHTML=&quot;Hello JavaScript&quot;;    //改变内容</span><br><span class="line">4.isNaN() 函数用于检查其参数是否是非数字值。      </span><br><span class="line"></span><br><span class="line"> 返回值：如果 x 是特殊的非数字值 NaN（或者能被转换为这样的值），返回的值就是 true。</span><br><span class="line"> 如果 x 是其他值,则返回 false。</span><br><span class="line">5.只能在 HTML 输出流中使用 document.write。 如果您在文档已加载后使用它（比如在函数中），</span><br><span class="line">会覆盖整个文档。</span><br><span class="line">6.请使用 document.write() 仅仅向文档输出写内容。如果在文档已完成加载后</span><br><span class="line">执行 document.write，整个 HTML 页面将被覆盖：</span><br><span class="line">7.对代码行进行折行</span><br><span class="line">您可以在文本字符串中使用反斜杠对代码行进行换行。下面的例子会正确地显示：</span><br><span class="line"></span><br><span class="line">document.write(&quot;Hello \</span><br><span class="line">World!&quot;);</span><br><span class="line">不过，您不能像这样折行：</span><br><span class="line"></span><br><span class="line">document.write \</span><br><span class="line"></span><br><span class="line">(&quot;Hello World!&quot;);</span><br><span class="line">8.JavaScript 变量     </span><br><span class="line">变量必须以字母开头  </span><br><span class="line">变量也能以 $ 和 _ 符号开头（不过我们不推荐这么做）  </span><br><span class="line">变量名称对大小写敏感（y 和 Y 是不同的变量）</span><br><span class="line">提示：JavaScript 语句和 JavaScript 变量都对大小写敏感。</span><br><span class="line">当您向变量分配文本值时，应该用双引号或单引号包围这个值。</span><br><span class="line"></span><br><span class="line">当您向变量赋的值是数值时，不要使用引号。</span><br><span class="line">如果您用引号包围数值，该值会被作为文本来处理。</span><br><span class="line">使用 var 关键词来声明变量：   var carname;</span><br><span class="line"></span><br><span class="line">9.创建名为 cars 的数组：   </span><br><span class="line"></span><br><span class="line"> var cars=new Array();  </span><br><span class="line"> 或者 (condensed array): var cars=new Array(&quot;Audi&quot;,&quot;BMW&quot;,&quot;Volvo&quot;);</span><br><span class="line"></span><br><span class="line">或者 (literal array):  var cars=[&quot;Audi&quot;,&quot;BMW&quot;,&quot;Volvo&quot;];</span><br><span class="line"></span><br><span class="line">10.声明新变量时，可以使用关键词 &quot;new&quot; 来声明其类型：     </span><br><span class="line">var carname=new String;    var x=      new Number;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/22/强于昨天的自己，便是进步/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/22/强于昨天的自己，便是进步/" itemprop="url">强于昨天的自己，便是进步</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-22T23:32:18+08:00">
+                2018-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>​        未来是什么？我曾无数次问自己，但从来没有得到过答案。提起未来，大多数人觉得遥不可及。那么，现实又是什么样？当前社会很现实，现实是不相信眼泪的，在这个物竞天择，适者生存的世界里，成功都是来自与强者。而我也是一个立志做强者的人。当然，在这路上会遇到很多困扰。我今天要说的就是我们总喜欢和别人做比较，比成绩，比技能，等等…</p>
+<p>​        我们的<a href="http://www.wenzhangba.com/renshengganwu/" target="_blank" rel="noopener">人生</a>为什么要活在与别人的不断比较里？这一生只有一次，为什么不能活给<a href="http://www.wenzhangba.com/huati/ziji/" target="_blank" rel="noopener">自己</a>？每<a href="http://www.wenzhangba.com/zhuanti/geren/" target="_blank" rel="noopener">个人</a>都有自己的路要走，有自己的<a href="http://www.wenzhangba.com/zhuanti/xuanze/" target="_blank" rel="noopener">选择</a>和<a href="http://www.wenzhangba.com/huati/jiazhi/" target="_blank" rel="noopener">价值</a><a href="http://www.wenzhangba.com/zhuanti/panduan/" target="_blank" rel="noopener">判断</a>，如果总是和别人做比较，以别人的人生为<a href="http://www.wenzhangba.com/zhuanti/moban/" target="_blank" rel="noopener">模板</a>，照着别人的生活方式过着每一天，那我们活着的<a href="http://www.wenzhangba.com/huati/yiyi/" target="_blank" rel="noopener">意义</a>在哪？每个人生来平等，也都有自己的优点和缺点。所以，我们不需要总是和被人作比较，做好自己，强于昨天的自己，便是一种进步。</p>
+<p>​        总与人比较，其实很多时候是认得虚荣心在作怪。人的<a href="http://www.wenzhangba.com/zhuanti/xurongxin/" target="_blank" rel="noopener">虚荣心</a>往往源于对自己的<a href="http://www.wenzhangba.com/huati/zixin/" target="_blank" rel="noopener">不自信</a>。但我们却常常忘了，每个人仅有一次的生命，不是为了跟别人比较才存在在这个<a href="http://www.wenzhangba.com/huati/shijie/" target="_blank" rel="noopener">世界</a>上的。在这个世界上，我们每一个人都是独一无二的存在，因此我们要活出<a href="http://www.wenzhangba.com/huati/duyiwuer/" target="_blank" rel="noopener">独一无二</a>的<a href="http://www.wenzhangba.com/zhuanti/geti/" target="_blank" rel="noopener">个体</a>，不管阳<a href="http://www.wenzhangba.com/zhuanti/guangming/" target="_blank" rel="noopener">光明</a>媚或<a href="http://www.wenzhangba.com/huati/fengchuiyuda/" target="_blank" rel="noopener">风吹雨打</a>，自己亦是世界上最美的<a href="http://www.wenzhangba.com/huati/fengjing/" target="_blank" rel="noopener">风景</a>。</p>
+<p>​        人生，就像是一座金矿，但“采掘”的结果，总是因为人们勤奋程度不同，得到的回报也不相同。我们要做的，就是要牢牢地抓住稍纵即逝的今天，今天能做的事一定要在今天做，不要把任何计划和希望寄托在未知的明天。今天才是最宝贵的，只有紧紧抓住今天，才能有充实的明天，才能有所作为，有所成就。每天都能充实的度过。强于昨天的自己，便是对自己一天的努力最大的奖励。</p>
+<p>​       人的一生，少不了拼搏的过程，只有拼搏，才能成就美好的人生。我们应该把有限的时间用在提升自己，而不是与别人做比较。做好自己，便是一种成功。</p>
+<p>​        最后，愿你活成自己想成为的模样；愿你在生病时，有人彻夜长伴；愿你在最无趣无力的日子里，仍对世界保持好奇；愿你没有悲伤，每天笑口常开；愿你在精疲力尽时，身边有人可以倚靠。愿你学会释怀，愿你走出半生，归来仍是少年。愿你不在常与人比较，强于昨天的自己，便是进步；</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/31/盒子模型/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/31/盒子模型/" itemprop="url">盒子模型</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-31T20:33:47+08:00">
+                2018-08-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>盒子模型由盒子壁（border）、内边距（padding）、盒子内容（width+hight）、外边距（margin）组成。</p>
+<h4 id="CSS-框模型概述"><a href="#CSS-框模型概述" class="headerlink" title="CSS 框模型概述"></a>CSS 框模型概述</h4><p><img src="http://www.w3school.com.cn/i/ct_boxmodel.gif" alt="CSS 框模型"></p>
+<p>元素框的最内部分是实际的内容，直接包围内容的是内边距。内边距呈现了元素的背景。内边距的边缘是边框。边框以外是外边距，外边距默认是透明的，因此不会遮挡其后的任何元素。</p>
+<p>提示：背景应用于由内容和内边距、边框组成的区域。</p>
+<p>提示：内边距、边框和外边距可以应用于一个元素的所有边，也可以应用于单独的边。</p>
+<p>提示：外边距可以是负值，而且在很多情况下都要使用负值的外边距。</p>
+<p>详细解释：<a href="http://www.w3school.com.cn/css/css_boxmodel.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/css/css_boxmodel.asp</a> </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/28/CSS伪类和伪元素/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1017,715 +1658,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/18/表单和选择标签/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/18/表单和选择标签/" itemprop="url">表单和选择标签</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-18T17:17:22+08:00">
-                2018-08-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>表单标签</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;form&gt;  &lt;/form&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;form  method=&quot;get&quot;  action=&quot;&quot;&gt;  </span><br><span class="line">       &lt;p&gt;</span><br><span class="line">              username:&lt;input  type=&quot;text&quot;&gt;</span><br><span class="line">       &lt;/p&gt;</span><br><span class="line">       &lt;p&gt;</span><br><span class="line">              password:&lt;input   type=&quot;password&quot;&gt;</span><br><span class="line">       &lt;/p&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>选择标签</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">单选：  1:&lt;input type=&quot;radio&quot;  name=&quot;&quot;  value=&quot;1&quot;&gt;</span><br><span class="line">        2:&lt;input                        value=&quot;2&quot;&gt;</span><br><span class="line">复选：   将type=&quot;radio&quot;改为type=&quot;checkbox&quot;</span><br><span class="line">默认选中：      checked=&quot;checked&quot;</span><br><span class="line"></span><br><span class="line">下拉菜单    &lt;select&gt;    &lt;/select&gt;</span><br><span class="line"></span><br><span class="line">           &lt;select  name=&quot;province&quot;&gt;</span><br><span class="line">                     &lt;option   value=&quot;&quot;&gt;  &lt;/option&gt;   //有value时以它为准</span><br><span class="line">           &lt;/select&gt;</span><br><span class="line">           </span><br><span class="line">提交功能：        &lt;input type=&quot;submit&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/18/网页高级标签/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/18/网页高级标签/" itemprop="url">网页高级标签</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-18T16:58:46+08:00">
-                2018-08-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>引用图片:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img   src=&quot;   &quot;&gt;</span><br></pre></td></tr></table></figure>
-<p>1.本地的绝对（相对）路径</p>
-<p>2.网上的URL</p>
-<p>alt：图片占位符                     title：图片提示符</p>
-<p><strong>常用标签</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;a   href=&quot; &quot;&gt;  用户看到的显示 &lt;/a&gt; </span><br><span class="line"></span><br><span class="line">target=&quot;_blank&quot;       当用来打开超链接时，在新的页面打开</span><br></pre></td></tr></table></figure>
-<p><em><u><strong>href的值可以写：</strong></u></em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.超链接         href=“http：//www......”</span><br><span class="line">2.锚点    </span><br><span class="line">3.打电话        href=&quot;tel:123456...&quot;</span><br><span class="line">4.发邮件         href=“mailto：邮箱地址”</span><br><span class="line">5.协议限定符</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/18/网页-高级标签/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/18/网页-高级标签/" itemprop="url">网页 高级标签</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-18T16:20:04+08:00">
-                2018-08-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>排序标签</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol   type=&quot;A&quot;&gt;     //  1../A../a../i../I..   (type的值表示选项按什么类型来表示)</span><br><span class="line"></span><br><span class="line">           &lt;li&gt;中国&lt;/li&gt;    </span><br><span class="line">           &lt;li&gt;美国&lt;/li&gt;</span><br><span class="line"></span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<p>上面代码表示出来为：    A  中国       B   美国</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">当&lt;ol   type=&quot;A&quot;     reversed=&quot;reversed&quot;&gt;  加上reversed=&quot;reversed&quot;时，排序为：倒序排序</span><br><span class="line"></span><br><span class="line">当&lt;ol    type=&quot;A&quot;     start=&quot;2&quot;&gt;   加上start=&quot;2&quot;时，表示从大写字母的（B）第二个开始排序</span><br><span class="line"></span><br><span class="line">&lt;ul    type=&quot;disc&quot;&gt;   //disc/square/circle  表示选项前面排序框的表示格式</span><br><span class="line"></span><br><span class="line">             &lt;li&gt;中国&lt;/li&gt;</span><br><span class="line"></span><br><span class="line">             &lt;li&gt;美国&lt;/li&gt;</span><br><span class="line"></span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/18/网页基本框架/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/18/网页基本框架/" itemprop="url">网页常用标签</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-18T16:14:20+08:00">
-                2018-08-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><code>网页的基本框架</code></p>
-<p><code>&lt;html  lang=&quot;en&quot;&gt;</code>  </p>
-<p><code>&lt;head&gt;</code></p>
-<p>主要写用户不可看见的网页属性</p>
-<p><code>&lt;/head&gt;</code></p>
-<p><code>&lt;body&gt;</code></p>
-<p><code>主要写直接展示给用户的网页界面</code></p>
-<p><code>&lt;/body&gt;</code></p>
-<p><code>&lt;/html&gt;</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/16/html常用的标签总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/16/html常用的标签总结/" itemprop="url">html常用的标签总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-16T19:32:03+08:00">
-                2018-08-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <table>
-<thead>
-<tr>
-<th style="text-align:center"><code>作用</code></th>
-<th style="text-align:center"><code>形式</code></th>
-<th style="text-align:center"><code>解释</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>网页标签的标题</code></td>
-<td style="text-align:center"><code>&lt;title&gt;标题&lt;/title&gt;</code></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>字典翻译</code></td>
-<td style="text-align:center"><code>&lt;meta  charset=&quot;utf-8&quot;&gt;</code></td>
-<td style="text-align:center"><code>&lt;!   通常网页就是用这个--&gt;</code></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>分段</code></td>
-<td style="text-align:center"><code>&lt;p&gt;    &lt;/p&gt;</code></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>网页内容标题</code></td>
-<td style="text-align:center"><code>&lt;h1&gt;&lt;/h1&gt;.......&lt;h6&gt;&lt;/h6&gt;</code></td>
-<td style="text-align:center"><code>&lt;!   h1到h6的字体从大到小--&gt;</code></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>字体加粗</code></td>
-<td style="text-align:center"><code>&lt;strong&gt;    &lt;/strong&gt;</code></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>字体斜体</code></td>
-<td style="text-align:center"><code>&lt;em&gt;     &lt;/em&gt;</code></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>中划线</code></td>
-<td style="text-align:center"><code>&lt;del&gt;    &lt;/del&gt;</code></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>地址</code></td>
-<td style="text-align:center"><code>&lt;address&gt;     &lt;/address&gt;</code></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>划分区间</code></td>
-<td style="text-align:center"><code>&lt;div&gt;    &lt;/div&gt;</code></td>
-<td style="text-align:center"><code>&lt;!    块级元素--&gt;</code></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>划分区间</code></td>
-<td style="text-align:center"><code>&lt;span&gt;   &lt;/span&gt;</code></td>
-<td style="text-align:center"><code>&lt;!   行内级元素--&gt;</code></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"><code>功能</code></th>
-<th style="text-align:center"><code>格式</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>空格</code></td>
-<td style="text-align:center"><code>&amp;nbsp;</code></td>
-</tr>
-<tr>
-<td style="text-align:center">&lt;     &gt;</td>
-<td style="text-align:center">&lt;&gt;</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>换行</code></td>
-<td style="text-align:center"><code>&lt;br&gt;</code></td>
-</tr>
-<tr>
-<td style="text-align:center"><code>水平线</code></td>
-<td style="text-align:center"><code>&lt;hr&gt;</code></td>
-</tr>
-</tbody>
-</table>
-<p>SEO:<code>搜素引擎优化</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1776,7 +1708,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

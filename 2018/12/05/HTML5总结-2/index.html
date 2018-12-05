@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1.Input 类型email 类型用于应该包含 e-mail 地址的输入域。 在提交表单时，会自动验证 email 域的值。 12实例E-mail: &amp;lt;input type=&amp;quot;email&amp;quot; name=&amp;quot;user_email&amp;quot; /&amp;gt; url 类型用于应该包含 URL 地址的输入域。 在提交表单时，会自动验证 url 域的值。 12实例Homepa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5总结-2">
+<meta property="og:url" content="http://yoursite.com/2018/12/05/HTML5总结-2/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="1.Input 类型email 类型用于应该包含 e-mail 地址的输入域。 在提交表单时，会自动验证 email 域的值。 12实例E-mail: &amp;lt;input type=&amp;quot;email&amp;quot; name=&amp;quot;user_email&amp;quot; /&amp;gt; url 类型用于应该包含 URL 地址的输入域。 在提交表单时，会自动验证 url 域的值。 12实例Homepa">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-05T13:26:26.696Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML5总结-2">
+<meta name="twitter:description" content="1.Input 类型email 类型用于应该包含 e-mail 地址的输入域。 在提交表单时，会自动验证 email 域的值。 12实例E-mail: &amp;lt;input type=&amp;quot;email&amp;quot; name=&amp;quot;user_email&amp;quot; /&amp;gt; url 类型用于应该包含 URL 地址的输入域。 在提交表单时，会自动验证 url 域的值。 12实例Homepa">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/12/05/HTML5总结-2/"/>
+
+
+
+
+
+  <title>HTML5总结-2 | 个人博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">成长历程</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/HTML5总结-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">HTML5总结-2</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-05T20:47:09+08:00">
+                2018-12-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="1-Input-类型"><a href="#1-Input-类型" class="headerlink" title="1.Input 类型"></a>1.Input 类型</h4><p>email 类型用于应该包含 e-mail 地址的输入域。</p>
+<p>在提交表单时，会自动验证 email 域的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">E-mail: &lt;input type=&quot;email&quot; name=&quot;user_email&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>url 类型用于应该包含 URL 地址的输入域。</p>
+<p>在提交表单时，会自动验证 url 域的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Homepage: &lt;input type=&quot;url&quot; name=&quot;user_url&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>number 类型用于应该包含数值的输入域。</p>
+<p>您还能够设定对所接受的数字的限定：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Points: &lt;input type=&quot;number&quot; name=&quot;points&quot; min=&quot;1&quot; max=&quot;10&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>提示：规定合法的数字间隔（如果 step=”3”，则合法的数是 -3,0,3,6 等）</p>
+<p>range 类型用于应该包含一定范围内数字值的输入域。</p>
+<p>range 类型显示为滑动条。</p>
+<p>您还能够设定对所接受的数字的限定：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">&lt;input type=&quot;range&quot; name=&quot;points&quot; min=&quot;1&quot; max=&quot;10&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="2-Date-Pickers（日期选择器）"><a href="#2-Date-Pickers（日期选择器）" class="headerlink" title="2. Date Pickers（日期选择器）"></a>2. Date Pickers（日期选择器）</h5><p>HTML5 拥有多个可供选取日期和时间的新输入类型：</p>
+<p>date - 选取日、月、年<br>month - 选取月、年<br>week - 选取周和年<br>time - 选取时间（小时和分钟）<br>datetime - 选取时间、日、月、年（UTC 时间）<br>datetime-local - 选取时间、日、月、年（本地时间）<br>下面的例子允许您从日历中选取一个日期：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Date: &lt;input type=&quot;date&quot; name=&quot;user_date&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="3-Input-类型-search"><a href="#3-Input-类型-search" class="headerlink" title="3.Input 类型 - search"></a>3.Input 类型 - search</h4><p>search 类型用于搜索域，比如站点搜索或 Google 搜索。</p>
+<p>search 域显示为常规的文本域。</p>
+<h4 id="4-HTML5-的新的表单元素："><a href="#4-HTML5-的新的表单元素：" class="headerlink" title="4.HTML5 的新的表单元素："></a>4.HTML5 的新的表单元素：</h4><p>datalist 元素<br>datalist 元素规定输入域的选项列表。</p>
+<p>列表是通过 datalist 内的 option 元素创建的。</p>
+<p>如需把 datalist 绑定到输入域，请用输入域的 list 属性引用 datalist 的 id：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Webpage: &lt;input type=&quot;url&quot; list=&quot;url_list&quot; name=&quot;link&quot; /&gt;</span><br><span class="line">&lt;datalist id=&quot;url_list&quot;&gt;</span><br><span class="line">&lt;option label=&quot;W3School&quot; value=&quot;http://www.W3School.com.cn&quot; /&gt;</span><br><span class="line">&lt;option label=&quot;Google&quot; value=&quot;http://www.google.com&quot; /&gt;</span><br><span class="line">&lt;option label=&quot;Microsoft&quot; value=&quot;http://www.microsoft.com&quot; /&gt;</span><br><span class="line">&lt;/datalist&gt;</span><br></pre></td></tr></table></figure>
+<p>output 元素用于不同类型的输出，比如计算或脚本输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">&lt;output id=&quot;result&quot; onforminput=&quot;resCalc()&quot;&gt;&lt;/output&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="5-新的-form-属性："><a href="#5-新的-form-属性：" class="headerlink" title="5.新的 form 属性："></a>5.新的 form 属性：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">新的 input 属性：autocomplete      autofocus      form</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">form overrides (formaction, formenctype, formmethod, formnovalidate, formtarget)</span><br><span class="line">height 和 width</span><br><span class="line">list</span><br><span class="line">min, max 和 step</span><br><span class="line">multiple</span><br><span class="line">pattern (regexp)</span><br><span class="line">placeholder</span><br><span class="line">required</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">autocomplete 属性</span><br><span class="line">autocomplete 属性规定 form 或 input 域应该拥有自动完成功能。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注释：autocomplete 适用于 &lt;form&gt; 标签，以及以下类型的 &lt;input&gt; 标签：</span><br><span class="line">text, search, url, telephone, email, password, datepickers, range 以及 color。</span><br></pre></td></tr></table></figure>
+<p>当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">autofocus 属性</span><br><span class="line">autofocus 属性规定在页面加载时，域自动地获得焦点。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">User name: &lt;input type=&quot;text&quot; name=&quot;user_name&quot;  autofocus=&quot;autofocus&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="6-表单重写属性"><a href="#6-表单重写属性" class="headerlink" title="6.表单重写属性"></a>6.表单重写属性</h4><p>表单重写属性（form override attributes）允许您重写 form 元素的某些属性设定。</p>
+<p>表单重写属性有：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">formaction - 重写表单的 action 属性</span><br><span class="line">formenctype - 重写表单的 enctype 属性</span><br><span class="line">formmethod - 重写表单的 method 属性</span><br><span class="line">formnovalidate - 重写表单的 novalidate 属性</span><br><span class="line">formtarget - 重写表单的 target 属性</span><br><span class="line">注释：表单重写属性适用于以下类型的 &lt;input&gt; 标签：submit 和 image。</span><br></pre></td></tr></table></figure>
+<h4 id="7-multiple-属性"><a href="#7-multiple-属性" class="headerlink" title="7.multiple 属性"></a>7.multiple 属性</h4><p>multiple 属性规定输入域中可选择多个值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注释：multiple 属性适用于以下类型的 &lt;input&gt; 标签：email 和 file。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Select images: &lt;input type=&quot;file&quot; name=&quot;img&quot; multiple=&quot;multiple&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="8-novalidate-属性"><a href="#8-novalidate-属性" class="headerlink" title="8.novalidate 属性"></a>8.novalidate 属性</h4><p>novalidate 属性规定在提交表单时不应该验证 form 或 input 域。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注释：novalidate 属性适用于 &lt;form&gt; 以及以下类型的 </span><br><span class="line">&lt;input&gt; 标签：text, search, url, telephone, email, </span><br><span class="line">password, date pickers, range 以及 color.</span><br></pre></td></tr></table></figure>
+<h4 id="9-pattern-属性"><a href="#9-pattern-属性" class="headerlink" title="9.pattern 属性"></a>9.pattern 属性</h4><p>pattern 属性规定用于验证 input 域的模式（pattern）。</p>
+<p>模式（pattern） 是正则表达式。您可以在我们的 JavaScript 教程中学习到有关正则表达式的内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注释：pattern 属性适用于以下类型的 &lt;input&gt; 标签：text, search,</span><br><span class="line">url, telephone, email 以及 password。</span><br></pre></td></tr></table></figure>
+<p>下面的例子显示了一个只能包含三个字母的文本域（不含数字及特殊字符）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Country code: &lt;input type=&quot;text&quot; name=&quot;country_code&quot;</span><br><span class="line">pattern=&quot;[A-z]&#123;3&#125;&quot; title=&quot;Three letter country code&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="10-placeholder-属性"><a href="#10-placeholder-属性" class="headerlink" title="10.placeholder 属性"></a>10.placeholder 属性</h4><p>placeholder 属性提供一种提示（hint），描述输入域所期待的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注释：placeholder 属性适用于以下类型的 &lt;input&gt; 标签：text,</span><br><span class="line">search, url, telephone, email 以及 password。</span><br></pre></td></tr></table></figure>
+<p>提示（hint）会在输入域为空时显示出现，会在输入域获得焦点时消失：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">&lt;input type=&quot;search&quot; name=&quot;user_search&quot;  placeholder=&quot;Search W3School&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="11-required-属性"><a href="#11-required-属性" class="headerlink" title="11.required 属性"></a>11.required 属性</h4><p>required 属性规定必须在提交之前填写输入域（不能为空）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注释：required 属性适用于以下类型的 &lt;input&gt; 标签：text, search, url,</span><br><span class="line">telephone, email, password, date pickers, number, checkbox, radio 以及 file。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Name: &lt;input type=&quot;text&quot; name=&quot;usr_name&quot; required=&quot;required&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/05/HTML5总结-1/" rel="next" title="HTML5总结-1">
+                <i class="fa fa-chevron-left"></i> HTML5总结-1
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/05/HTML5总结-3/" rel="prev" title="HTML5总结-3">
+                HTML5总结-3 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">郭高勤</p>
+              <p class="site-description motion-element" itemprop="description">只为更优秀的自己</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Input-类型"><span class="nav-number">1.</span> <span class="nav-text">1.Input 类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Date-Pickers（日期选择器）"><span class="nav-number">1.1.</span> <span class="nav-text">2. Date Pickers（日期选择器）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Input-类型-search"><span class="nav-number">2.</span> <span class="nav-text">3.Input 类型 - search</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-HTML5-的新的表单元素："><span class="nav-number">3.</span> <span class="nav-text">4.HTML5 的新的表单元素：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-新的-form-属性："><span class="nav-number">4.</span> <span class="nav-text">5.新的 form 属性：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-表单重写属性"><span class="nav-number">5.</span> <span class="nav-text">6.表单重写属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-multiple-属性"><span class="nav-number">6.</span> <span class="nav-text">7.multiple 属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-novalidate-属性"><span class="nav-number">7.</span> <span class="nav-text">8.novalidate 属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-pattern-属性"><span class="nav-number">8.</span> <span class="nav-text">9.pattern 属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-placeholder-属性"><span class="nav-number">9.</span> <span class="nav-text">10.placeholder 属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-required-属性"><span class="nav-number">10.</span> <span class="nav-text">11.required 属性</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">❤❤郭高勤</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://1118ggq.github.io">个人专属-ggq</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash;  My bolog
+  </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

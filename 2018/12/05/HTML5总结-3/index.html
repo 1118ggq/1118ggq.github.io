@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="按字母顺序排列的标签列表new : HTML5 中的新标签。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5总结-3">
+<meta property="og:url" content="http://yoursite.com/2018/12/05/HTML5总结-3/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="按字母顺序排列的标签列表new : HTML5 中的新标签。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-05T13:36:04.587Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML5总结-3">
+<meta name="twitter:description" content="按字母顺序排列的标签列表new : HTML5 中的新标签。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/12/05/HTML5总结-3/"/>
+
+
+
+
+
+  <title>HTML5总结-3 | 个人博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">成长历程</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/HTML5总结-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">HTML5总结-3</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-05T20:47:16+08:00">
+                2018-12-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>按字母顺序排列的标签列表<br>new : HTML5 中的新标签。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line">标签	             描述</span><br><span class="line"></span><br><span class="line">&lt;!--...--&gt;	      定义注释。</span><br><span class="line">&lt;!DOCTYPE&gt; 	定义文档类型。</span><br><span class="line">&lt;a&gt;	定义超链接。</span><br><span class="line">&lt;abbr&gt;	定义缩写。</span><br><span class="line">&lt;acronym&gt;	HTML 5 中不支持。定义首字母缩写。</span><br><span class="line">&lt;address&gt;	定义地址元素。</span><br><span class="line">&lt;applet&gt;	HTML 5 中不支持。定义 applet。</span><br><span class="line">&lt;area&gt;	定义图像映射中的区域。</span><br><span class="line">&lt;article&gt;	定义 article。</span><br><span class="line">&lt;aside&gt;	定义页面内容之外的内容。</span><br><span class="line">&lt;audio&gt;	定义声音内容。</span><br><span class="line">&lt;b&gt;	定义粗体文本。</span><br><span class="line">&lt;base&gt;	定义页面中所有链接的基准 URL。</span><br><span class="line">&lt;basefont&gt;	HTML 5 中不支持。请使用 CSS 代替。</span><br><span class="line">&lt;bdi&gt;	定义文本的文本方向，使其脱离其周围文本的方向设置。</span><br><span class="line">&lt;bdo&gt;	定义文本显示的方向。</span><br><span class="line">&lt;big&gt;	HTML 5 中不支持。定义大号文本。</span><br><span class="line">&lt;blockquote&gt;	定义长的引用。</span><br><span class="line">&lt;body&gt;	定义 body 元素。</span><br><span class="line">&lt;br&gt;	插入换行符。</span><br><span class="line">&lt;button&gt;	定义按钮。</span><br><span class="line">&lt;canvas&gt;	定义图形。</span><br><span class="line">&lt;caption&gt;	定义表格标题。</span><br><span class="line">&lt;center&gt;	HTML 5 中不支持。定义居中的文本。</span><br><span class="line">&lt;cite&gt;	定义引用。</span><br><span class="line">&lt;code&gt;	定义计算机代码文本。</span><br><span class="line">&lt;col&gt;	定义表格列的属性。</span><br><span class="line">&lt;colgroup&gt;	定义表格列的分组。</span><br><span class="line">&lt;command&gt;	定义命令按钮。</span><br><span class="line">&lt;datalist&gt;	定义下拉列表。</span><br><span class="line">&lt;dd&gt;	定义定义的描述。</span><br><span class="line">&lt;del&gt;	定义删除文本。</span><br><span class="line">&lt;details&gt;	定义元素的细节。</span><br><span class="line">&lt;dfn&gt;	定义定义项目。</span><br><span class="line">&lt;dir&gt;	HTML 5 中不支持。定义目录列表。</span><br><span class="line">&lt;div&gt;	定义文档中的一个部分。</span><br><span class="line">&lt;dl&gt;	定义定义列表。</span><br><span class="line">&lt;dt&gt;	定义定义的项目。</span><br><span class="line">&lt;em&gt;	定义强调文本。</span><br><span class="line">&lt;embed&gt;	定义外部交互内容或插件。</span><br><span class="line">&lt;fieldset&gt;	定义 fieldset。</span><br><span class="line">&lt;figcaption&gt;	定义 figure 元素的标题。</span><br><span class="line">&lt;figure&gt;	定义媒介内容的分组，以及它们的标题。</span><br><span class="line">&lt;font&gt;	HTML 5 中不支持。</span><br><span class="line">&lt;footer&gt;	定义 section 或 page 的页脚。</span><br><span class="line">&lt;form&gt;	定义表单。</span><br><span class="line">&lt;frame&gt;	HTML 5 中不支持。定义子窗口（框架）。</span><br><span class="line">&lt;frameset&gt;	HTML 5 中不支持。定义框架的集。</span><br><span class="line">&lt;h1&gt; to &lt;h6&gt;	定义标题 1 到标题 6。</span><br><span class="line">&lt;head&gt;	定义关于文档的信息。</span><br><span class="line">&lt;header&gt;	定义 section 或 page 的页眉。</span><br><span class="line">&lt;hgroup&gt;	定义有关文档中的 section 的信息。</span><br><span class="line">&lt;hr&gt;	定义水平线。</span><br><span class="line">&lt;html&gt;	定义 html 文档。</span><br><span class="line">&lt;i&gt;	定义斜体文本。</span><br><span class="line">&lt;iframe&gt;	定义行内的子窗口（框架）。</span><br><span class="line">&lt;img&gt;	定义图像。</span><br><span class="line">&lt;input&gt;	定义输入域。</span><br><span class="line">&lt;ins&gt;	定义插入文本。</span><br><span class="line">&lt;keygen&gt;	定义生成密钥。</span><br><span class="line">&lt;isindex&gt;	HTML 5 中不支持。定义单行的输入域。</span><br><span class="line">&lt;kbd&gt;	定义键盘文本。</span><br><span class="line">&lt;label&gt;	定义表单控件的标注。</span><br><span class="line">&lt;legend&gt;	定义 fieldset 中的标题。</span><br><span class="line">&lt;li&gt;	定义列表的项目。</span><br><span class="line">&lt;link&gt;	定义资源引用。</span><br><span class="line">&lt;map&gt;	定义图像映射。</span><br><span class="line">&lt;mark&gt;	定义有记号的文本。</span><br><span class="line">&lt;menu&gt;	定义菜单列表。</span><br><span class="line">&lt;meta&gt;	定义元信息。</span><br><span class="line">&lt;meter&gt;	定义预定义范围内的度量。</span><br><span class="line">&lt;nav&gt;	定义导航链接。</span><br><span class="line">&lt;noframes&gt;	HTML 5 中不支持。定义 noframe 部分。</span><br><span class="line">&lt;noscript&gt;	定义 noscript 部分。</span><br><span class="line">&lt;object&gt;	定义嵌入对象。</span><br><span class="line">&lt;ol&gt;	定义有序列表。</span><br><span class="line">&lt;optgroup&gt;	定义选项组。</span><br><span class="line">&lt;option&gt;	定义下拉列表中的选项。</span><br><span class="line">&lt;output&gt;	定义输出的一些类型。</span><br><span class="line">&lt;p&gt;	定义段落。</span><br><span class="line">&lt;param&gt;	为对象定义参数。</span><br><span class="line">&lt;pre&gt;	定义预格式化文本。</span><br><span class="line">&lt;progress&gt;	定义任何类型的任务的进度。</span><br><span class="line">&lt;q&gt;	定义短的引用。</span><br><span class="line">&lt;rp&gt;	定义若浏览器不支持 ruby 元素显示的内容。</span><br><span class="line">&lt;rt&gt;	定义 ruby 注释的解释。</span><br><span class="line">&lt;ruby&gt;	定义 ruby 注释。</span><br><span class="line">&lt;s&gt;	HTML 5 中不支持。定义加删除线的文本。</span><br><span class="line">&lt;samp&gt;	定义样本计算机代码。</span><br><span class="line">&lt;script&gt;	定义脚本。</span><br><span class="line">&lt;section&gt;	定义 section。</span><br><span class="line">&lt;select&gt;	定义可选列表。</span><br><span class="line">&lt;small&gt;	将旁注 (side comments) 呈现为小型文本。</span><br><span class="line">&lt;source&gt;	定义媒介源。</span><br><span class="line">&lt;span&gt;	定义文档中的 section。</span><br><span class="line">&lt;strike&gt;	HTML 5 中不支持。定义加删除线的文本。</span><br><span class="line">&lt;strong&gt;	定义强调文本。</span><br><span class="line">&lt;style&gt;	定义样式定义。</span><br><span class="line">&lt;sub&gt;	定义下标文本。</span><br><span class="line">&lt;summary&gt;	定义 details 元素的标题。</span><br><span class="line">&lt;sup&gt;	定义上标文本。</span><br><span class="line">&lt;table&gt;	定义表格。</span><br><span class="line">&lt;tbody&gt;	定义表格的主体。</span><br><span class="line">&lt;td&gt;	定义表格单元。</span><br><span class="line">&lt;textarea&gt;	定义 textarea。</span><br><span class="line">&lt;tfoot&gt;	定义表格的脚注。</span><br><span class="line">&lt;th&gt;	定义表头。</span><br><span class="line">&lt;thead&gt;	定义表头。</span><br><span class="line">&lt;time&gt;	定义日期/时间。</span><br><span class="line">&lt;title&gt;	定义文档的标题。</span><br><span class="line">&lt;tr&gt;	定义表格行。</span><br><span class="line">&lt;track&gt;	定义用在媒体播放器中的文本轨道。</span><br><span class="line">&lt;tt&gt;	HTML 5 中不支持。定义打字机文本。</span><br><span class="line">&lt;u&gt;	HTML 5 中不支持。定义下划线文本。</span><br><span class="line">&lt;ul&gt;	定义无序列表。</span><br><span class="line">&lt;var&gt;	定义变量。</span><br><span class="line">&lt;video&gt;	定义视频。</span><br><span class="line">&lt;xmp&gt;	HTML 5 中不支持。定义预格式文本。</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/05/HTML5总结-2/" rel="next" title="HTML5总结-2">
+                <i class="fa fa-chevron-left"></i> HTML5总结-2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/05/CSS3总结-1/" rel="prev" title="CSS3总结-1">
+                CSS3总结-1 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">郭高勤</p>
+              <p class="site-description motion-element" itemprop="description">只为更优秀的自己</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">❤❤郭高勤</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://1118ggq.github.io">个人专属-ggq</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash;  My bolog
+  </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

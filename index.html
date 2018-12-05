@@ -232,6 +232,691 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/CSS3总结-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/05/CSS3总结-2/" itemprop="url">CSS3总结-2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-05T20:47:48+08:00">
+                2018-12-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1-CSS3-过渡"><a href="#1-CSS3-过渡" class="headerlink" title="1.CSS3 过渡"></a>1.CSS3 过渡</h3><p>  CSS3 过渡是元素从一种样式逐渐改变为另一种的效果。</p>
+<p>要实现这一点，必须规定两项内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">规定您希望把效果添加到哪个 CSS 属性上</span><br><span class="line">规定效果的时长</span><br></pre></td></tr></table></figure>
+<h5 id="过渡属性"><a href="#过渡属性" class="headerlink" title="过渡属性"></a>过渡属性</h5><p>下面的表格列出了所有的转换属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">   属性	                          描述	                          </span><br><span class="line">transiti           简写属性，用于在一个属性中设置四个过渡属性。</span><br><span class="line">transition-property	    规定应用过渡的 CSS 属性的名称。</span><br><span class="line">transition-duration	    定义过渡效果花费的时间。默认是 0。	</span><br><span class="line">transition-timing-function	   规定过渡效果的时间曲线。默认是 &quot;ease&quot;。</span><br><span class="line">transition-delay	   规定过渡效果何时开始。默认是 0。</span><br></pre></td></tr></table></figure>
+<h3 id="2-CSS3-动画"><a href="#2-CSS3-动画" class="headerlink" title="2.CSS3 动画"></a>2.CSS3 动画</h3><p> 改变背景色和位置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">  &lt;!DOCTYPE html&gt;</span><br><span class="line">  &lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;style&gt; </span><br><span class="line">div</span><br><span class="line">&#123;</span><br><span class="line">width:100px;</span><br><span class="line">height:100px;</span><br><span class="line">background:red;</span><br><span class="line">position:relative;</span><br><span class="line">animation:myfirst 5s;</span><br><span class="line">-moz-animation:myfirst 5s; /* Firefox */</span><br><span class="line">-webkit-animation:myfirst 5s; /* Safari and Chrome */</span><br><span class="line">-o-animation:myfirst 5s; /* Opera */</span><br><span class="line">&#125;</span><br><span class="line">@keyframes myfirst</span><br><span class="line">&#123;</span><br><span class="line">0%   &#123;background:red; left:0px; top:0px;&#125;</span><br><span class="line">25%  &#123;background:yellow; left:200px; top:0px;&#125;</span><br><span class="line">50%  &#123;background:blue; left:200px; top:200px;&#125;</span><br><span class="line">75%  &#123;background:green; left:0px; top:200px;&#125;</span><br><span class="line">100% &#123;background:red; left:0px; top:0px;&#125;</span><br><span class="line">&#125;</span><br><span class="line">@-moz-keyframes myfirst /* Firefox */</span><br><span class="line">&#123;</span><br><span class="line">0%   &#123;background:red; left:0px; top:0px;&#125;</span><br><span class="line">25%  &#123;background:yellow; left:200px; top:0px;&#125;</span><br><span class="line">50%  &#123;background:blue; left:200px; top:200px;&#125;</span><br><span class="line">75%  &#123;background:green; left:0px; top:200px;&#125;</span><br><span class="line">100% &#123;background:red; left:0px; top:0px;&#125;</span><br><span class="line">&#125;</span><br><span class="line">@-webkit-keyframes myfirst /* Safari and Chrome */</span><br><span class="line">&#123;</span><br><span class="line">0%   &#123;background:red; left:0px; top:0px;&#125;</span><br><span class="line">25%  &#123;background:yellow; left:200px; top:0px;&#125;</span><br><span class="line">50%  &#123;background:blue; left:200px; top:200px;&#125;</span><br><span class="line">75%  &#123;background:green; left:0px; top:200px;&#125;</span><br><span class="line">100% &#123;background:red; left:0px; top:0px;&#125;</span><br><span class="line">&#125;</span><br><span class="line">@-o-keyframes myfirst /* Opera */</span><br><span class="line">&#123;</span><br><span class="line">0%   &#123;background:red; left:0px; top:0px;&#125;</span><br><span class="line">25%  &#123;background:yellow; left:200px; top:0px;&#125;</span><br><span class="line">50%  &#123;background:blue; left:200px; top:200px;&#125;</span><br><span class="line">75%  &#123;background:green; left:0px; top:200px;&#125;</span><br><span class="line">100% &#123;background:red; left:0px; top:0px;&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p&gt;&lt;b&gt;注释：&lt;/b&gt;本例在 Internet Explorer 中无效。&lt;/p&gt;</span><br><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="CSS3-动画属性"><a href="#CSS3-动画属性" class="headerlink" title="CSS3 动画属性"></a>CSS3 动画属性</h5><p>下面的表格列出了 @keyframes 规则和所有动画属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">属性	描述	CSS</span><br><span class="line">@keyframes	规定动画。	3</span><br><span class="line">animation	所有动画属性的简写属性，除了 animation-play-state 属性。	3</span><br><span class="line">animation-name	规定 @keyframes 动画的名称。	3</span><br><span class="line">animation-duration	规定动画完成一个周期所花费的秒或毫秒。默认是 0。	3</span><br><span class="line">animation-timing-function	规定动画的速度曲线。默认是 &quot;ease&quot;。	3</span><br><span class="line">animation-delay	规定动画何时开始。默认是 0。	3</span><br><span class="line">animation-iteration-count	规定动画被播放的次数。默认是 1。	3</span><br><span class="line">animation-direction	规定动画是否在下一周期逆向地播放。默认是 &quot;normal&quot;。	3</span><br><span class="line">animation-play-state	规定动画是否正在运行或暂停。默认是 &quot;running&quot;。	3</span><br><span class="line">animation-fill-mode	规定对象动画时间之外的状态。</span><br></pre></td></tr></table></figure>
+<h3 id="3-CSS3-多列"><a href="#3-CSS3-多列" class="headerlink" title="3.CSS3 多列"></a>3.CSS3 多列</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">column-count 属性规定元素应该被分隔的列数</span><br><span class="line">  column-gap 属性规定列之间的间隔：</span><br><span class="line">   column-rule 属性设置列之间的宽度、样式和颜色规则</span><br></pre></td></tr></table></figure>
+<h3 id="4-CSS3-用户界面"><a href="#4-CSS3-用户界面" class="headerlink" title="4.CSS3 用户界面"></a>4.CSS3 用户界面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">resize 属性规定是否可由用户调整元素尺寸。</span><br><span class="line">box-sizing 属性允许您以确切的方式定义适应某个区域的具体内容</span><br><span class="line">outline-offset 属性对轮廓进行偏移，并在超出边框边缘的位置绘制轮廓</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/CSS3总结-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/05/CSS3总结-1/" itemprop="url">CSS3总结-1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-05T20:47:36+08:00">
+                2018-12-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1-边框属性"><a href="#1-边框属性" class="headerlink" title="1.边框属性"></a>1.边框属性</h3><p>   border-radius 属性用于创建圆角<br>   box-shadow 用于向方框添加阴影<br>   border-image 属性允许您规定用于边框的图片</p>
+<h3 id="2-背景属性"><a href="#2-背景属性" class="headerlink" title="2.背景属性"></a>2.背景属性</h3><p>   background-size 属性规定背景图片的尺寸。<br>   background-origin 属性规定背景图片的定位区域。</p>
+<p>背景图片可以放置于 content-box、padding-box 或 border-box 区域<br>  CSS3 允许您为元素使用多个背景图像。</p>
+<p>实例<br>为 body 元素设置两幅背景图片：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">body</span><br><span class="line">&#123; </span><br><span class="line">background-image:url(bg_flower.gif),url(bg_flower_2.gif);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>background-clip    规定背景的绘制区域。<br>background-origin    规定背景图片的定位区域。<br>background-size    规定背景图片的尺寸。</p>
+<h3 id="3-text-shadow-可向文本应用阴影"><a href="#3-text-shadow-可向文本应用阴影" class="headerlink" title="3.text-shadow 可向文本应用阴影"></a>3.text-shadow 可向文本应用阴影</h3><p>  向标题添加阴影：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">h1</span><br><span class="line">&#123;</span><br><span class="line">text-shadow: 5px 5px 5px #FF0000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>word-wrap 属性允许您允许文本强制文本进行换行<br>实例<br>允许对长单词进行拆分，并换行到下一行：</p>
+<p>p {word-wrap:break-word;}</p>
+<h3 id="4-font-family-属性"><a href="#4-font-family-属性" class="headerlink" title="4.font-family 属性"></a>4.font-family 属性</h3><p>引用字体的名称 (myFirstFont)</p>
+<p>实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt; </span><br><span class="line">@font-face</span><br><span class="line">&#123;</span><br><span class="line">font-family: myFirstFont;</span><br><span class="line">src: url(&apos;Sansation_Light.ttf&apos;),</span><br><span class="line">     url(&apos;Sansation_Light.eot&apos;); /* IE9+ */</span><br><span class="line">&#125;</span><br><span class="line">div</span><br><span class="line">&#123;</span><br><span class="line">font-family:myFirstFont;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="5-2D-转换"><a href="#5-2D-转换" class="headerlink" title="5.2D 转换"></a>5.2D 转换</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">translate() 方法，元素从其当前位置移动，根据给定的 left（x 坐标） 和 top（y 坐标） 位置参数</span><br><span class="line"></span><br><span class="line">      translate(50px,100px) 把元素从左侧移动 50 像素，从顶端移动 100 像素。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rotate() 方法，元素顺时针旋转给定的角度。允许负值，元素将逆时针旋转。</span><br><span class="line">          值 rotate(30deg) 把元素顺时针旋转 30 度。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scale() 方法，元素的尺寸会增加或减少，根据给定的宽度（X 轴）和高度（Y 轴）参数</span><br><span class="line">      值 scale(2,4) 把宽度转换为原始尺寸的 2 倍，把高度转换为原始高度的 4 倍。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">skew() 方法，元素翻转给定的角度，根据给定的水平线（X 轴）和垂直线（Y 轴）参数：</span><br><span class="line">      值 skew(30deg,20deg) 围绕 X 轴把元素翻转 30 度，围绕 Y 轴翻转 20 度</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">matrix() 方法把所有 2D 转换方法组合在一起。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">div</span><br><span class="line">&#123;</span><br><span class="line">transform: translate(50px,100px);</span><br><span class="line">-ms-transform: translate(50px,100px);		/* IE 9 */</span><br><span class="line">-webkit-transform: translate(50px,100px);	/* Safari and Chrome */</span><br><span class="line">-o-transform: translate(50px,100px);		/* Opera */</span><br><span class="line">-moz-transform: translate(50px,100px);		/* Firefox */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6-3D-转换"><a href="#6-3D-转换" class="headerlink" title="6.3D 转换"></a>6.3D 转换</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rotateX() 方法，元素围绕其 X 轴以给定的度数进行旋转。</span><br><span class="line">  rotateY() 方法，元素围绕其 Y 轴以给定的度数进行旋转</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/HTML5总结-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/05/HTML5总结-3/" itemprop="url">HTML5总结-3</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-05T20:47:16+08:00">
+                2018-12-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>按字母顺序排列的标签列表<br>new : HTML5 中的新标签。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line">标签	             描述</span><br><span class="line"></span><br><span class="line">&lt;!--...--&gt;	      定义注释。</span><br><span class="line">&lt;!DOCTYPE&gt; 	定义文档类型。</span><br><span class="line">&lt;a&gt;	定义超链接。</span><br><span class="line">&lt;abbr&gt;	定义缩写。</span><br><span class="line">&lt;acronym&gt;	HTML 5 中不支持。定义首字母缩写。</span><br><span class="line">&lt;address&gt;	定义地址元素。</span><br><span class="line">&lt;applet&gt;	HTML 5 中不支持。定义 applet。</span><br><span class="line">&lt;area&gt;	定义图像映射中的区域。</span><br><span class="line">&lt;article&gt;	定义 article。</span><br><span class="line">&lt;aside&gt;	定义页面内容之外的内容。</span><br><span class="line">&lt;audio&gt;	定义声音内容。</span><br><span class="line">&lt;b&gt;	定义粗体文本。</span><br><span class="line">&lt;base&gt;	定义页面中所有链接的基准 URL。</span><br><span class="line">&lt;basefont&gt;	HTML 5 中不支持。请使用 CSS 代替。</span><br><span class="line">&lt;bdi&gt;	定义文本的文本方向，使其脱离其周围文本的方向设置。</span><br><span class="line">&lt;bdo&gt;	定义文本显示的方向。</span><br><span class="line">&lt;big&gt;	HTML 5 中不支持。定义大号文本。</span><br><span class="line">&lt;blockquote&gt;	定义长的引用。</span><br><span class="line">&lt;body&gt;	定义 body 元素。</span><br><span class="line">&lt;br&gt;	插入换行符。</span><br><span class="line">&lt;button&gt;	定义按钮。</span><br><span class="line">&lt;canvas&gt;	定义图形。</span><br><span class="line">&lt;caption&gt;	定义表格标题。</span><br><span class="line">&lt;center&gt;	HTML 5 中不支持。定义居中的文本。</span><br><span class="line">&lt;cite&gt;	定义引用。</span><br><span class="line">&lt;code&gt;	定义计算机代码文本。</span><br><span class="line">&lt;col&gt;	定义表格列的属性。</span><br><span class="line">&lt;colgroup&gt;	定义表格列的分组。</span><br><span class="line">&lt;command&gt;	定义命令按钮。</span><br><span class="line">&lt;datalist&gt;	定义下拉列表。</span><br><span class="line">&lt;dd&gt;	定义定义的描述。</span><br><span class="line">&lt;del&gt;	定义删除文本。</span><br><span class="line">&lt;details&gt;	定义元素的细节。</span><br><span class="line">&lt;dfn&gt;	定义定义项目。</span><br><span class="line">&lt;dir&gt;	HTML 5 中不支持。定义目录列表。</span><br><span class="line">&lt;div&gt;	定义文档中的一个部分。</span><br><span class="line">&lt;dl&gt;	定义定义列表。</span><br><span class="line">&lt;dt&gt;	定义定义的项目。</span><br><span class="line">&lt;em&gt;	定义强调文本。</span><br><span class="line">&lt;embed&gt;	定义外部交互内容或插件。</span><br><span class="line">&lt;fieldset&gt;	定义 fieldset。</span><br><span class="line">&lt;figcaption&gt;	定义 figure 元素的标题。</span><br><span class="line">&lt;figure&gt;	定义媒介内容的分组，以及它们的标题。</span><br><span class="line">&lt;font&gt;	HTML 5 中不支持。</span><br><span class="line">&lt;footer&gt;	定义 section 或 page 的页脚。</span><br><span class="line">&lt;form&gt;	定义表单。</span><br><span class="line">&lt;frame&gt;	HTML 5 中不支持。定义子窗口（框架）。</span><br><span class="line">&lt;frameset&gt;	HTML 5 中不支持。定义框架的集。</span><br><span class="line">&lt;h1&gt; to &lt;h6&gt;	定义标题 1 到标题 6。</span><br><span class="line">&lt;head&gt;	定义关于文档的信息。</span><br><span class="line">&lt;header&gt;	定义 section 或 page 的页眉。</span><br><span class="line">&lt;hgroup&gt;	定义有关文档中的 section 的信息。</span><br><span class="line">&lt;hr&gt;	定义水平线。</span><br><span class="line">&lt;html&gt;	定义 html 文档。</span><br><span class="line">&lt;i&gt;	定义斜体文本。</span><br><span class="line">&lt;iframe&gt;	定义行内的子窗口（框架）。</span><br><span class="line">&lt;img&gt;	定义图像。</span><br><span class="line">&lt;input&gt;	定义输入域。</span><br><span class="line">&lt;ins&gt;	定义插入文本。</span><br><span class="line">&lt;keygen&gt;	定义生成密钥。</span><br><span class="line">&lt;isindex&gt;	HTML 5 中不支持。定义单行的输入域。</span><br><span class="line">&lt;kbd&gt;	定义键盘文本。</span><br><span class="line">&lt;label&gt;	定义表单控件的标注。</span><br><span class="line">&lt;legend&gt;	定义 fieldset 中的标题。</span><br><span class="line">&lt;li&gt;	定义列表的项目。</span><br><span class="line">&lt;link&gt;	定义资源引用。</span><br><span class="line">&lt;map&gt;	定义图像映射。</span><br><span class="line">&lt;mark&gt;	定义有记号的文本。</span><br><span class="line">&lt;menu&gt;	定义菜单列表。</span><br><span class="line">&lt;meta&gt;	定义元信息。</span><br><span class="line">&lt;meter&gt;	定义预定义范围内的度量。</span><br><span class="line">&lt;nav&gt;	定义导航链接。</span><br><span class="line">&lt;noframes&gt;	HTML 5 中不支持。定义 noframe 部分。</span><br><span class="line">&lt;noscript&gt;	定义 noscript 部分。</span><br><span class="line">&lt;object&gt;	定义嵌入对象。</span><br><span class="line">&lt;ol&gt;	定义有序列表。</span><br><span class="line">&lt;optgroup&gt;	定义选项组。</span><br><span class="line">&lt;option&gt;	定义下拉列表中的选项。</span><br><span class="line">&lt;output&gt;	定义输出的一些类型。</span><br><span class="line">&lt;p&gt;	定义段落。</span><br><span class="line">&lt;param&gt;	为对象定义参数。</span><br><span class="line">&lt;pre&gt;	定义预格式化文本。</span><br><span class="line">&lt;progress&gt;	定义任何类型的任务的进度。</span><br><span class="line">&lt;q&gt;	定义短的引用。</span><br><span class="line">&lt;rp&gt;	定义若浏览器不支持 ruby 元素显示的内容。</span><br><span class="line">&lt;rt&gt;	定义 ruby 注释的解释。</span><br><span class="line">&lt;ruby&gt;	定义 ruby 注释。</span><br><span class="line">&lt;s&gt;	HTML 5 中不支持。定义加删除线的文本。</span><br><span class="line">&lt;samp&gt;	定义样本计算机代码。</span><br><span class="line">&lt;script&gt;	定义脚本。</span><br><span class="line">&lt;section&gt;	定义 section。</span><br><span class="line">&lt;select&gt;	定义可选列表。</span><br><span class="line">&lt;small&gt;	将旁注 (side comments) 呈现为小型文本。</span><br><span class="line">&lt;source&gt;	定义媒介源。</span><br><span class="line">&lt;span&gt;	定义文档中的 section。</span><br><span class="line">&lt;strike&gt;	HTML 5 中不支持。定义加删除线的文本。</span><br><span class="line">&lt;strong&gt;	定义强调文本。</span><br><span class="line">&lt;style&gt;	定义样式定义。</span><br><span class="line">&lt;sub&gt;	定义下标文本。</span><br><span class="line">&lt;summary&gt;	定义 details 元素的标题。</span><br><span class="line">&lt;sup&gt;	定义上标文本。</span><br><span class="line">&lt;table&gt;	定义表格。</span><br><span class="line">&lt;tbody&gt;	定义表格的主体。</span><br><span class="line">&lt;td&gt;	定义表格单元。</span><br><span class="line">&lt;textarea&gt;	定义 textarea。</span><br><span class="line">&lt;tfoot&gt;	定义表格的脚注。</span><br><span class="line">&lt;th&gt;	定义表头。</span><br><span class="line">&lt;thead&gt;	定义表头。</span><br><span class="line">&lt;time&gt;	定义日期/时间。</span><br><span class="line">&lt;title&gt;	定义文档的标题。</span><br><span class="line">&lt;tr&gt;	定义表格行。</span><br><span class="line">&lt;track&gt;	定义用在媒体播放器中的文本轨道。</span><br><span class="line">&lt;tt&gt;	HTML 5 中不支持。定义打字机文本。</span><br><span class="line">&lt;u&gt;	HTML 5 中不支持。定义下划线文本。</span><br><span class="line">&lt;ul&gt;	定义无序列表。</span><br><span class="line">&lt;var&gt;	定义变量。</span><br><span class="line">&lt;video&gt;	定义视频。</span><br><span class="line">&lt;xmp&gt;	HTML 5 中不支持。定义预格式文本。</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/HTML5总结-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/05/HTML5总结-2/" itemprop="url">HTML5总结-2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-05T20:47:09+08:00">
+                2018-12-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="1-Input-类型"><a href="#1-Input-类型" class="headerlink" title="1.Input 类型"></a>1.Input 类型</h4><p>email 类型用于应该包含 e-mail 地址的输入域。</p>
+<p>在提交表单时，会自动验证 email 域的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">E-mail: &lt;input type=&quot;email&quot; name=&quot;user_email&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>url 类型用于应该包含 URL 地址的输入域。</p>
+<p>在提交表单时，会自动验证 url 域的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Homepage: &lt;input type=&quot;url&quot; name=&quot;user_url&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>number 类型用于应该包含数值的输入域。</p>
+<p>您还能够设定对所接受的数字的限定：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Points: &lt;input type=&quot;number&quot; name=&quot;points&quot; min=&quot;1&quot; max=&quot;10&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>提示：规定合法的数字间隔（如果 step=”3”，则合法的数是 -3,0,3,6 等）</p>
+<p>range 类型用于应该包含一定范围内数字值的输入域。</p>
+<p>range 类型显示为滑动条。</p>
+<p>您还能够设定对所接受的数字的限定：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">&lt;input type=&quot;range&quot; name=&quot;points&quot; min=&quot;1&quot; max=&quot;10&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="2-Date-Pickers（日期选择器）"><a href="#2-Date-Pickers（日期选择器）" class="headerlink" title="2. Date Pickers（日期选择器）"></a>2. Date Pickers（日期选择器）</h5><p>HTML5 拥有多个可供选取日期和时间的新输入类型：</p>
+<p>date - 选取日、月、年<br>month - 选取月、年<br>week - 选取周和年<br>time - 选取时间（小时和分钟）<br>datetime - 选取时间、日、月、年（UTC 时间）<br>datetime-local - 选取时间、日、月、年（本地时间）<br>下面的例子允许您从日历中选取一个日期：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Date: &lt;input type=&quot;date&quot; name=&quot;user_date&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="3-Input-类型-search"><a href="#3-Input-类型-search" class="headerlink" title="3.Input 类型 - search"></a>3.Input 类型 - search</h4><p>search 类型用于搜索域，比如站点搜索或 Google 搜索。</p>
+<p>search 域显示为常规的文本域。</p>
+<h4 id="4-HTML5-的新的表单元素："><a href="#4-HTML5-的新的表单元素：" class="headerlink" title="4.HTML5 的新的表单元素："></a>4.HTML5 的新的表单元素：</h4><p>datalist 元素<br>datalist 元素规定输入域的选项列表。</p>
+<p>列表是通过 datalist 内的 option 元素创建的。</p>
+<p>如需把 datalist 绑定到输入域，请用输入域的 list 属性引用 datalist 的 id：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Webpage: &lt;input type=&quot;url&quot; list=&quot;url_list&quot; name=&quot;link&quot; /&gt;</span><br><span class="line">&lt;datalist id=&quot;url_list&quot;&gt;</span><br><span class="line">&lt;option label=&quot;W3School&quot; value=&quot;http://www.W3School.com.cn&quot; /&gt;</span><br><span class="line">&lt;option label=&quot;Google&quot; value=&quot;http://www.google.com&quot; /&gt;</span><br><span class="line">&lt;option label=&quot;Microsoft&quot; value=&quot;http://www.microsoft.com&quot; /&gt;</span><br><span class="line">&lt;/datalist&gt;</span><br></pre></td></tr></table></figure>
+<p>output 元素用于不同类型的输出，比如计算或脚本输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">&lt;output id=&quot;result&quot; onforminput=&quot;resCalc()&quot;&gt;&lt;/output&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="5-新的-form-属性："><a href="#5-新的-form-属性：" class="headerlink" title="5.新的 form 属性："></a>5.新的 form 属性：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">新的 input 属性：autocomplete      autofocus      form</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">form overrides (formaction, formenctype, formmethod, formnovalidate, formtarget)</span><br><span class="line">height 和 width</span><br><span class="line">list</span><br><span class="line">min, max 和 step</span><br><span class="line">multiple</span><br><span class="line">pattern (regexp)</span><br><span class="line">placeholder</span><br><span class="line">required</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">autocomplete 属性</span><br><span class="line">autocomplete 属性规定 form 或 input 域应该拥有自动完成功能。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注释：autocomplete 适用于 &lt;form&gt; 标签，以及以下类型的 &lt;input&gt; 标签：</span><br><span class="line">text, search, url, telephone, email, password, datepickers, range 以及 color。</span><br></pre></td></tr></table></figure>
+<p>当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">autofocus 属性</span><br><span class="line">autofocus 属性规定在页面加载时，域自动地获得焦点。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">User name: &lt;input type=&quot;text&quot; name=&quot;user_name&quot;  autofocus=&quot;autofocus&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="6-表单重写属性"><a href="#6-表单重写属性" class="headerlink" title="6.表单重写属性"></a>6.表单重写属性</h4><p>表单重写属性（form override attributes）允许您重写 form 元素的某些属性设定。</p>
+<p>表单重写属性有：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">formaction - 重写表单的 action 属性</span><br><span class="line">formenctype - 重写表单的 enctype 属性</span><br><span class="line">formmethod - 重写表单的 method 属性</span><br><span class="line">formnovalidate - 重写表单的 novalidate 属性</span><br><span class="line">formtarget - 重写表单的 target 属性</span><br><span class="line">注释：表单重写属性适用于以下类型的 &lt;input&gt; 标签：submit 和 image。</span><br></pre></td></tr></table></figure>
+<h4 id="7-multiple-属性"><a href="#7-multiple-属性" class="headerlink" title="7.multiple 属性"></a>7.multiple 属性</h4><p>multiple 属性规定输入域中可选择多个值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注释：multiple 属性适用于以下类型的 &lt;input&gt; 标签：email 和 file。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Select images: &lt;input type=&quot;file&quot; name=&quot;img&quot; multiple=&quot;multiple&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="8-novalidate-属性"><a href="#8-novalidate-属性" class="headerlink" title="8.novalidate 属性"></a>8.novalidate 属性</h4><p>novalidate 属性规定在提交表单时不应该验证 form 或 input 域。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注释：novalidate 属性适用于 &lt;form&gt; 以及以下类型的 </span><br><span class="line">&lt;input&gt; 标签：text, search, url, telephone, email, </span><br><span class="line">password, date pickers, range 以及 color.</span><br></pre></td></tr></table></figure>
+<h4 id="9-pattern-属性"><a href="#9-pattern-属性" class="headerlink" title="9.pattern 属性"></a>9.pattern 属性</h4><p>pattern 属性规定用于验证 input 域的模式（pattern）。</p>
+<p>模式（pattern） 是正则表达式。您可以在我们的 JavaScript 教程中学习到有关正则表达式的内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注释：pattern 属性适用于以下类型的 &lt;input&gt; 标签：text, search,</span><br><span class="line">url, telephone, email 以及 password。</span><br></pre></td></tr></table></figure>
+<p>下面的例子显示了一个只能包含三个字母的文本域（不含数字及特殊字符）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Country code: &lt;input type=&quot;text&quot; name=&quot;country_code&quot;</span><br><span class="line">pattern=&quot;[A-z]&#123;3&#125;&quot; title=&quot;Three letter country code&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="10-placeholder-属性"><a href="#10-placeholder-属性" class="headerlink" title="10.placeholder 属性"></a>10.placeholder 属性</h4><p>placeholder 属性提供一种提示（hint），描述输入域所期待的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注释：placeholder 属性适用于以下类型的 &lt;input&gt; 标签：text,</span><br><span class="line">search, url, telephone, email 以及 password。</span><br></pre></td></tr></table></figure>
+<p>提示（hint）会在输入域为空时显示出现，会在输入域获得焦点时消失：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">&lt;input type=&quot;search&quot; name=&quot;user_search&quot;  placeholder=&quot;Search W3School&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="11-required-属性"><a href="#11-required-属性" class="headerlink" title="11.required 属性"></a>11.required 属性</h4><p>required 属性规定必须在提交之前填写输入域（不能为空）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注释：required 属性适用于以下类型的 &lt;input&gt; 标签：text, search, url,</span><br><span class="line">telephone, email, password, date pickers, number, checkbox, radio 以及 file。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Name: &lt;input type=&quot;text&quot; name=&quot;usr_name&quot; required=&quot;required&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/HTML5总结-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/05/HTML5总结-1/" itemprop="url">HTML5总结-1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-05T20:46:52+08:00">
+                2018-12-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1-在-HTML5-中显示视频"><a href="#1-在-HTML5-中显示视频" class="headerlink" title="1.在 HTML5 中显示视频"></a>1.在 HTML5 中显示视频</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;video src=&quot;movie.ogg&quot;  width=&quot;320&quot; height=&quot;240&quot; controls=&quot;controls&quot;&gt;</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">controls 属性供添加播放、暂停和音量控件。</span><br><span class="line">包含宽度和高度属性也是不错的主意。</span><br><span class="line"></span><br><span class="line">&lt;video&gt; 与 &lt;/video&gt; 之间插入的内容是供不支持 video 元素的浏览器显示的</span><br><span class="line"></span><br><span class="line">video 元素允许多个 source 元素。source 元素可以链接不同的视频文件。</span><br><span class="line">浏览器将使用第一个可识别的格式：</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">&lt;video width=&quot;320&quot; height=&quot;240&quot; controls=&quot;controls&quot;&gt;</span><br><span class="line">  &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot;&gt;</span><br><span class="line">  &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot;&gt;</span><br><span class="line">Your browser does not support the video tag.</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;video&gt; 标签的属性</span><br><span class="line">属性	          值          	描述</span><br><span class="line">autoplay	autoplay	如果出现该属性，则视频在就绪后马上播放。</span><br><span class="line">controls	controls	如果出现该属性，则向用户显示控件，比如播放按钮。</span><br><span class="line"> loop	    loop	    如果出现该属性，则当媒介文件完成播放后再次开始播放。</span><br><span class="line">preload   	preload	     如果出现该属性，则视频在页面加载时进行加载，并预备播放。</span><br><span class="line">                         如果使用 &quot;autoplay&quot;,则忽略该属性。</span><br><span class="line">src	url	要播放的视频的 URL。</span><br></pre></td></tr></table></figure>
+<h3 id="2-在-HTML5-中播放音频"><a href="#2-在-HTML5-中播放音频" class="headerlink" title="2.在 HTML5 中播放音频"></a>2.在 HTML5 中播放音频</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio src=&quot;song.ogg&quot; controls=&quot;controls&quot;&gt;</span><br><span class="line">&lt;/audio&gt;</span><br><span class="line">control 属性供添加播放、暂停和音量控件。</span><br><span class="line">&lt;audio&gt; 与 &lt;/audio&gt; 之间插入的内容是供不支持 audio 元素的浏览器显示的：</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/js基础-第八节/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -873,647 +1558,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/25/js基础-第三节/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/25/js基础-第三节/" itemprop="url">js基础-第三节</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-25T21:31:57+08:00">
-                2018-11-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h5 id="1-必填（或必选）项目"><a href="#1-必填（或必选）项目" class="headerlink" title="1.必填（或必选）项目"></a>1.必填（或必选）项目</h5><p>​        下面的函数用来检查用户是否已填写表单中的必填（或必选）项目。</p>
-<p>假如必填或必选项为空，那么警告框会弹出，并且函数的返回值为 false，</p>
-<p>否则函数的返回值则为 true（意味着数据没有问题）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">function validate_required(field,alerttxt)</span><br><span class="line">&#123;</span><br><span class="line">with (field)</span><br><span class="line">  &#123;</span><br><span class="line">  if (value==null||value==&quot;&quot;)</span><br><span class="line">    &#123;alert(alerttxt);return false&#125;</span><br><span class="line">  else &#123;return true&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function validate_form(thisform)</span><br><span class="line">&#123;</span><br><span class="line">with (thisform)</span><br><span class="line">  &#123;</span><br><span class="line">  if (validate_required(email,&quot;Email must be filled out!&quot;)==false)</span><br><span class="line">    &#123;email.focus();return false&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;form action=&quot;submitpage.htm&quot; onsubmit=&quot;return validate_form(this)&quot; method=&quot;post&quot;&gt;</span><br><span class="line">Email: &lt;input type=&quot;text&quot; name=&quot;email&quot; size=&quot;30&quot;&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt; </span><br><span class="line">&lt;/form&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<h5 id="2-E-mail-验证"><a href="#2-E-mail-验证" class="headerlink" title="2.E-mail 验证"></a>2.E-mail 验证</h5><p>下面的函数检查输入的数据是否符合电子邮件地址的基本语法。</p>
-<p>意思就是说，输入的数据必须包含 @ 符号和点号(.)。同时，@ 不可以是</p>
-<p>邮件地址的首字符，并且 @ 之后需有至少一个点号：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">function validate_email(field,alerttxt)</span><br><span class="line">&#123;</span><br><span class="line">with (field)</span><br><span class="line">&#123;</span><br><span class="line">apos=value.indexOf(&quot;@&quot;)</span><br><span class="line">dotpos=value.lastIndexOf(&quot;.&quot;)</span><br><span class="line">if (apos&lt;1||dotpos-apos&lt;2) </span><br><span class="line">  &#123;alert(alerttxt);return false&#125;</span><br><span class="line">else &#123;return true&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function validate_form(thisform)</span><br><span class="line">&#123;</span><br><span class="line">with (thisform)</span><br><span class="line">&#123;</span><br><span class="line">if (validate_email(email,&quot;Not a valid e-mail address!&quot;)==false)</span><br><span class="line">  &#123;email.focus();return false&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;form action=&quot;submitpage.htm&quot;onsubmit=&quot;return validate_form(this);&quot; method=&quot;post&quot;&gt;</span><br><span class="line">Email: &lt;input type=&quot;text&quot; name=&quot;email&quot; size=&quot;30&quot;&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt; </span><br><span class="line">&lt;/form&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<h5 id="3-indexOf-方法"><a href="#3-indexOf-方法" class="headerlink" title="3.indexOf() 方法"></a>3.indexOf() 方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">可返回某个指定的字符串值在字符串中首次出现的位置。</span><br><span class="line">说明：该方法将从头到尾地检索字符串 stringObject，看它是否含有子串 searchvalue。</span><br><span class="line">开始检索的位置在字符串的 fromindex 处或字符串的开头（没有指定 fromindex 时）。</span><br><span class="line">如果找到一个 searchvalue，则返回 searchvalue 的第一次出现的位置。</span><br><span class="line">stringObject 中的字符位置是从 0 开始的。</span><br><span class="line"></span><br><span class="line">注释：indexOf() 方法对大小写敏感！</span><br><span class="line">注释：如果要检索的字符串值没有出现，则该方法返回 -1。</span><br></pre></td></tr></table></figure>
-<h5 id="4-lastIndexOf-方法"><a href="#4-lastIndexOf-方法" class="headerlink" title="4.lastIndexOf() 方法"></a>4.lastIndexOf() 方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">可返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。</span><br><span class="line"></span><br><span class="line">返回值：如果在 stringObject 中的 fromindex 位置之前存在 searchvalue，</span><br><span class="line">则返回的是出现的最后一个 searchvalue 的位置。</span><br><span class="line"></span><br><span class="line">说明：该方法将从尾到头地检索字符串 stringObject，看它是否含有</span><br><span class="line">子串 searchvalue。开始检索的位置在字符串的 fromindex 处或字符串</span><br><span class="line">的结尾（没有指定 fromindex 时）。如果找到一个 searchvalue，</span><br><span class="line">则返回 searchvalue 的第一个字符在 stringObject 中的位置。</span><br><span class="line">stringObject 中的字符位置是从 0 开始的。</span><br><span class="line"></span><br><span class="line">注释：lastIndexOf() 方法对大小写敏感！</span><br><span class="line">注释：如果要检索的字符串值没有出现，则该方法返回 -1。</span><br></pre></td></tr></table></figure>
-<h5 id="5-js-form表单onsubmit事件用法详解"><a href="#5-js-form表单onsubmit事件用法详解" class="headerlink" title="5.js form表单onsubmit事件用法详解"></a>5.js form表单onsubmit事件用法详解</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> onsubmit 属性只在&lt;form&gt; 表单中使用。</span><br><span class="line"></span><br><span class="line">onsubmit事件是当表单提交时进行相关js操作的一个事件。</span><br><span class="line"></span><br><span class="line">onsubmit 事件会在表单中的确认按钮被点击时发生。</span><br><span class="line">当该事件触发的函数中返回false时，表单就不会被提交。</span><br><span class="line"></span><br><span class="line">onsubmit经常用于表单验证。请看下面实例。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">function submitFun(obj)&#123;</span><br><span class="line">      if(obj.category.value==&apos;&apos;)&#123;</span><br><span class="line">          alert(&quot;请输入&quot;);</span><br><span class="line">          return false;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;form onsubmit=&quot;return submitFun(this);&quot;&gt;</span><br><span class="line">&lt;input type=&quot;text&quot; name=&quot;category&quot; /&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;提交&quot;/&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
-<p>当”提交”按钮被点击时，依然会执行submitFun()函数，在submitFun()函</p>
-<p>数中，我们对表单输入框进行了空验证，如果为空，提示输入并return false,</p>
-<p>这样表单就不会提交（上面已经说到：当该事件触发的函数中返回false时，</p>
-<p>表单就不会被提交）。 同时，这里要注意onsubmit=”return submitFun(this);”，</p>
-<p>不能掉了return，否则表单永远会提交。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/25/js基础-第二节/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/25/js基础-第二节/" itemprop="url">js基础-第二节</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-25T19:00:39+08:00">
-                2018-11-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>1.创建 JavaScript 对象<br>JavaScript 中的几乎所有事务都是对象：</p>
-<p>字符串、数字、数组、日期、函数，等等。</p>
-<p>你也可以创建自己的对象。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">本例创建名为 &quot;person&quot; 的对象，并为其添加了四个属性：</span><br><span class="line">person=new Object();</span><br><span class="line">person.firstname=&quot;Bill&quot;;</span><br><span class="line">person.lastname=&quot;Gates&quot;;</span><br><span class="line">person.age=56;</span><br><span class="line">person.eyecolor=&quot;blue&quot;;</span><br></pre></td></tr></table></figure>
-<p>2.访问对象属性的语法是：</p>
-<p>objectName.propertyName</p>
-<p>通过下面的语法调用方法：</p>
-<p>objectName.methodName()</p>
-<p>使用 String 对象的 toUpperCase() 方法来把文本转换为大写：<br>3.如果您把值赋给尚未声明的变量，该变量将被自动作为全局变量声明。<br>4.===    全等（值和类型）<br> 5.在 JavaScript 中，我们可使用以下条件语句：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if 语句 - 只有当指定条件为 true 时，使用该语句来执行代码</span><br><span class="line"></span><br><span class="line">if...else 语句 - 当条件为 true 时执行代码，当条件为 false 时执行其他代码</span><br><span class="line">if...else if....else 语句 - 使用该语句来选择多个代码块之一来执行</span><br><span class="line">switch 语句 - 使用该语句来选择多个代码块之一来执行</span><br></pre></td></tr></table></figure>
-<p>6.break 语句用于跳出循环。<br>         continue 用于跳过循环中的一个迭代。<br>7.<strong>JavaScript 标签</strong></p>
-<p>如需标记 JavaScript 语句，请在语句之前加上冒号：         例如   label:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">cars=[&quot;BMW&quot;,&quot;Volvo&quot;,&quot;Saab&quot;,&quot;Ford&quot;];</span><br><span class="line">list:</span><br><span class="line">&#123;</span><br><span class="line">document.write(cars[0] + &quot;&lt;br&gt;&quot;);</span><br><span class="line">document.write(cars[1] + &quot;&lt;br&gt;&quot;);</span><br><span class="line">document.write(cars[2] + &quot;&lt;br&gt;&quot;);</span><br><span class="line">break list;</span><br><span class="line">document.write(cars[3] + &quot;&lt;br&gt;&quot;);</span><br><span class="line">document.write(cars[4] + &quot;&lt;br&gt;&quot;);</span><br><span class="line">document.write(cars[5] + &quot;&lt;br&gt;&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>8.语句<br>break 和 continue 语句仅仅是能够跳出代码块的语句。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">语法</span><br><span class="line">break labelname;</span><br><span class="line">continue labelname;</span><br><span class="line"></span><br><span class="line">continue 语句（带有或不带标签引用）只能用在循环中。</span><br><span class="line">break 语句（不带标签引用），只能用在循环或 switch 中。</span><br><span class="line">通过标签引用，break 语句可用于跳出任何 JavaScript 代码块：</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/25/js基础-第一节/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/25/js基础-第一节/" itemprop="url">js基础--第一节</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-25T11:09:14+08:00">
-                2018-11-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"> 1.Javascript 能够直接写入 HTML 输出流中。    </span><br><span class="line"></span><br><span class="line">例如：&lt;script&gt;document.write(&quot;&lt;p&gt;This  a paragraph.&lt;/p&gt;&quot;);&lt;/script&gt;   </span><br><span class="line"></span><br><span class="line">提示：您只能在 HTML 输出中使用 document.write。如果您在文档加载后使用该方法，</span><br><span class="line">会覆盖整个文档。</span><br><span class="line">2.JavaScript：对事件作出反应       </span><br><span class="line"></span><br><span class="line"> &lt;button type=&quot;button&quot; onclick=&quot;alert(&apos;Welcome!&apos;)&quot;&gt;点击这里&lt;/button&gt;</span><br><span class="line">3.JavaScript：改变 HTML 内容         </span><br><span class="line"></span><br><span class="line">  x=document.getElementById(&quot;demo&quot;)  //查找元素  </span><br><span class="line">  x.innerHTML=&quot;Hello JavaScript&quot;;    //改变内容</span><br><span class="line">4.isNaN() 函数用于检查其参数是否是非数字值。      </span><br><span class="line"></span><br><span class="line"> 返回值：如果 x 是特殊的非数字值 NaN（或者能被转换为这样的值），返回的值就是 true。</span><br><span class="line"> 如果 x 是其他值,则返回 false。</span><br><span class="line">5.只能在 HTML 输出流中使用 document.write。 如果您在文档已加载后使用它（比如在函数中），</span><br><span class="line">会覆盖整个文档。</span><br><span class="line">6.请使用 document.write() 仅仅向文档输出写内容。如果在文档已完成加载后</span><br><span class="line">执行 document.write，整个 HTML 页面将被覆盖：</span><br><span class="line">7.对代码行进行折行</span><br><span class="line">您可以在文本字符串中使用反斜杠对代码行进行换行。下面的例子会正确地显示：</span><br><span class="line"></span><br><span class="line">document.write(&quot;Hello \</span><br><span class="line">World!&quot;);</span><br><span class="line">不过，您不能像这样折行：</span><br><span class="line"></span><br><span class="line">document.write \</span><br><span class="line"></span><br><span class="line">(&quot;Hello World!&quot;);</span><br><span class="line">8.JavaScript 变量     </span><br><span class="line">变量必须以字母开头  </span><br><span class="line">变量也能以 $ 和 _ 符号开头（不过我们不推荐这么做）  </span><br><span class="line">变量名称对大小写敏感（y 和 Y 是不同的变量）</span><br><span class="line">提示：JavaScript 语句和 JavaScript 变量都对大小写敏感。</span><br><span class="line">当您向变量分配文本值时，应该用双引号或单引号包围这个值。</span><br><span class="line"></span><br><span class="line">当您向变量赋的值是数值时，不要使用引号。</span><br><span class="line">如果您用引号包围数值，该值会被作为文本来处理。</span><br><span class="line">使用 var 关键词来声明变量：   var carname;</span><br><span class="line"></span><br><span class="line">9.创建名为 cars 的数组：   </span><br><span class="line"></span><br><span class="line"> var cars=new Array();  </span><br><span class="line"> 或者 (condensed array): var cars=new Array(&quot;Audi&quot;,&quot;BMW&quot;,&quot;Volvo&quot;);</span><br><span class="line"></span><br><span class="line">或者 (literal array):  var cars=[&quot;Audi&quot;,&quot;BMW&quot;,&quot;Volvo&quot;];</span><br><span class="line"></span><br><span class="line">10.声明新变量时，可以使用关键词 &quot;new&quot; 来声明其类型：     </span><br><span class="line">var carname=new String;    var x=      new Number;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/22/强于昨天的自己，便是进步/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/22/强于昨天的自己，便是进步/" itemprop="url">强于昨天的自己，便是进步</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-22T23:32:18+08:00">
-                2018-11-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>​        未来是什么？我曾无数次问自己，但从来没有得到过答案。提起未来，大多数人觉得遥不可及。那么，现实又是什么样？当前社会很现实，现实是不相信眼泪的，在这个物竞天择，适者生存的世界里，成功都是来自与强者。而我也是一个立志做强者的人。当然，在这路上会遇到很多困扰。我今天要说的就是我们总喜欢和别人做比较，比成绩，比技能，等等…</p>
-<p>​        我们的<a href="http://www.wenzhangba.com/renshengganwu/" target="_blank" rel="noopener">人生</a>为什么要活在与别人的不断比较里？这一生只有一次，为什么不能活给<a href="http://www.wenzhangba.com/huati/ziji/" target="_blank" rel="noopener">自己</a>？每<a href="http://www.wenzhangba.com/zhuanti/geren/" target="_blank" rel="noopener">个人</a>都有自己的路要走，有自己的<a href="http://www.wenzhangba.com/zhuanti/xuanze/" target="_blank" rel="noopener">选择</a>和<a href="http://www.wenzhangba.com/huati/jiazhi/" target="_blank" rel="noopener">价值</a><a href="http://www.wenzhangba.com/zhuanti/panduan/" target="_blank" rel="noopener">判断</a>，如果总是和别人做比较，以别人的人生为<a href="http://www.wenzhangba.com/zhuanti/moban/" target="_blank" rel="noopener">模板</a>，照着别人的生活方式过着每一天，那我们活着的<a href="http://www.wenzhangba.com/huati/yiyi/" target="_blank" rel="noopener">意义</a>在哪？每个人生来平等，也都有自己的优点和缺点。所以，我们不需要总是和被人作比较，做好自己，强于昨天的自己，便是一种进步。</p>
-<p>​        总与人比较，其实很多时候是认得虚荣心在作怪。人的<a href="http://www.wenzhangba.com/zhuanti/xurongxin/" target="_blank" rel="noopener">虚荣心</a>往往源于对自己的<a href="http://www.wenzhangba.com/huati/zixin/" target="_blank" rel="noopener">不自信</a>。但我们却常常忘了，每个人仅有一次的生命，不是为了跟别人比较才存在在这个<a href="http://www.wenzhangba.com/huati/shijie/" target="_blank" rel="noopener">世界</a>上的。在这个世界上，我们每一个人都是独一无二的存在，因此我们要活出<a href="http://www.wenzhangba.com/huati/duyiwuer/" target="_blank" rel="noopener">独一无二</a>的<a href="http://www.wenzhangba.com/zhuanti/geti/" target="_blank" rel="noopener">个体</a>，不管阳<a href="http://www.wenzhangba.com/zhuanti/guangming/" target="_blank" rel="noopener">光明</a>媚或<a href="http://www.wenzhangba.com/huati/fengchuiyuda/" target="_blank" rel="noopener">风吹雨打</a>，自己亦是世界上最美的<a href="http://www.wenzhangba.com/huati/fengjing/" target="_blank" rel="noopener">风景</a>。</p>
-<p>​        人生，就像是一座金矿，但“采掘”的结果，总是因为人们勤奋程度不同，得到的回报也不相同。我们要做的，就是要牢牢地抓住稍纵即逝的今天，今天能做的事一定要在今天做，不要把任何计划和希望寄托在未知的明天。今天才是最宝贵的，只有紧紧抓住今天，才能有充实的明天，才能有所作为，有所成就。每天都能充实的度过。强于昨天的自己，便是对自己一天的努力最大的奖励。</p>
-<p>​       人的一生，少不了拼搏的过程，只有拼搏，才能成就美好的人生。我们应该把有限的时间用在提升自己，而不是与别人做比较。做好自己，便是一种成功。</p>
-<p>​        最后，愿你活成自己想成为的模样；愿你在生病时，有人彻夜长伴；愿你在最无趣无力的日子里，仍对世界保持好奇；愿你没有悲伤，每天笑口常开；愿你在精疲力尽时，身边有人可以倚靠。愿你学会释怀，愿你走出半生，归来仍是少年。愿你不在常与人比较，强于昨天的自己，便是进步；</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/31/盒子模型/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/31/盒子模型/" itemprop="url">盒子模型</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-31T20:33:47+08:00">
-                2018-08-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>盒子模型由盒子壁（border）、内边距（padding）、盒子内容（width+hight）、外边距（margin）组成。</p>
-<h4 id="CSS-框模型概述"><a href="#CSS-框模型概述" class="headerlink" title="CSS 框模型概述"></a>CSS 框模型概述</h4><p><img src="http://www.w3school.com.cn/i/ct_boxmodel.gif" alt="CSS 框模型"></p>
-<p>元素框的最内部分是实际的内容，直接包围内容的是内边距。内边距呈现了元素的背景。内边距的边缘是边框。边框以外是外边距，外边距默认是透明的，因此不会遮挡其后的任何元素。</p>
-<p>提示：背景应用于由内容和内边距、边框组成的区域。</p>
-<p>提示：内边距、边框和外边距可以应用于一个元素的所有边，也可以应用于单独的边。</p>
-<p>提示：外边距可以是负值，而且在很多情况下都要使用负值的外边距。</p>
-<p>详细解释：<a href="http://www.w3school.com.cn/css/css_boxmodel.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/css/css_boxmodel.asp</a> </p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1564,7 +1608,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
