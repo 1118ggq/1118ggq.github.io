@@ -232,6 +232,405 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/js基础-第六节/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/03/js基础-第六节/" itemprop="url">js基础-第六节</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-03T22:08:47+08:00">
+                2018-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="1-确定浏览器窗口的尺寸："><a href="#1-确定浏览器窗口的尺寸：" class="headerlink" title="1.确定浏览器窗口的尺寸："></a>1.确定浏览器窗口的尺寸：</h4><p>（浏览器的视口，不包括工具栏和滚动条）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var w=window.innerWidth</span><br><span class="line">|| document.documentElement.clientWidth</span><br><span class="line">|| document.body.clientWidth;</span><br><span class="line"></span><br><span class="line">var h=window.innerHeight</span><br><span class="line">|| document.documentElement.clientHeight</span><br><span class="line">|| document.body.clientHeight;</span><br><span class="line">（包含所有的浏览器）</span><br></pre></td></tr></table></figure>
+<h4 id="其他-Window-方法："><a href="#其他-Window-方法：" class="headerlink" title="其他 Window 方法："></a>其他 Window 方法：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">window.open() - 打开新窗口</span><br><span class="line">window.close() - 关闭当前窗口</span><br><span class="line">window.moveTo() - 移动当前窗口</span><br><span class="line">window.resizeTo() - 调整当前窗口的尺寸</span><br></pre></td></tr></table></figure>
+<h4 id="2-Window-Screen"><a href="#2-Window-Screen" class="headerlink" title="2.Window Screen"></a>2.Window Screen</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">screen.availWidth - 可用的屏幕宽度</span><br><span class="line">screen.availHeight - 可用的屏幕高度</span><br></pre></td></tr></table></figure>
+<h4 id="3-Window-Location"><a href="#3-Window-Location" class="headerlink" title="3.Window Location"></a>3.Window Location</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">location.hostname 返回 web 主机的域名</span><br><span class="line">location.pathname 返回当前页面的路径和文件名</span><br><span class="line">location.port 返回 web 主机的端口 （80 或 443）</span><br><span class="line">location.protocol 返回所使用的 web 协议（http:// 或 https://）</span><br><span class="line">location.href 属性返回当前页面的 URL</span><br><span class="line">location.assign() 方法加载新的文档</span><br></pre></td></tr></table></figure>
+<h4 id="4-Window-History"><a href="#4-Window-History" class="headerlink" title="4.Window History"></a>4.Window History</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">window.history 对象包含浏览器的历史</span><br><span class="line">history.back() - 与在浏览器点击后退按钮相同</span><br><span class="line">history.forward() - 与在浏览器中点击按钮向前相同</span><br></pre></td></tr></table></figure>
+<h4 id="5-Window-Navigator"><a href="#5-Window-Navigator" class="headerlink" title="5.Window Navigator"></a>5.Window Navigator</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.navigator 对象包含有关访问者浏览器的信息。</span><br></pre></td></tr></table></figure>
+<h4 id="6-JavaScript-中创建三种消息框："><a href="#6-JavaScript-中创建三种消息框：" class="headerlink" title="6.JavaScript 中创建三种消息框："></a>6.JavaScript 中创建三种消息框：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">警告框：常用于确保用户可以得到某些信息。     </span><br><span class="line">语法：  alert(&quot;文本&quot;)</span><br><span class="line"></span><br><span class="line">确认框：用于使用户可以验证或者接受某些信息。  </span><br><span class="line">语法：  confirm(&quot;文本&quot;)</span><br><span class="line"></span><br><span class="line">提示框：经常用于提示用户在进入页面前输入某个值。 </span><br><span class="line">语法： prompt(&quot;文本&quot;,&quot;默认值&quot;)</span><br></pre></td></tr></table></figure>
+<h4 id="7-JavaScript-计时事件"><a href="#7-JavaScript-计时事件" class="headerlink" title="7.JavaScript 计时事件"></a>7.JavaScript 计时事件</h4><p>两个关键方法是:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">setTimeout()         未来的某时执行代码</span><br><span class="line">clearTimeout()        取消setTimeout()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">setTimeout()语法</span><br><span class="line"></span><br><span class="line">var t=setTimeout(&quot;javascript语句&quot;,毫秒)</span><br><span class="line">setTimeout() 方法会返回某个值。在上面的语句中，值被储存在名为 t 的变量中。假如你希望取消这个 setTimeout()，你可以使用这个变量名来指定它。</span><br><span class="line">setTimeout() 的第一个参数是含有 JavaScript 语句的字符串。这个语句可能诸如 &quot;alert(&apos;5 seconds!&apos;)&quot;，或者对函数的调用，诸如 alertMsg()&quot;。</span><br><span class="line">第二个参数指示从当前起多少毫秒后执行第一个参数。</span><br><span class="line">提示：1000 毫秒等于一秒。</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/js基础-第五节/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/03/js基础-第五节/" itemprop="url">js基础-第五节</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-03T16:50:01+08:00">
+                2018-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1.创建新的 &lt;p&gt; 元素：</span><br><span class="line"></span><br><span class="line">var para=document.createElement(&quot;p&quot;);</span><br><span class="line">向 &lt;p&gt; 元素添加文本，必须首先创建文本节点。</span><br><span class="line">这段代码创建了一个文本节点：</span><br><span class="line">var node=document.createTextNode(&quot;这是新段落。&quot;);</span><br><span class="line">然后您必须向 &lt;p&gt; 元素追加这个文本节点：</span><br><span class="line">para.appendChild(node);</span><br><span class="line">最后必须向一个已有的元素追加这个新元素。</span><br><span class="line">这段代码找到一个已有的元素：</span><br><span class="line">var element=document.getElementById(&quot;div1&quot;);</span><br><span class="line">这段代码向这个已有的元素追加新元素：</span><br><span class="line">element.appendChild(para);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2.访问对象属性的语法是： objectName.propertyName</span><br><span class="line">  通过以下语法来调用方法：objectName.methodName()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">3.如果前缀为 0，则 JavaScript 会把数值常量解释为八进制数，</span><br><span class="line">如果前缀为 0 和 &quot;x&quot;，则解释为十六进制数。</span><br><span class="line"></span><br><span class="line"> 数字属性和方法</span><br><span class="line">属性：</span><br><span class="line">MAX VALUE</span><br><span class="line">MIN VALUE</span><br><span class="line">NEGATIVE INFINITIVE</span><br><span class="line">POSITIVE INFINITIVE</span><br><span class="line">NaN</span><br><span class="line">prototype</span><br><span class="line">constructor</span><br><span class="line">方法：</span><br><span class="line">toExponential()</span><br><span class="line">toFixed()</span><br><span class="line">toPrecision()</span><br><span class="line">toString()</span><br><span class="line">valueOf()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">4.如何在网页上显示一个钟表。</span><br><span class="line"></span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">function startTime()</span><br><span class="line">&#123;</span><br><span class="line">var today=new Date()</span><br><span class="line">var h=today.getHours()</span><br><span class="line">var m=today.getMinutes()</span><br><span class="line">var s=today.getSeconds()</span><br><span class="line">m=checkTime(m)</span><br><span class="line">s=checkTime(s)</span><br><span class="line">document.getElementById(&apos;txt&apos;).innerHTML=h+&quot;:&quot;+m+&quot;:&quot;+s</span><br><span class="line">t=setTimeout(&apos;startTime()&apos;,500)</span><br><span class="line">&#125;</span><br><span class="line">function checkTime(i)</span><br><span class="line">&#123;</span><br><span class="line">if (i&lt;10) </span><br><span class="line">  &#123;i=&quot;0&quot; + i&#125;</span><br><span class="line">  return i</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body onload=&quot;startTime()&quot;&gt;</span><br><span class="line">&lt;div id=&quot;txt&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">5.下面的例子中，我们为日期对象设置了一个特定的日期 (2008 年 8 月 9 日)：</span><br><span class="line">var myDate=new Date()</span><br><span class="line">myDate.setFullYear(2008,7,9)</span><br><span class="line">注意：表示月份的参数介于 0 到 11 之间。也就是说，如果希望把月设置为 8 月，则参数应该是 7。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">6.算数值JavaScript 提供 8 种可被 Math 对象访问的算数值：</span><br><span class="line">常数</span><br><span class="line">圆周率    2 的平方根     1/2 的平方根     2 的自然对数</span><br><span class="line">10 的自然对数     以 2 为底的 e 的对数    以 10 为底的 e 的对数</span><br><span class="line">这是在 Javascript 中使用这些值的方法：（与上面的算数值一一对应）</span><br><span class="line">Math.E      Math.PI      Math.SQRT2     Math.SQRT1_2</span><br><span class="line">Math.LN2    Math.LN10    Math.LOG2E     Math.LOG10E</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">7.函数（方法）实例：</span><br><span class="line">下面的例子使用了 Math 对象的 round 方法对一个数进行四舍五入。</span><br><span class="line">document.write(Math.round(4.7))         上面的代码输出为：5</span><br><span class="line">下面的例子使用了 Math 对象的 random() 方法来返回一个介于 0 和 1 之间的随机数：</span><br><span class="line">document.write(Math.random())    上面的代码输出为： 0.9370844220218102</span><br><span class="line">下面的例子使用了 Math 对象的 floor() 方法和 random() 来返回一个介于 0 和 10 之间的随机数：</span><br><span class="line">document.write(Math.floor(Math.random()*11))     上面的代码输出为：3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">8.RegExp 是正则表达式的缩写。</span><br><span class="line">  RegExp 对象有 3 个方法：test()、exec() 以及 compile()。</span><br><span class="line">  test() 方法检索字符串中的指定值。返回值是 true 或 false。</span><br><span class="line">  exec() 方法检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null。</span><br><span class="line">  compile() 方法用于改变 RegExp。   compile() 既可以改变检索模式，也可以添加或删除第二个参数。</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/26/js基础-第四节/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/26/js基础-第四节/" itemprop="url">js基础-第四节</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-26T21:35:17+08:00">
+                2018-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1-通过标签名查找-HTML-元素"><a href="#1-通过标签名查找-HTML-元素" class="headerlink" title="1.通过标签名查找 HTML 元素"></a>1.通过标签名查找 HTML 元素</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">查找 id=&quot;main&quot; 的元素，然后查找 &quot;main&quot; 中的所有 &lt;p&gt; 元素：  </span><br><span class="line">（自己做测试反正没成功，不懂什么原因）</span><br><span class="line"></span><br><span class="line">var x=document.getElementById(&quot;main&quot;);</span><br><span class="line">var y=x.getElementsByTagName(&quot;p&quot;);</span><br></pre></td></tr></table></figure>
+<h3 id="2-document-write-用于直接向-HTML-输出流写内容"><a href="#2-document-write-用于直接向-HTML-输出流写内容" class="headerlink" title="2.document.write() 用于直接向 HTML 输出流写内容"></a>2.document.write() 用于直接向 HTML 输出流写内容</h3><p>  修改 HTML 内容的方法时使用 innerHTML 属性。   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例：document.getElementById(id).innerHTML=new HTML</span><br></pre></td></tr></table></figure>
+<p>改变 HTML 元素的属性： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(id).attribute=new value</span><br></pre></td></tr></table></figure>
+<p>  改变 HTML 元素的样式，请使用这个语法：   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(id).style.property=new style</span><br></pre></td></tr></table></figure>
+<p>3.用户点击某个元素时执行代码，请向一个 HTML 事件</p>
+<p>​    属性添加 JavaScript 代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onclick=JavaScript</span><br></pre></td></tr></table></figure>
+<h3 id="4-onload-和-onunload-事件"><a href="#4-onload-和-onunload-事件" class="headerlink" title="4.onload 和 onunload 事件"></a>4.onload 和 onunload 事件</h3><p>onload 和 onunload 事件会在用户进入或离开页面时被触发。</p>
+<p>onload 事件可用于检测访问者的浏览器类型和浏览器版本，</p>
+<p>并基于这些信息来加载网页的正确版本。</p>
+<p>onload 和 onunload 事件可用于处理 cookie。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body onload=&quot;checkCookies()&quot;&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="5-onchange-事件常结合对输入字段的验证来使用。"><a href="#5-onchange-事件常结合对输入字段的验证来使用。" class="headerlink" title="5.onchange 事件常结合对输入字段的验证来使用。"></a>5.onchange 事件常结合对输入字段的验证来使用。</h3><p>当用户改变输入字段的内容时，会调用 upperCase() 函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">function myFunction()</span><br><span class="line">&#123;</span><br><span class="line">var x=document.getElementById(&quot;fname&quot;);</span><br><span class="line">x.value=x.value.toUpperCase();</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">请输入英文字符：&lt;input type=&quot;text&quot; id=&quot;fname&quot; onchange=&quot;myFunction()&quot;&gt;</span><br><span class="line">&lt;p&gt;当您离开输入字段时，会触发将输入文本转换为大写的函数。&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="6-onmouseover-和-onmouseout-事件"><a href="#6-onmouseover-和-onmouseout-事件" class="headerlink" title="6.onmouseover 和 onmouseout 事件"></a>6.onmouseover 和 onmouseout 事件</h3><p>onmouseover 和 onmouseout 事件可用于在用户</p>
+<p>的鼠标移至 HTML 元素上方或移出元素时触发函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div onmouseover=&quot;mOver(this)&quot; onmouseout=&quot;mOut(this)&quot; style=&quot;background-color:green;width:120px;height:20px;padding:40px;color:#ffffff;&quot;&gt;把鼠标移到上面&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">function mOver(obj)</span><br><span class="line">&#123;</span><br><span class="line">obj.innerHTML=&quot;谢谢&quot;</span><br><span class="line">&#125;</span><br><span class="line">function mOut(obj)</span><br><span class="line">&#123;</span><br><span class="line">obj.innerHTML=&quot;把鼠标移到上面&quot;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="7-onmousedown、onmouseup-以及-onclick-事件"><a href="#7-onmousedown、onmouseup-以及-onclick-事件" class="headerlink" title="7.onmousedown、onmouseup 以及 onclick 事件"></a>7.onmousedown、onmouseup 以及 onclick 事件</h3><p>onmousedown, onmouseup 以及 onclick 构成了鼠标点击事件的所有部分。</p>
+<p>首先当点击鼠标按钮时，会触发 onmousedown 事件，当释放鼠标按钮时，</p>
+<p>会触发 onmouseup 事件，最后，当完成鼠标点击时，会触发 onclick 事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div onmousedown=&quot;mDown(this)&quot; onmouseup=&quot;mUp(this)&quot; style=&quot;background-color:green;color:#ffffff;width:90px;height:20px;padding:40px;</span><br><span class="line">font-size:12px;&quot;&gt;请点击这里&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">function mDown(obj)</span><br><span class="line">&#123;</span><br><span class="line">obj.style.backgroundColor=&quot;#1ec5e5&quot;;</span><br><span class="line">obj.innerHTML=&quot;请释放鼠标按钮&quot;</span><br><span class="line">&#125;</span><br><span class="line">function mUp(obj)</span><br><span class="line">&#123;</span><br><span class="line">obj.style.backgroundColor=&quot;green&quot;;</span><br><span class="line">obj.innerHTML=&quot;请按下鼠标按钮&quot;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/25/js基础-第三节/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1179,485 +1578,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/20/CSS-样式/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/20/CSS-样式/" itemprop="url">CSS--样式</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-20T14:17:56+08:00">
-                2018-08-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="CSS文本样式"><a href="#CSS文本样式" class="headerlink" title="CSS文本样式"></a>CSS文本样式</h3><p>以下内容均为填入<code>&lt;div&gt;&lt;style&gt; &lt;/div&gt;&lt;/style&gt;中的样式</code></p>
-<p><code>&lt;div style=“XXXX;”&gt;</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">设置下划线,删除线,顶划线         text-decoration: 样式</span><br><span class="line"></span><br><span class="line">属性值:     none 无      underline 下划线    line-through 删除线       overline 顶划线</span><br></pre></td></tr></table></figure>
-<p><strong>设置<em>文本大小写</em></strong></p>
-<p>text-transform</p>
-<p>属性值:  lowercase  全小写     capitalize  单词首字母大写       uppercasee  全大写</p>
-<p><strong>设置<em>小型大写字母</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">font-variant: 字母状态</span><br><span class="line"></span><br><span class="line">属性值:    normal 正常状态       small-caps 小型大写字母</span><br></pre></td></tr></table></figure>
-<p><strong><em>首行缩进</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">text-indent:缩进距离</span><br><span class="line"></span><br><span class="line">属性值: px,em,rem,百分比      文字默认字体大小16px     1em=16px=一个汉字的大小</span><br></pre></td></tr></table></figure>
-<p><strong>文本<em>水平对齐方式</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">text-align: 对齐方式</span><br><span class="line"></span><br><span class="line">属性值:  left 左对齐(默认)       center 居中对齐       right 右对齐</span><br></pre></td></tr></table></figure>
-<p><strong><em>设置行高</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">line-height: 行高</span><br><span class="line"></span><br><span class="line">属性值:  px,em,rem,百分比</span><br></pre></td></tr></table></figure>
-<p><strong><em>设置字距/词距</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">letter-spacing: 字母间距              word-spacing: 词距</span><br></pre></td></tr></table></figure>
-<h3 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h3><p><strong><em>设置字体类型</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">font-family: 字体</span><br></pre></td></tr></table></figure>
-<p><strong><em>设置字体粗细</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">font-weight:粗细                   font-weight:设置字体粗细</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">属性值:    可以用单词也可以用数值</span><br><span class="line"></span><br><span class="line">100   200     300</span><br><span class="line">lighter       normal 400       bold 700       bolder</span><br><span class="line">800             900</span><br></pre></td></tr></table></figure>
-<p><strong><em>设置字体样式</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">font-style:样式</span><br><span class="line"></span><br><span class="line">属性值:  normal 正常字体    italic 斜体     oblique 字体倾斜</span><br></pre></td></tr></table></figure>
-<p><strong><em>设置字体颜色</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">color: 颜色</span><br></pre></td></tr></table></figure>
-<h3 id="背景样式"><a href="#背景样式" class="headerlink" title="背景样式"></a>背景样式</h3><p><strong><em>设置背景颜色</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-color: 颜色</span><br></pre></td></tr></table></figure>
-<p><strong><em>设置背景图片</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image:url(路径)</span><br></pre></td></tr></table></figure>
-<p><strong><em>设置图片是否平铺</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">background-repeat:是否平铺</span><br><span class="line"></span><br><span class="line">属性值:  repeat 平铺(默认)    no-repeat 不平铺    </span><br><span class="line"></span><br><span class="line">repeat-x 只在水平方向平铺       repeat-y 只在垂直方向平铺</span><br></pre></td></tr></table></figure>
-<p><strong><em>设置背景图片的位置</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">background-position: 位置</span><br><span class="line"></span><br><span class="line">属性值: </span><br><span class="line"></span><br><span class="line">1.left,right,top ,bottom,center两两组合的九个位置</span><br><span class="line"></span><br><span class="line">2.  x% y%(百分比)</span><br><span class="line"></span><br><span class="line">3.xpx ypx(像素值)</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/20/css基础知识/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/20/css基础知识/" itemprop="url">css基础知识</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-20T11:12:37+08:00">
-                2018-08-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <table>
-<thead>
-<tr>
-<th style="text-align:center">选择器</th>
-<th style="text-align:center">例子</th>
-<th style="text-align:center">例子描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">.class</td>
-<td style="text-align:center">.intro</td>
-<td style="text-align:center">选择 class=”intro” 的所有元素。</td>
-</tr>
-<tr>
-<td style="text-align:center">#id</td>
-<td style="text-align:center">#firstname</td>
-<td style="text-align:center">选择 id=”firstname” 的所有元素。</td>
-</tr>
-<tr>
-<td style="text-align:center">*（通配符）</td>
-<td style="text-align:center"><code>*</code></td>
-<td style="text-align:center">选择所有元素</td>
-</tr>
-<tr>
-<td style="text-align:center">element(标签)</td>
-<td style="text-align:center">p</td>
-<td style="text-align:center">选择所有 <code>&lt;p&gt;</code> 标签元素。</td>
-</tr>
-<tr>
-<td style="text-align:center">attribute(属性)</td>
-<td style="text-align:center">[target]</td>
-<td style="text-align:center">选择带有 target 属性所有元素。</td>
-</tr>
-</tbody>
-</table>
-<p>选择器的优先级：</p>
-<p>Id&gt;class=属性&gt;标签&gt;通配符</p>
-<p><strong><em>更多css选择器的知识，点击</em></strong>   <a href="http://www.w3school.com.cn/cssref/css_selectors.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/cssref/css_selectors.asp</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/18/主流浏览器的简介/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/18/主流浏览器的简介/" itemprop="url">主流浏览器的简介</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-18T17:42:49+08:00">
-                2018-08-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>浏览器分为 <strong>shell（外壳）</strong>和  <strong>内核</strong>两个重要的部分。</p>
-<p>当今世界常见的主流浏览器</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">名称</td>
-<td>内核</td>
-</tr>
-<tr>
-<td style="text-align:center">IE</td>
-<td>trident</td>
-</tr>
-<tr>
-<td style="text-align:center">Firefox（火狐）</td>
-<td>Gecko</td>
-</tr>
-<tr>
-<td style="text-align:center">Google Chrome</td>
-<td>webkit  /blink</td>
-</tr>
-<tr>
-<td style="text-align:center">safari</td>
-<td>webkit</td>
-</tr>
-<tr>
-<td style="text-align:center">Opera</td>
-<td>Presto</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-<p>一个网页主要由三大部分组成</p>
-<p> HTML           CSS          JavaScript</p>
-<p>结构       +     行为    +    样式</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1708,7 +1628,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

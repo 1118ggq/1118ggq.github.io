@@ -232,6 +232,485 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/20/CSS-样式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/20/CSS-样式/" itemprop="url">CSS--样式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-20T14:17:56+08:00">
+                2018-08-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="CSS文本样式"><a href="#CSS文本样式" class="headerlink" title="CSS文本样式"></a>CSS文本样式</h3><p>以下内容均为填入<code>&lt;div&gt;&lt;style&gt; &lt;/div&gt;&lt;/style&gt;中的样式</code></p>
+<p><code>&lt;div style=“XXXX;”&gt;</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">设置下划线,删除线,顶划线         text-decoration: 样式</span><br><span class="line"></span><br><span class="line">属性值:     none 无      underline 下划线    line-through 删除线       overline 顶划线</span><br></pre></td></tr></table></figure>
+<p><strong>设置<em>文本大小写</em></strong></p>
+<p>text-transform</p>
+<p>属性值:  lowercase  全小写     capitalize  单词首字母大写       uppercasee  全大写</p>
+<p><strong>设置<em>小型大写字母</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">font-variant: 字母状态</span><br><span class="line"></span><br><span class="line">属性值:    normal 正常状态       small-caps 小型大写字母</span><br></pre></td></tr></table></figure>
+<p><strong><em>首行缩进</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">text-indent:缩进距离</span><br><span class="line"></span><br><span class="line">属性值: px,em,rem,百分比      文字默认字体大小16px     1em=16px=一个汉字的大小</span><br></pre></td></tr></table></figure>
+<p><strong>文本<em>水平对齐方式</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">text-align: 对齐方式</span><br><span class="line"></span><br><span class="line">属性值:  left 左对齐(默认)       center 居中对齐       right 右对齐</span><br></pre></td></tr></table></figure>
+<p><strong><em>设置行高</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">line-height: 行高</span><br><span class="line"></span><br><span class="line">属性值:  px,em,rem,百分比</span><br></pre></td></tr></table></figure>
+<p><strong><em>设置字距/词距</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">letter-spacing: 字母间距              word-spacing: 词距</span><br></pre></td></tr></table></figure>
+<h3 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h3><p><strong><em>设置字体类型</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">font-family: 字体</span><br></pre></td></tr></table></figure>
+<p><strong><em>设置字体粗细</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">font-weight:粗细                   font-weight:设置字体粗细</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">属性值:    可以用单词也可以用数值</span><br><span class="line"></span><br><span class="line">100   200     300</span><br><span class="line">lighter       normal 400       bold 700       bolder</span><br><span class="line">800             900</span><br></pre></td></tr></table></figure>
+<p><strong><em>设置字体样式</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">font-style:样式</span><br><span class="line"></span><br><span class="line">属性值:  normal 正常字体    italic 斜体     oblique 字体倾斜</span><br></pre></td></tr></table></figure>
+<p><strong><em>设置字体颜色</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">color: 颜色</span><br></pre></td></tr></table></figure>
+<h3 id="背景样式"><a href="#背景样式" class="headerlink" title="背景样式"></a>背景样式</h3><p><strong><em>设置背景颜色</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-color: 颜色</span><br></pre></td></tr></table></figure>
+<p><strong><em>设置背景图片</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image:url(路径)</span><br></pre></td></tr></table></figure>
+<p><strong><em>设置图片是否平铺</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">background-repeat:是否平铺</span><br><span class="line"></span><br><span class="line">属性值:  repeat 平铺(默认)    no-repeat 不平铺    </span><br><span class="line"></span><br><span class="line">repeat-x 只在水平方向平铺       repeat-y 只在垂直方向平铺</span><br></pre></td></tr></table></figure>
+<p><strong><em>设置背景图片的位置</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">background-position: 位置</span><br><span class="line"></span><br><span class="line">属性值: </span><br><span class="line"></span><br><span class="line">1.left,right,top ,bottom,center两两组合的九个位置</span><br><span class="line"></span><br><span class="line">2.  x% y%(百分比)</span><br><span class="line"></span><br><span class="line">3.xpx ypx(像素值)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/20/css基础知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/20/css基础知识/" itemprop="url">css基础知识</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-20T11:12:37+08:00">
+                2018-08-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <table>
+<thead>
+<tr>
+<th style="text-align:center">选择器</th>
+<th style="text-align:center">例子</th>
+<th style="text-align:center">例子描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.class</td>
+<td style="text-align:center">.intro</td>
+<td style="text-align:center">选择 class=”intro” 的所有元素。</td>
+</tr>
+<tr>
+<td style="text-align:center">#id</td>
+<td style="text-align:center">#firstname</td>
+<td style="text-align:center">选择 id=”firstname” 的所有元素。</td>
+</tr>
+<tr>
+<td style="text-align:center">*（通配符）</td>
+<td style="text-align:center"><code>*</code></td>
+<td style="text-align:center">选择所有元素</td>
+</tr>
+<tr>
+<td style="text-align:center">element(标签)</td>
+<td style="text-align:center">p</td>
+<td style="text-align:center">选择所有 <code>&lt;p&gt;</code> 标签元素。</td>
+</tr>
+<tr>
+<td style="text-align:center">attribute(属性)</td>
+<td style="text-align:center">[target]</td>
+<td style="text-align:center">选择带有 target 属性所有元素。</td>
+</tr>
+</tbody>
+</table>
+<p>选择器的优先级：</p>
+<p>Id&gt;class=属性&gt;标签&gt;通配符</p>
+<p><strong><em>更多css选择器的知识，点击</em></strong>   <a href="http://www.w3school.com.cn/cssref/css_selectors.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/cssref/css_selectors.asp</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/18/主流浏览器的简介/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/18/主流浏览器的简介/" itemprop="url">主流浏览器的简介</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-18T17:42:49+08:00">
+                2018-08-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>浏览器分为 <strong>shell（外壳）</strong>和  <strong>内核</strong>两个重要的部分。</p>
+<p>当今世界常见的主流浏览器</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">名称</td>
+<td>内核</td>
+</tr>
+<tr>
+<td style="text-align:center">IE</td>
+<td>trident</td>
+</tr>
+<tr>
+<td style="text-align:center">Firefox（火狐）</td>
+<td>Gecko</td>
+</tr>
+<tr>
+<td style="text-align:center">Google Chrome</td>
+<td>webkit  /blink</td>
+</tr>
+<tr>
+<td style="text-align:center">safari</td>
+<td>webkit</td>
+</tr>
+<tr>
+<td style="text-align:center">Opera</td>
+<td>Presto</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p>一个网页主要由三大部分组成</p>
+<p> HTML           CSS          JavaScript</p>
+<p>结构       +     行为    +    样式</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/18/表单和选择标签/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1226,7 +1705,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
