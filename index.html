@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/06/jQuery总结-3/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/22/数据库基础4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="郭高勤">
@@ -251,7 +251,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/06/jQuery总结-3/" itemprop="url">jQuery总结-3</a></h1>
+                <a class="post-title-link" href="/2019/06/22/数据库基础4/" itemprop="url">数据库基础4</a></h1>
         
 
         <div class="post-meta">
@@ -263,8 +263,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-06T23:54:06+08:00">
-                2018-12-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-22T14:36:19+08:00">
+                2019-06-22
               </time>
             
 
@@ -303,146 +303,15 @@
       
         
           
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/06/jQuery总结-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/06/jQuery总结-2/" itemprop="url">jQuery总结-2</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-06T23:53:43+08:00">
-                2018-12-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="1-jQuery-效果-动画"><a href="#1-jQuery-效果-动画" class="headerlink" title="1.jQuery 效果 - 动画"></a>1.jQuery 效果 - 动画</h3><h6 id="animate-方法用于创建自定义动画。"><a href="#animate-方法用于创建自定义动画。" class="headerlink" title="animate() 方法用于创建自定义动画。"></a>animate() 方法用于创建自定义动画。</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：   $(selector).animate(&#123;params&#125;,speed,callback);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">实例    $(&quot;button&quot;).click(function()&#123;</span><br><span class="line">       $(&quot;div&quot;).animate(&#123;left:&apos;250px&apos;&#125;);</span><br><span class="line">       &#125;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">使用相对值</span><br><span class="line">也可以定义相对值（该值相对于元素的当前值）。需要在值的前面加上 += 或 -=</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">使用预定义的值</span><br><span class="line">您甚至可以把属性的动画值设置为 &quot;show&quot;、&quot;hide&quot; 或 &quot;toggle&quot;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">使用队列功能</span><br><span class="line">默认地，jQuery 提供针对动画的队列功能</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">下面的例子把 &lt;div&gt; 元素移动到右边，然后增加文本的字号：</span><br><span class="line"></span><br><span class="line">$(&quot;button&quot;).click(function()&#123;</span><br><span class="line">  var div=$(&quot;div&quot;);</span><br><span class="line">  div.animate(&#123;left:&apos;100px&apos;&#125;,&quot;slow&quot;);</span><br><span class="line">  div.animate(&#123;fontSize:&apos;3em&apos;&#125;,&quot;slow&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>对位置进行操作，要记得首先把元素的 CSS position 属性设置为 relative、fixed 或 absolute！<br>使用 animate() 时，必须使用 Camel 标记法书写所有的属性名，</p>
-<p>如：必须使用 paddingLeft 而不是 padding-left，使用 marginRight 而不是 margin-right，…</p>
-<h3 id="2-jQuery-停止动画"><a href="#2-jQuery-停止动画" class="headerlink" title="2.jQuery 停止动画"></a>2.jQuery 停止动画</h3><p>  stop() 方法用于停止动画或效果，在它们完成之前。</p>
-<p>stop() 方法适用于所有 jQuery 效果函数，包括滑动、淡入淡出和自定义动画。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">语法</span><br><span class="line">$(selector).stop(stopAll,goToEnd);</span><br></pre></td></tr></table></figure>
-<p>可选的 stopAll 参数规定是否应该清除动画队列。默认是 false，</p>
-<p>即仅停止活动的动画，允许任何排入队列的动画向后执行。</p>
-<p>可选的 goToEnd 参数规定是否立即完成当前动画。默认是 false。</p>
-<p>因此，默认地，stop() 会清除在被选元素上指定的当前动画。</p>
-<h3 id="3-jQuery-Callback-函数"><a href="#3-jQuery-Callback-函数" class="headerlink" title="3.jQuery Callback 函数"></a>3.jQuery Callback 函数</h3><p>  当动画 100% 完成后，即调用 Callback 函数。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：   $(selector).hide(speed,callback)</span><br></pre></td></tr></table></figure>
-<p>callback 参数是一个在 hide 操作完成后被执行的函数。</p>
-<h3 id="4-jQuery-Chaining"><a href="#4-jQuery-Chaining" class="headerlink" title="4.jQuery - Chaining"></a>4.jQuery - Chaining</h3><p>  Chaining 允许我们在一条语句中允许多个 jQuery 方法（在相同的元素上）。<br>  下面的例子把 css(), slideUp(), and slideDown() 链接在一起。</p>
-<p>“p1” 元素首先会变为红色，然后向上滑动，然后向下滑动：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#p1&quot;).css(&quot;color&quot;,&quot;red&quot;).slideUp(2000).slideDown(2000);</span><br></pre></td></tr></table></figure>
+            <p>一、</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.ifnull（判断值，默认值）函数    如果判断值为空，则用默认值替换</span><br><span class="line">  2.case  with函数</span><br><span class="line">   可以替换 if  else</span><br></pre></td></tr></table></figure>
+<p>二、统计函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.count()  统计个数</span><br><span class="line">2.sum()    求出总和</span><br><span class="line">3.max()     求最大值</span><br><span class="line">4.min()     求最小值</span><br><span class="line">5.avg()     求平均值</span><br></pre></td></tr></table></figure>
+<p>三、mysql的统计查询</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.单字段分组统计</span><br><span class="line">2.多字段分组统计</span><br><span class="line">3.having   分组以后进行筛选，只能通过having语句来实现</span><br></pre></td></tr></table></figure>
+<p>四、子查询<br>      指完整的查询语句中，嵌套若干个不同功能的小查询，从             而完成复杂查询。</p>
+<p>五、视图、索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">​    1.创建视图</span><br><span class="line">    语法：  create  view  视图名称  as  子查询;</span><br></pre></td></tr></table></figure>
 
           
         
@@ -491,7 +360,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/06/jQuery总结-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/22/数据库基础3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="郭高勤">
@@ -510,7 +379,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/06/jQuery总结-1/" itemprop="url">jQuery总结-1</a></h1>
+                <a class="post-title-link" href="/2019/06/22/数据库基础3/" itemprop="url">数据库基础3</a></h1>
         
 
         <div class="post-meta">
@@ -522,8 +391,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-06T23:53:34+08:00">
-                2018-12-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-22T14:36:07+08:00">
+                2019-06-22
               </time>
             
 
@@ -562,177 +431,13 @@
       
         
           
-            <h3 id="1-jQuery-库"><a href="#1-jQuery-库" class="headerlink" title="1.jQuery 库"></a>1.jQuery 库</h3><p>jQuery 库位于一个 JavaScript 文件中，其中包含了所有的 jQuery 函数。</p>
-<h5 id="可以通过下面的标记把-jQuery-添加到网页中："><a href="#可以通过下面的标记把-jQuery-添加到网页中：" class="headerlink" title="可以通过下面的标记把 jQuery 添加到网页中："></a>可以通过下面的标记把 jQuery 添加到网页中：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="2-jQuery-语法"><a href="#2-jQuery-语法" class="headerlink" title="2.jQuery 语法"></a>2.jQuery 语法</h3><p>jQuery 语法是为 HTML 元素的选取编制的，可以对元素执行某些操作。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">基础语法是：$(selector).action()</span><br></pre></td></tr></table></figure>
-<p>美元符号定义 jQuery<br>选择符（selector）“查询”和“查找” HTML 元素<br>jQuery 的 action() 执行对元素的操作</p>
-<h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(this).hide() - 隐藏当前元素</span><br><span class="line">$(&quot;p&quot;).hide() - 隐藏所有&lt;p&gt; 段落</span><br><span class="line">$(&quot;.test&quot;).hide() - 隐藏所有 class=&quot;test&quot; 的所有元素</span><br><span class="line">$(&quot;#test&quot;).hide() - 隐藏所有 id=&quot;test&quot; 的元素</span><br></pre></td></tr></table></figure>
-<h5 id="提示：jQuery-使用的语法是-XPath-与-CSS-选择器语法的组合。"><a href="#提示：jQuery-使用的语法是-XPath-与-CSS-选择器语法的组合。" class="headerlink" title="提示：jQuery 使用的语法是 XPath 与 CSS 选择器语法的组合。"></a>提示：jQuery 使用的语法是 XPath 与 CSS 选择器语法的组合。</h5><h3 id="3-文档就绪函数"><a href="#3-文档就绪函数" class="headerlink" title="3.文档就绪函数"></a>3.文档就绪函数</h3><p>所有 jQuery 函数位于一个 document ready 函数中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(function()&#123;</span><br></pre></td></tr></table></figure>
-<p>这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码。</p>
-<h3 id="4-jQuery-选择器"><a href="#4-jQuery-选择器" class="headerlink" title="4.jQuery 选择器"></a>4.jQuery 选择器</h3><h4 id="jQuery-元素选择器"><a href="#jQuery-元素选择器" class="headerlink" title="jQuery 元素选择器"></a>jQuery 元素选择器</h4><p>jQuery 使用 CSS 选择器来选取 HTML 元素。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;p&quot;) 选取 &lt;p&gt; 元素</span><br><span class="line">$(&quot;p.intro&quot;) 选取所有 class=&quot;intro&quot; 的 &lt;p&gt; 元素。</span><br><span class="line">$(&quot;p#demo&quot;) 选取所有 id=&quot;demo&quot; 的 &lt;p&gt; 元素。</span><br></pre></td></tr></table></figure>
-<h3 id="jQuery-属性选择器"><a href="#jQuery-属性选择器" class="headerlink" title="jQuery 属性选择器"></a>jQuery 属性选择器</h3><p>jQuery 使用 XPath 表达式来选择带有给定属性的元素。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;[href]&quot;) 选取所有带有 href 属性的元素。</span><br><span class="line">$(&quot;[href=&apos;#&apos;]&quot;) 选取所有带有 href 值等于 &quot;#&quot; 的元素。</span><br><span class="line">$(&quot;[href!=&apos;#&apos;]&quot;) 选取所有带有 href 值不等于 &quot;#&quot; 的元素。</span><br><span class="line">(&quot;[href=&apos;.jpg&apos;]&quot;) 选取所有 href 值以 &quot;.jpg&quot; 结尾的元素。</span><br></pre></td></tr></table></figure>
-<h4 id="jQuery-CSS-选择器"><a href="#jQuery-CSS-选择器" class="headerlink" title="jQuery CSS 选择器"></a>jQuery CSS 选择器</h4><p>jQuery CSS 选择器可用于改变 HTML 元素的 CSS 属性。</p>
-<p>下面的例子把所有 p 元素的背景颜色更改为红色：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">$(&quot;p&quot;).css(&quot;background-color&quot;,&quot;red&quot;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">语法	描述</span><br><span class="line">$(this)	当前 HTML 元素</span><br><span class="line">$(&quot;p&quot;)	所有 &lt;p&gt; 元素</span><br><span class="line">$(&quot;p.intro&quot;)	所有 class=&quot;intro&quot; 的 &lt;p&gt; 元素</span><br><span class="line">$(&quot;.intro&quot;)	所有 class=&quot;intro&quot; 的元素</span><br><span class="line">$(&quot;#intro&quot;)	id=&quot;intro&quot; 的元素</span><br><span class="line">$(&quot;ul li:first&quot;)	每个 &lt;ul&gt; 的第一个 &lt;li&gt; 元素</span><br><span class="line">$(&quot;[href$=&apos;.jpg&apos;]&quot;)	所有带有以 &quot;.jpg&quot; 结尾的属性值的 href 属性</span><br><span class="line">$(&quot;div#intro .head&quot;)	id=&quot;intro&quot; 的 &lt;div&gt; 元素中的所有 class=&quot;head&quot; 的元素</span><br></pre></td></tr></table></figure>
-<h3 id="5-jQuery-事件"><a href="#5-jQuery-事件" class="headerlink" title="5.jQuery 事件"></a>5.jQuery 事件</h3><h4 id="jQuery引用"><a href="#jQuery引用" class="headerlink" title="jQuery引用"></a>jQuery引用</h4><p>  把它们放到一个单独的文件中会更好，就像这样（通过 src 属性来引用文件）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;my_jquery_functions.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="jQuery-名称冲突"><a href="#jQuery-名称冲突" class="headerlink" title="jQuery 名称冲突"></a>jQuery 名称冲突</h4><p>  jQuery 使用名为 noConflict() 的方法来解决该问题。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var jq=jQuery.noConflict()，帮助您使用自己的名称（比如 jq）来代替 $ 符号。</span><br></pre></td></tr></table></figure>
-<h4 id="jQuery-事件"><a href="#jQuery-事件" class="headerlink" title="jQuery 事件"></a>jQuery 事件</h4><p>下面是 jQuery 中事件方法的一些例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Event 函数	绑定函数至</span><br><span class="line">$(document).ready(function)	将函数绑定到文档的就绪事件（当文档完成加载时）</span><br><span class="line">$(selector).click(function)	触发或将函数绑定到被选元素的点击事件</span><br><span class="line">$(selector).dblclick(function)	触发或将函数绑定到被选元素的双击事件</span><br><span class="line">$(selector).focus(function)	触发或将函数绑定到被选元素的获得焦点事件</span><br><span class="line">$(selector).mouseover(function)	触发或将函数绑定到被选元素的鼠标悬停事件</span><br></pre></td></tr></table></figure>
-<h3 id="6-jQuery-效果-隐藏和显示"><a href="#6-jQuery-效果-隐藏和显示" class="headerlink" title="6.jQuery 效果 - 隐藏和显示"></a>6.jQuery 效果 - 隐藏和显示</h3><h6 id="hide-和-show-方法来隐藏和显示-HTML-元素"><a href="#hide-和-show-方法来隐藏和显示-HTML-元素" class="headerlink" title="hide() 和 show() 方法来隐藏和显示 HTML 元素"></a>hide() 和 show() 方法来隐藏和显示 HTML 元素</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">语法：$(selector).hide(speed,callback);</span><br><span class="line">      $(selector).show(speed,callback);</span><br></pre></td></tr></table></figure>
-<p>可选的 speed 参数规定隐藏/显示的速度，可以取以下值：”slow”、”fast” 或毫秒。<br>可选的 callback 参数是隐藏或显示完成后所执行的函数名称。</p>
-<h6 id="toggle-方法来切换-hide-和-show-方法"><a href="#toggle-方法来切换-hide-和-show-方法" class="headerlink" title="toggle() 方法来切换 hide() 和 show() 方法"></a>toggle() 方法来切换 hide() 和 show() 方法</h6><p>显示被隐藏的元素，并隐藏已显示的元素：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">$(&quot;button&quot;).click(function()&#123;</span><br><span class="line">  $(&quot;p&quot;).toggle();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">$(selector).toggle(speed,callback);</span><br></pre></td></tr></table></figure>
-<p>可选的 speed 参数规定隐藏/显示的速度，可以取以下值：”slow”、”fast” 或毫秒。</p>
-<p>可选的 callback 参数是 toggle() 方法完成后所执行的函数名称。</p>
-<h3 id="7-jQuery-Fading-方法"><a href="#7-jQuery-Fading-方法" class="headerlink" title="7.jQuery Fading 方法"></a>7.jQuery Fading 方法</h3><p>通过 jQuery，您可以实现元素的淡入淡出效果。</p>
-<p>jQuery 拥有下面四种 fade 方法：</p>
-<h6 id="fadeIn-用于淡入已隐藏的元素。"><a href="#fadeIn-用于淡入已隐藏的元素。" class="headerlink" title="fadeIn() 用于淡入已隐藏的元素。"></a>fadeIn() 用于淡入已隐藏的元素。</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：   $(selector).fadeIn(speed,callback);</span><br></pre></td></tr></table></figure>
-<h6 id="fadeOut-方法用于淡出可见元素。"><a href="#fadeOut-方法用于淡出可见元素。" class="headerlink" title="fadeOut() 方法用于淡出可见元素。"></a>fadeOut() 方法用于淡出可见元素。</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：$(selector).fadeOut(speed,callback);</span><br></pre></td></tr></table></figure>
-<h5 id="fadeToggle-方法可以在-fadeIn-与-fadeOut-方法之间进行切换。"><a href="#fadeToggle-方法可以在-fadeIn-与-fadeOut-方法之间进行切换。" class="headerlink" title="fadeToggle() 方法可以在 fadeIn() 与 fadeOut() 方法之间进行切换。"></a>fadeToggle() 方法可以在 fadeIn() 与 fadeOut() 方法之间进行切换。</h5><p>如果元素已淡出，则 fadeToggle() 会向元素添加淡入效果。</p>
-<p>如果元素已淡入，则 fadeToggle() 会向元素添加淡出效果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：   $(selector).fadeToggle(speed,callback);</span><br></pre></td></tr></table></figure>
-<h6 id="fadeTo-方法允许渐变为给定的不透明度（值介于-0-与-1-之间）"><a href="#fadeTo-方法允许渐变为给定的不透明度（值介于-0-与-1-之间）" class="headerlink" title="fadeTo() 方法允许渐变为给定的不透明度（值介于 0 与 1 之间）"></a>fadeTo() 方法允许渐变为给定的不透明度（值介于 0 与 1 之间）</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：$(selector).fadeTo(speed,opacity,callback);</span><br></pre></td></tr></table></figure>
-<p>  opacity 参数将淡入淡出效果设置为给定的不透明度（值介于 0 与 1 之间）。</p>
-<h3 id="8-jQuery-效果-滑动"><a href="#8-jQuery-效果-滑动" class="headerlink" title="8.jQuery 效果 - 滑动"></a>8.jQuery 效果 - 滑动</h3><h6 id="slideDown-方法用于向下滑动元素。"><a href="#slideDown-方法用于向下滑动元素。" class="headerlink" title="slideDown() 方法用于向下滑动元素。"></a>slideDown() 方法用于向下滑动元素。</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：  $(selector).slideDown(speed,callback);</span><br></pre></td></tr></table></figure>
-<h6 id="slideUp-方法用于向上滑动元素。"><a href="#slideUp-方法用于向上滑动元素。" class="headerlink" title="slideUp() 方法用于向上滑动元素。"></a>slideUp() 方法用于向上滑动元素。</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法：   $(selector).slideUp(speed,callback);</span><br></pre></td></tr></table></figure>
-<h5 id="slideToggle-方法可以在-slideDown-与-slideUp-方法之间进行切换。"><a href="#slideToggle-方法可以在-slideDown-与-slideUp-方法之间进行切换。" class="headerlink" title="slideToggle() 方法可以在 slideDown() 与 slideUp() 方法之间进行切换。"></a>slideToggle() 方法可以在 slideDown() 与 slideUp() 方法之间进行切换。</h5>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/CSS3总结-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="郭高勤">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/05/CSS3总结-2/" itemprop="url">CSS3总结-2</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-05T20:47:48+08:00">
-                2018-12-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="1-CSS3-过渡"><a href="#1-CSS3-过渡" class="headerlink" title="1.CSS3 过渡"></a>1.CSS3 过渡</h3><p>  CSS3 过渡是元素从一种样式逐渐改变为另一种的效果。</p>
-<p>要实现这一点，必须规定两项内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">规定您希望把效果添加到哪个 CSS 属性上</span><br><span class="line">规定效果的时长</span><br></pre></td></tr></table></figure>
-<h5 id="过渡属性"><a href="#过渡属性" class="headerlink" title="过渡属性"></a>过渡属性</h5><p>下面的表格列出了所有的转换属性：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">   属性	                          描述	                          </span><br><span class="line">transiti           简写属性，用于在一个属性中设置四个过渡属性。</span><br><span class="line">transition-property	    规定应用过渡的 CSS 属性的名称。</span><br><span class="line">transition-duration	    定义过渡效果花费的时间。默认是 0。	</span><br><span class="line">transition-timing-function	   规定过渡效果的时间曲线。默认是 &quot;ease&quot;。</span><br><span class="line">transition-delay	   规定过渡效果何时开始。默认是 0。</span><br></pre></td></tr></table></figure>
-<h3 id="2-CSS3-动画"><a href="#2-CSS3-动画" class="headerlink" title="2.CSS3 动画"></a>2.CSS3 动画</h3><p> 改变背景色和位置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">  &lt;!DOCTYPE html&gt;</span><br><span class="line">  &lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;style&gt; </span><br><span class="line">div</span><br><span class="line">&#123;</span><br><span class="line">width:100px;</span><br><span class="line">height:100px;</span><br><span class="line">background:red;</span><br><span class="line">position:relative;</span><br><span class="line">animation:myfirst 5s;</span><br><span class="line">-moz-animation:myfirst 5s; /* Firefox */</span><br><span class="line">-webkit-animation:myfirst 5s; /* Safari and Chrome */</span><br><span class="line">-o-animation:myfirst 5s; /* Opera */</span><br><span class="line">&#125;</span><br><span class="line">@keyframes myfirst</span><br><span class="line">&#123;</span><br><span class="line">0%   &#123;background:red; left:0px; top:0px;&#125;</span><br><span class="line">25%  &#123;background:yellow; left:200px; top:0px;&#125;</span><br><span class="line">50%  &#123;background:blue; left:200px; top:200px;&#125;</span><br><span class="line">75%  &#123;background:green; left:0px; top:200px;&#125;</span><br><span class="line">100% &#123;background:red; left:0px; top:0px;&#125;</span><br><span class="line">&#125;</span><br><span class="line">@-moz-keyframes myfirst /* Firefox */</span><br><span class="line">&#123;</span><br><span class="line">0%   &#123;background:red; left:0px; top:0px;&#125;</span><br><span class="line">25%  &#123;background:yellow; left:200px; top:0px;&#125;</span><br><span class="line">50%  &#123;background:blue; left:200px; top:200px;&#125;</span><br><span class="line">75%  &#123;background:green; left:0px; top:200px;&#125;</span><br><span class="line">100% &#123;background:red; left:0px; top:0px;&#125;</span><br><span class="line">&#125;</span><br><span class="line">@-webkit-keyframes myfirst /* Safari and Chrome */</span><br><span class="line">&#123;</span><br><span class="line">0%   &#123;background:red; left:0px; top:0px;&#125;</span><br><span class="line">25%  &#123;background:yellow; left:200px; top:0px;&#125;</span><br><span class="line">50%  &#123;background:blue; left:200px; top:200px;&#125;</span><br><span class="line">75%  &#123;background:green; left:0px; top:200px;&#125;</span><br><span class="line">100% &#123;background:red; left:0px; top:0px;&#125;</span><br><span class="line">&#125;</span><br><span class="line">@-o-keyframes myfirst /* Opera */</span><br><span class="line">&#123;</span><br><span class="line">0%   &#123;background:red; left:0px; top:0px;&#125;</span><br><span class="line">25%  &#123;background:yellow; left:200px; top:0px;&#125;</span><br><span class="line">50%  &#123;background:blue; left:200px; top:200px;&#125;</span><br><span class="line">75%  &#123;background:green; left:0px; top:200px;&#125;</span><br><span class="line">100% &#123;background:red; left:0px; top:0px;&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p&gt;&lt;b&gt;注释：&lt;/b&gt;本例在 Internet Explorer 中无效。&lt;/p&gt;</span><br><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<h5 id="CSS3-动画属性"><a href="#CSS3-动画属性" class="headerlink" title="CSS3 动画属性"></a>CSS3 动画属性</h5><p>下面的表格列出了 @keyframes 规则和所有动画属性：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">    属性	                    描述	</span><br><span class="line">@keyframes	               规定动画。	</span><br><span class="line">animation           	所有动画属性的简写属性，除了 animation-play-state 属性。	</span><br><span class="line">animation-name	        规定 @keyframes 动画的名称。	</span><br><span class="line">animation-duration	    规定动画完成一个周期所花费的秒或毫秒。默认是 0。	</span><br><span class="line">animation-timing-function	规定动画的速度曲线。默认是 &quot;ease&quot;。	</span><br><span class="line">animation-delay	          规定动画何时开始。默认是 0。	</span><br><span class="line">animation-iteration-count    	规定动画被播放的次数。默认是 1。	</span><br><span class="line">animation-direction	        规定动画是否在下一周期逆向地播放。默认是 &quot;normal&quot;。	</span><br><span class="line">animation-play-state	    规定动画是否正在运行或暂停。默认是 &quot;running&quot;。	</span><br><span class="line">animation-fill-mode	       规定对象动画时间之外的状态。</span><br></pre></td></tr></table></figure>
-<h3 id="3-CSS3-多列"><a href="#3-CSS3-多列" class="headerlink" title="3.CSS3 多列"></a>3.CSS3 多列</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">column-count 属性规定元素应该被分隔的列数</span><br><span class="line">  column-gap 属性规定列之间的间隔：</span><br><span class="line">   column-rule 属性设置列之间的宽度、样式和颜色规则</span><br></pre></td></tr></table></figure>
-<h3 id="4-CSS3-用户界面"><a href="#4-CSS3-用户界面" class="headerlink" title="4.CSS3 用户界面"></a>4.CSS3 用户界面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">resize 属性规定是否可由用户调整元素尺寸。</span><br><span class="line">box-sizing 属性允许您以确切的方式定义适应某个区域的具体内容</span><br><span class="line">outline-offset 属性对轮廓进行偏移，并在超出边框边缘的位置绘制轮廓</span><br></pre></td></tr></table></figure>
+            <p>一.多表查询</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.关联字段</span><br></pre></td></tr></table></figure>
+<p>二、连接查询</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  1.自连接</span><br><span class="line">    自链接就是两张关联表都是同一张表，通过自身关联来查询。</span><br><span class="line"></span><br><span class="line">   2.左链接</span><br><span class="line">     左链接以左边的表为主，左表的数据全部展示，右表的数据关联到了就展示</span><br><span class="line">右表数据，如果没有关联到就展示null</span><br><span class="line"></span><br><span class="line">   3.右链接</span><br><span class="line">      右链接以右边的表为主，右表的数据全部展示，左表的数据关联到了就展示</span><br><span class="line">左表数据，如果没有关联到就展示null</span><br><span class="line">   4.结果集的合并</span><br><span class="line">    将两个查询结果集合并可以通过UNION或UNION  ALL来操作。</span><br><span class="line">   union：返回查询结果的全部内容，重复数据不显示。</span><br><span class="line">   union all：返回查询结果的全部内容，重复数据也会显示。</span><br></pre></td></tr></table></figure>
+<p>三、常用函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1.upper    将字符串转为大写</span><br><span class="line">2.lower    将字符串转为小写</span><br><span class="line">3.length   字符串的长度</span><br><span class="line">4.substr   截取字符串,从1开始</span><br><span class="line">5.replace   字符串替换</span><br><span class="line">6.instr     查找字符串中某个字符的索引</span><br><span class="line">7.trim      去掉左右空格</span><br><span class="line">8.round    对数字四舍五入</span><br><span class="line">9.mod        取模</span><br><span class="line">10.now（）      获取当前时间</span><br><span class="line">11.adddate（日期，天数）    制定的日期加上指定的天数，求出新的日期 </span><br><span class="line">12.last_day(日期)    求出指定日期的最后一天</span><br></pre></td></tr></table></figure>
+<p>​     </p>
 
           
         
@@ -781,7 +486,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/CSS3总结-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/22/数据库基础2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="郭高勤">
@@ -800,7 +505,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/05/CSS3总结-1/" itemprop="url">CSS3总结-1</a></h1>
+                <a class="post-title-link" href="/2019/06/22/数据库基础2/" itemprop="url">数据库基础2</a></h1>
         
 
         <div class="post-meta">
@@ -812,8 +517,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-05T20:47:36+08:00">
-                2018-12-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-22T14:36:02+08:00">
+                2019-06-22
               </time>
             
 
@@ -852,26 +557,12 @@
       
         
           
-            <h3 id="1-边框属性"><a href="#1-边框属性" class="headerlink" title="1.边框属性"></a>1.边框属性</h3><p>   border-radius 属性用于创建圆角<br>   box-shadow 用于向方框添加阴影<br>   border-image 属性允许您规定用于边框的图片</p>
-<h3 id="2-背景属性"><a href="#2-背景属性" class="headerlink" title="2.背景属性"></a>2.背景属性</h3><p>   background-size 属性规定背景图片的尺寸。<br>   background-origin 属性规定背景图片的定位区域。</p>
-<p>背景图片可以放置于 content-box、padding-box 或 border-box 区域<br>  CSS3 允许您为元素使用多个背景图像。</p>
-<p>实例<br>为 body 元素设置两幅背景图片：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">body</span><br><span class="line">&#123; </span><br><span class="line">background-image:url(bg_flower.gif),url(bg_flower_2.gif);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>background-clip    规定背景的绘制区域。<br>background-origin    规定背景图片的定位区域。<br>background-size    规定背景图片的尺寸。</p>
-<h3 id="3-text-shadow-可向文本应用阴影"><a href="#3-text-shadow-可向文本应用阴影" class="headerlink" title="3.text-shadow 可向文本应用阴影"></a>3.text-shadow 可向文本应用阴影</h3><p>  向标题添加阴影：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">h1</span><br><span class="line">&#123;</span><br><span class="line">text-shadow: 5px 5px 5px #FF0000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>word-wrap 属性允许您允许文本强制文本进行换行<br>实例<br>允许对长单词进行拆分，并换行到下一行：</p>
-<p>p {word-wrap:break-word;}</p>
-<h3 id="4-font-family-属性"><a href="#4-font-family-属性" class="headerlink" title="4.font-family 属性"></a>4.font-family 属性</h3><p>引用字体的名称 (myFirstFont)</p>
-<p>实例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt; </span><br><span class="line">@font-face</span><br><span class="line">&#123;</span><br><span class="line">font-family: myFirstFont;</span><br><span class="line">src: url(&apos;Sansation_Light.ttf&apos;),</span><br><span class="line">     url(&apos;Sansation_Light.eot&apos;); /* IE9+ */</span><br><span class="line">&#125;</span><br><span class="line">div</span><br><span class="line">&#123;</span><br><span class="line">font-family:myFirstFont;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="5-2D-转换"><a href="#5-2D-转换" class="headerlink" title="5.2D 转换"></a>5.2D 转换</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">translate() 方法，元素从其当前位置移动，根据给定的 left（x 坐标） 和 top（y 坐标） 位置参数</span><br><span class="line"></span><br><span class="line">      translate(50px,100px) 把元素从左侧移动 50 像素，从顶端移动 100 像素。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rotate() 方法，元素顺时针旋转给定的角度。允许负值，元素将逆时针旋转。</span><br><span class="line">          值 rotate(30deg) 把元素顺时针旋转 30 度。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scale() 方法，元素的尺寸会增加或减少，根据给定的宽度（X 轴）和高度（Y 轴）参数</span><br><span class="line">      值 scale(2,4) 把宽度转换为原始尺寸的 2 倍，把高度转换为原始高度的 4 倍。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">skew() 方法，元素翻转给定的角度，根据给定的水平线（X 轴）和垂直线（Y 轴）参数：</span><br><span class="line">      值 skew(30deg,20deg) 围绕 X 轴把元素翻转 30 度，围绕 Y 轴翻转 20 度</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">matrix() 方法把所有 2D 转换方法组合在一起。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">div</span><br><span class="line">&#123;</span><br><span class="line">transform: translate(50px,100px);</span><br><span class="line">-ms-transform: translate(50px,100px);		/* IE 9 */</span><br><span class="line">-webkit-transform: translate(50px,100px);	/* Safari and Chrome */</span><br><span class="line">-o-transform: translate(50px,100px);		/* Opera */</span><br><span class="line">-moz-transform: translate(50px,100px);		/* Firefox */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="6-3D-转换"><a href="#6-3D-转换" class="headerlink" title="6.3D 转换"></a>6.3D 转换</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rotateX() 方法，元素围绕其 X 轴以给定的度数进行旋转。</span><br><span class="line">  rotateY() 方法，元素围绕其 Y 轴以给定的度数进行旋转</span><br></pre></td></tr></table></figure>
+            <p>一、数据库的约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.非空约束   not null；  </span><br><span class="line">2.唯一约束   unique；</span><br><span class="line">3.主键约束   primary key；</span><br><span class="line">  主键自增  auto_increment；</span><br><span class="line">主键唯一，不能为空</span><br><span class="line">4.外键约束   </span><br><span class="line">  constraint 外键名称 foreign key （当前表的字段） references  外键表名（列名）</span><br></pre></td></tr></table></figure>
+<p>二、数据库的备份和恢复</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">备份</span><br><span class="line">1.导出整个数据库的数据</span><br><span class="line">  语法  mysqldump-u  用户名 -p 数据库名 &gt; 导出的文件名</span><br><span class="line">2.导出一张表中的数据</span><br><span class="line">  语法  mysqldump-u  用户名 -p 数据库名  表名称 &gt; 导出的文件名</span><br><span class="line">恢复</span><br><span class="line">   数据的恢复必须先要登录，然后新建一个数据库，进入到指定的数据库中执行如下命令。</span><br><span class="line">  语法   source  脚本目录（给绝对路径）</span><br></pre></td></tr></table></figure>
+<p>三、简单查询</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">1.查询emp中所有数据</span><br><span class="line">  select  * from emp；</span><br><span class="line">2.显示部分字段就叫投影</span><br><span class="line">  select empno,ename  from  emp;</span><br><span class="line">3.别名</span><br><span class="line">  select e.EMPNO,e.ENAME,e.JOB  from emp e;</span><br><span class="line">4.去掉重复内容</span><br><span class="line">  select  DISTINCT  e.job,e.ename from emp e;</span><br><span class="line">5.连接显示</span><br><span class="line">  select E.EMPNO,e.ENAME from emp e;</span><br><span class="line">6.把多列合并成一个列显示</span><br><span class="line">  select CONCAT(&quot;员工编号：&quot;,e.EMPNO,&quot;员工姓名：&quot;,e.ENAME) as &apos;员工信息&apos; from empty e；</span><br><span class="line">7.限定查询</span><br><span class="line">  按照条件查询，只选出对自己有用的数据，where后面可以跟多个条件</span><br></pre></td></tr></table></figure>
 
           
         
@@ -920,7 +611,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/HTML5总结-3/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/22/数据库基础1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="郭高勤">
@@ -939,7 +630,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/05/HTML5总结-3/" itemprop="url">HTML5总结-3</a></h1>
+                <a class="post-title-link" href="/2019/06/22/数据库基础1/" itemprop="url">数据库基础1</a></h1>
         
 
         <div class="post-meta">
@@ -951,8 +642,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-05T20:47:16+08:00">
-                2018-12-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-22T14:35:49+08:00">
+                2019-06-22
               </time>
             
 
@@ -991,8 +682,12 @@
       
         
           
-            <p>按字母顺序排列的标签列表<br>new : HTML5 中的新标签。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line">标签	             描述</span><br><span class="line"></span><br><span class="line">&lt;!--...--&gt;	      定义注释。</span><br><span class="line">&lt;!DOCTYPE&gt; 	定义文档类型。</span><br><span class="line">&lt;a&gt;	定义超链接。</span><br><span class="line">&lt;abbr&gt;	定义缩写。</span><br><span class="line">&lt;acronym&gt;	HTML 5 中不支持。定义首字母缩写。</span><br><span class="line">&lt;address&gt;	定义地址元素。</span><br><span class="line">&lt;applet&gt;	HTML 5 中不支持。定义 applet。</span><br><span class="line">&lt;area&gt;	定义图像映射中的区域。</span><br><span class="line">&lt;article&gt;	定义 article。</span><br><span class="line">&lt;aside&gt;	定义页面内容之外的内容。</span><br><span class="line">&lt;audio&gt;	定义声音内容。</span><br><span class="line">&lt;b&gt;	定义粗体文本。</span><br><span class="line">&lt;base&gt;	定义页面中所有链接的基准 URL。</span><br><span class="line">&lt;basefont&gt;	HTML 5 中不支持。请使用 CSS 代替。</span><br><span class="line">&lt;bdi&gt;	定义文本的文本方向，使其脱离其周围文本的方向设置。</span><br><span class="line">&lt;bdo&gt;	定义文本显示的方向。</span><br><span class="line">&lt;big&gt;	HTML 5 中不支持。定义大号文本。</span><br><span class="line">&lt;blockquote&gt;	定义长的引用。</span><br><span class="line">&lt;body&gt;	定义 body 元素。</span><br><span class="line">&lt;br&gt;	插入换行符。</span><br><span class="line">&lt;button&gt;	定义按钮。</span><br><span class="line">&lt;canvas&gt;	定义图形。</span><br><span class="line">&lt;caption&gt;	定义表格标题。</span><br><span class="line">&lt;center&gt;	HTML 5 中不支持。定义居中的文本。</span><br><span class="line">&lt;cite&gt;	定义引用。</span><br><span class="line">&lt;code&gt;	定义计算机代码文本。</span><br><span class="line">&lt;col&gt;	定义表格列的属性。</span><br><span class="line">&lt;colgroup&gt;	定义表格列的分组。</span><br><span class="line">&lt;command&gt;	定义命令按钮。</span><br><span class="line">&lt;datalist&gt;	定义下拉列表。</span><br><span class="line">&lt;dd&gt;	定义定义的描述。</span><br><span class="line">&lt;del&gt;	定义删除文本。</span><br><span class="line">&lt;details&gt;	定义元素的细节。</span><br><span class="line">&lt;dfn&gt;	定义定义项目。</span><br><span class="line">&lt;dir&gt;	HTML 5 中不支持。定义目录列表。</span><br><span class="line">&lt;div&gt;	定义文档中的一个部分。</span><br><span class="line">&lt;dl&gt;	定义定义列表。</span><br><span class="line">&lt;dt&gt;	定义定义的项目。</span><br><span class="line">&lt;em&gt;	定义强调文本。</span><br><span class="line">&lt;embed&gt;	定义外部交互内容或插件。</span><br><span class="line">&lt;fieldset&gt;	定义 fieldset。</span><br><span class="line">&lt;figcaption&gt;	定义 figure 元素的标题。</span><br><span class="line">&lt;figure&gt;	定义媒介内容的分组，以及它们的标题。</span><br><span class="line">&lt;font&gt;	HTML 5 中不支持。</span><br><span class="line">&lt;footer&gt;	定义 section 或 page 的页脚。</span><br><span class="line">&lt;form&gt;	定义表单。</span><br><span class="line">&lt;frame&gt;	HTML 5 中不支持。定义子窗口（框架）。</span><br><span class="line">&lt;frameset&gt;	HTML 5 中不支持。定义框架的集。</span><br><span class="line">&lt;h1&gt; to &lt;h6&gt;	定义标题 1 到标题 6。</span><br><span class="line">&lt;head&gt;	定义关于文档的信息。</span><br><span class="line">&lt;header&gt;	定义 section 或 page 的页眉。</span><br><span class="line">&lt;hgroup&gt;	定义有关文档中的 section 的信息。</span><br><span class="line">&lt;hr&gt;	定义水平线。</span><br><span class="line">&lt;html&gt;	定义 html 文档。</span><br><span class="line">&lt;i&gt;	定义斜体文本。</span><br><span class="line">&lt;iframe&gt;	定义行内的子窗口（框架）。</span><br><span class="line">&lt;img&gt;	定义图像。</span><br><span class="line">&lt;input&gt;	定义输入域。</span><br><span class="line">&lt;ins&gt;	定义插入文本。</span><br><span class="line">&lt;keygen&gt;	定义生成密钥。</span><br><span class="line">&lt;isindex&gt;	HTML 5 中不支持。定义单行的输入域。</span><br><span class="line">&lt;kbd&gt;	定义键盘文本。</span><br><span class="line">&lt;label&gt;	定义表单控件的标注。</span><br><span class="line">&lt;legend&gt;	定义 fieldset 中的标题。</span><br><span class="line">&lt;li&gt;	定义列表的项目。</span><br><span class="line">&lt;link&gt;	定义资源引用。</span><br><span class="line">&lt;map&gt;	定义图像映射。</span><br><span class="line">&lt;mark&gt;	定义有记号的文本。</span><br><span class="line">&lt;menu&gt;	定义菜单列表。</span><br><span class="line">&lt;meta&gt;	定义元信息。</span><br><span class="line">&lt;meter&gt;	定义预定义范围内的度量。</span><br><span class="line">&lt;nav&gt;	定义导航链接。</span><br><span class="line">&lt;noframes&gt;	HTML 5 中不支持。定义 noframe 部分。</span><br><span class="line">&lt;noscript&gt;	定义 noscript 部分。</span><br><span class="line">&lt;object&gt;	定义嵌入对象。</span><br><span class="line">&lt;ol&gt;	定义有序列表。</span><br><span class="line">&lt;optgroup&gt;	定义选项组。</span><br><span class="line">&lt;option&gt;	定义下拉列表中的选项。</span><br><span class="line">&lt;output&gt;	定义输出的一些类型。</span><br><span class="line">&lt;p&gt;	定义段落。</span><br><span class="line">&lt;param&gt;	为对象定义参数。</span><br><span class="line">&lt;pre&gt;	定义预格式化文本。</span><br><span class="line">&lt;progress&gt;	定义任何类型的任务的进度。</span><br><span class="line">&lt;q&gt;	定义短的引用。</span><br><span class="line">&lt;rp&gt;	定义若浏览器不支持 ruby 元素显示的内容。</span><br><span class="line">&lt;rt&gt;	定义 ruby 注释的解释。</span><br><span class="line">&lt;ruby&gt;	定义 ruby 注释。</span><br><span class="line">&lt;s&gt;	HTML 5 中不支持。定义加删除线的文本。</span><br><span class="line">&lt;samp&gt;	定义样本计算机代码。</span><br><span class="line">&lt;script&gt;	定义脚本。</span><br><span class="line">&lt;section&gt;	定义 section。</span><br><span class="line">&lt;select&gt;	定义可选列表。</span><br><span class="line">&lt;small&gt;	将旁注 (side comments) 呈现为小型文本。</span><br><span class="line">&lt;source&gt;	定义媒介源。</span><br><span class="line">&lt;span&gt;	定义文档中的 section。</span><br><span class="line">&lt;strike&gt;	HTML 5 中不支持。定义加删除线的文本。</span><br><span class="line">&lt;strong&gt;	定义强调文本。</span><br><span class="line">&lt;style&gt;	定义样式定义。</span><br><span class="line">&lt;sub&gt;	定义下标文本。</span><br><span class="line">&lt;summary&gt;	定义 details 元素的标题。</span><br><span class="line">&lt;sup&gt;	定义上标文本。</span><br><span class="line">&lt;table&gt;	定义表格。</span><br><span class="line">&lt;tbody&gt;	定义表格的主体。</span><br><span class="line">&lt;td&gt;	定义表格单元。</span><br><span class="line">&lt;textarea&gt;	定义 textarea。</span><br><span class="line">&lt;tfoot&gt;	定义表格的脚注。</span><br><span class="line">&lt;th&gt;	定义表头。</span><br><span class="line">&lt;thead&gt;	定义表头。</span><br><span class="line">&lt;time&gt;	定义日期/时间。</span><br><span class="line">&lt;title&gt;	定义文档的标题。</span><br><span class="line">&lt;tr&gt;	定义表格行。</span><br><span class="line">&lt;track&gt;	定义用在媒体播放器中的文本轨道。</span><br><span class="line">&lt;tt&gt;	HTML 5 中不支持。定义打字机文本。</span><br><span class="line">&lt;u&gt;	HTML 5 中不支持。定义下划线文本。</span><br><span class="line">&lt;ul&gt;	定义无序列表。</span><br><span class="line">&lt;var&gt;	定义变量。</span><br><span class="line">&lt;video&gt;	定义视频。</span><br><span class="line">&lt;xmp&gt;	HTML 5 中不支持。定义预格式文本。</span><br></pre></td></tr></table></figure>
+            <p>一、数据库创建和管理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.创建数据库</span><br><span class="line">  语法： CREATE  DATABASE  数据库名;</span><br><span class="line">2.删除数据库</span><br><span class="line">  语法： DROP  DATABASE  数据库名;</span><br><span class="line">3.查看所有数据库</span><br><span class="line">  语法：  SHOW  DATABASES;</span><br><span class="line">4.连接数据库</span><br><span class="line">  语法：  use   数据库名;</span><br><span class="line">5.查看数据库信息</span><br><span class="line">  语法：  Status;</span><br></pre></td></tr></table></figure>
+<p>二、表的创建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">1.创建表</span><br><span class="line">  语法： create  table  表名&#123;</span><br><span class="line">   字段</span><br><span class="line">&#125;</span><br><span class="line">2.查看表结构</span><br><span class="line">  语法：desc  表明;</span><br><span class="line">3.标的重命名</span><br><span class="line">  语法：alter  table 旧表名 rename 新的表名;</span><br><span class="line">4.表的删除</span><br><span class="line">  语法：DROP  TABLE  表名称;</span><br><span class="line">5.查看表</span><br><span class="line">  语法：show  tables;</span><br><span class="line">6.表中添加字段</span><br><span class="line">  语法：ALTER TABLE 表名称 ADD 字段名称 字段类型;</span><br><span class="line">7.修改表中字段</span><br><span class="line">  修改表字段名称</span><br><span class="line">  语法：alter table 表名 change 字段原名 字段新名；</span><br><span class="line">  修改表字段类型</span><br><span class="line">  语法：alter table 表名 modify 字段名称 字段类型；</span><br><span class="line">8.删除表中字段</span><br><span class="line">  语法：alter table 表名 drop 列名称;</span><br></pre></td></tr></table></figure>
+<p>三、数据更新操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.数据增加操作</span><br><span class="line">  语法：insert into 表名([列1，列2....])values(值1，值2);</span><br><span class="line">2.数据查询操作</span><br><span class="line">  语法：select * from 表名;</span><br><span class="line">3.数据的更新操作</span><br><span class="line">  语法：update 表名 set 字段=值[字段=值] where 条件;</span><br><span class="line">4.数据库的删除操作</span><br><span class="line">  语法：delete from 表名 [where 删除条件];</span><br><span class="line">5.删除整个表</span><br><span class="line">  语法：delete  from 表名;</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1041,7 +736,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/HTML5总结-2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/22/java基础复习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="郭高勤">
@@ -1060,7 +755,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/05/HTML5总结-2/" itemprop="url">HTML5总结-2</a></h1>
+                <a class="post-title-link" href="/2019/06/22/java基础复习/" itemprop="url">java基础复习</a></h1>
         
 
         <div class="post-meta">
@@ -1072,8 +767,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-05T20:47:09+08:00">
-                2018-12-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-22T14:35:18+08:00">
+                2019-06-22
               </time>
             
 
@@ -1112,58 +807,18 @@
       
         
           
-            <h4 id="1-Input-类型"><a href="#1-Input-类型" class="headerlink" title="1.Input 类型"></a>1.Input 类型</h4><p>email 类型用于应该包含 e-mail 地址的输入域。</p>
-<p>在提交表单时，会自动验证 email 域的值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">E-mail: &lt;input type=&quot;email&quot; name=&quot;user_email&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<p>url 类型用于应该包含 URL 地址的输入域。</p>
-<p>在提交表单时，会自动验证 url 域的值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Homepage: &lt;input type=&quot;url&quot; name=&quot;user_url&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<p>number 类型用于应该包含数值的输入域。</p>
-<p>您还能够设定对所接受的数字的限定：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Points: &lt;input type=&quot;number&quot; name=&quot;points&quot; min=&quot;1&quot; max=&quot;10&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<p>提示：规定合法的数字间隔（如果 step=”3”，则合法的数是 -3,0,3,6 等）</p>
-<p>range 类型用于应该包含一定范围内数字值的输入域。</p>
-<p>range 类型显示为滑动条。</p>
-<p>您还能够设定对所接受的数字的限定：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">&lt;input type=&quot;range&quot; name=&quot;points&quot; min=&quot;1&quot; max=&quot;10&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<h5 id="2-Date-Pickers（日期选择器）"><a href="#2-Date-Pickers（日期选择器）" class="headerlink" title="2. Date Pickers（日期选择器）"></a>2. Date Pickers（日期选择器）</h5><p>HTML5 拥有多个可供选取日期和时间的新输入类型：</p>
-<p>date - 选取日、月、年<br>month - 选取月、年<br>week - 选取周和年<br>time - 选取时间（小时和分钟）<br>datetime - 选取时间、日、月、年（UTC 时间）<br>datetime-local - 选取时间、日、月、年（本地时间）<br>下面的例子允许您从日历中选取一个日期：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Date: &lt;input type=&quot;date&quot; name=&quot;user_date&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="3-Input-类型-search"><a href="#3-Input-类型-search" class="headerlink" title="3.Input 类型 - search"></a>3.Input 类型 - search</h4><p>search 类型用于搜索域，比如站点搜索或 Google 搜索。</p>
-<p>search 域显示为常规的文本域。</p>
-<h4 id="4-HTML5-的新的表单元素："><a href="#4-HTML5-的新的表单元素：" class="headerlink" title="4.HTML5 的新的表单元素："></a>4.HTML5 的新的表单元素：</h4><p>datalist 元素<br>datalist 元素规定输入域的选项列表。</p>
-<p>列表是通过 datalist 内的 option 元素创建的。</p>
-<p>如需把 datalist 绑定到输入域，请用输入域的 list 属性引用 datalist 的 id：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Webpage: &lt;input type=&quot;url&quot; list=&quot;url_list&quot; name=&quot;link&quot; /&gt;</span><br><span class="line">&lt;datalist id=&quot;url_list&quot;&gt;</span><br><span class="line">&lt;option label=&quot;W3School&quot; value=&quot;http://www.W3School.com.cn&quot; /&gt;</span><br><span class="line">&lt;option label=&quot;Google&quot; value=&quot;http://www.google.com&quot; /&gt;</span><br><span class="line">&lt;option label=&quot;Microsoft&quot; value=&quot;http://www.microsoft.com&quot; /&gt;</span><br><span class="line">&lt;/datalist&gt;</span><br></pre></td></tr></table></figure>
-<p>output 元素用于不同类型的输出，比如计算或脚本输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">&lt;output id=&quot;result&quot; onforminput=&quot;resCalc()&quot;&gt;&lt;/output&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="5-新的-form-属性："><a href="#5-新的-form-属性：" class="headerlink" title="5.新的 form 属性："></a>5.新的 form 属性：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">新的 input 属性：autocomplete      autofocus      form</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">form overrides (formaction, formenctype, formmethod, formnovalidate, formtarget)</span><br><span class="line">height 和 width</span><br><span class="line">list</span><br><span class="line">min, max 和 step</span><br><span class="line">multiple</span><br><span class="line">pattern (regexp)</span><br><span class="line">placeholder</span><br><span class="line">required</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">autocomplete 属性</span><br><span class="line">autocomplete 属性规定 form 或 input 域应该拥有自动完成功能。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注释：autocomplete 适用于 &lt;form&gt; 标签，以及以下类型的 &lt;input&gt; 标签：</span><br><span class="line">text, search, url, telephone, email, password, datepickers, range 以及 color。</span><br></pre></td></tr></table></figure>
-<p>当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">autofocus 属性</span><br><span class="line">autofocus 属性规定在页面加载时，域自动地获得焦点。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">User name: &lt;input type=&quot;text&quot; name=&quot;user_name&quot;  autofocus=&quot;autofocus&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="6-表单重写属性"><a href="#6-表单重写属性" class="headerlink" title="6.表单重写属性"></a>6.表单重写属性</h4><p>表单重写属性（form override attributes）允许您重写 form 元素的某些属性设定。</p>
-<p>表单重写属性有：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">formaction - 重写表单的 action 属性</span><br><span class="line">formenctype - 重写表单的 enctype 属性</span><br><span class="line">formmethod - 重写表单的 method 属性</span><br><span class="line">formnovalidate - 重写表单的 novalidate 属性</span><br><span class="line">formtarget - 重写表单的 target 属性</span><br><span class="line">注释：表单重写属性适用于以下类型的 &lt;input&gt; 标签：submit 和 image。</span><br></pre></td></tr></table></figure>
-<h4 id="7-multiple-属性"><a href="#7-multiple-属性" class="headerlink" title="7.multiple 属性"></a>7.multiple 属性</h4><p>multiple 属性规定输入域中可选择多个值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注释：multiple 属性适用于以下类型的 &lt;input&gt; 标签：email 和 file。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Select images: &lt;input type=&quot;file&quot; name=&quot;img&quot; multiple=&quot;multiple&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="8-novalidate-属性"><a href="#8-novalidate-属性" class="headerlink" title="8.novalidate 属性"></a>8.novalidate 属性</h4><p>novalidate 属性规定在提交表单时不应该验证 form 或 input 域。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注释：novalidate 属性适用于 &lt;form&gt; 以及以下类型的 </span><br><span class="line">&lt;input&gt; 标签：text, search, url, telephone, email, </span><br><span class="line">password, date pickers, range 以及 color.</span><br></pre></td></tr></table></figure>
-<h4 id="9-pattern-属性"><a href="#9-pattern-属性" class="headerlink" title="9.pattern 属性"></a>9.pattern 属性</h4><p>pattern 属性规定用于验证 input 域的模式（pattern）。</p>
-<p>模式（pattern） 是正则表达式。您可以在我们的 JavaScript 教程中学习到有关正则表达式的内容。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注释：pattern 属性适用于以下类型的 &lt;input&gt; 标签：text, search,</span><br><span class="line">url, telephone, email 以及 password。</span><br></pre></td></tr></table></figure>
-<p>下面的例子显示了一个只能包含三个字母的文本域（不含数字及特殊字符）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Country code: &lt;input type=&quot;text&quot; name=&quot;country_code&quot;</span><br><span class="line">pattern=&quot;[A-z]&#123;3&#125;&quot; title=&quot;Three letter country code&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="10-placeholder-属性"><a href="#10-placeholder-属性" class="headerlink" title="10.placeholder 属性"></a>10.placeholder 属性</h4><p>placeholder 属性提供一种提示（hint），描述输入域所期待的值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注释：placeholder 属性适用于以下类型的 &lt;input&gt; 标签：text,</span><br><span class="line">search, url, telephone, email 以及 password。</span><br></pre></td></tr></table></figure>
-<p>提示（hint）会在输入域为空时显示出现，会在输入域获得焦点时消失：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">&lt;input type=&quot;search&quot; name=&quot;user_search&quot;  placeholder=&quot;Search W3School&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="11-required-属性"><a href="#11-required-属性" class="headerlink" title="11.required 属性"></a>11.required 属性</h4><p>required 属性规定必须在提交之前填写输入域（不能为空）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注释：required 属性适用于以下类型的 &lt;input&gt; 标签：text, search, url,</span><br><span class="line">telephone, email, password, date pickers, number, checkbox, radio 以及 file。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">Name: &lt;input type=&quot;text&quot; name=&quot;usr_name&quot; required=&quot;required&quot; /&gt;</span><br></pre></td></tr></table></figure>
+            <p>1.八大数据类型</p>
+<p>2.substring(start,end)  截取子串，包括start不包括end</p>
+<p>3.== 和 equals 的区别</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> Object  ==  比较内存地址</span><br><span class="line">   String  equals   比较内容</span><br><span class="line">例如：String s1=&quot;hello&quot;;   String s2=&quot;hello&quot;;</span><br><span class="line">    s1==s2  true</span><br><span class="line">    s1.equals(s2);  true</span><br><span class="line">   String a=&quot;hello&quot;;   String b=&quot;hello&quot;;  //维护在常量池里，所以地址相同</span><br><span class="line">    //只要是new出来的都是新对象，都存放在堆内存中</span><br><span class="line">    String c=new String(&quot;hello&quot;); </span><br><span class="line">    String d=new String(&quot;hello&quot;);  </span><br><span class="line">    c=d  false </span><br><span class="line">    a=b true  </span><br><span class="line">    a=c false</span><br></pre></td></tr></table></figure>
+<p>4.字符串内容不可变，只能改变引用<br>5.indexOf(String)  返回字符串的第一次出现的位置<br>6.数组复制  arry1 = arry2;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">二维数组声明方式</span><br><span class="line"> 1.int[][]  n = new int[5][5]；</span><br><span class="line"> 2.int[][]  n1=&#123;&#123;1,2,3,4&#125;,&#123;5,6,7,8&#125;,&#123;9,10,11,12&#125;&#125;;</span><br></pre></td></tr></table></figure>
+<p>7.类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">一般形式</span><br><span class="line"></span><br><span class="line">  class 类名&#123;</span><br><span class="line">       </span><br><span class="line"></span><br><span class="line">  类型  变量名;</span><br><span class="line">  类型  变量名;</span><br><span class="line">  ....</span><br><span class="line"></span><br><span class="line">类型  方法名(参数)&#123;</span><br><span class="line">        方法内容</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  带参数的方法：</span><br><span class="line">  修饰符  类型  方法名(参数类型 参数1，....)&#123;</span><br><span class="line">        方法体</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"> 修饰符：可以修饰类、属性、方法</span><br><span class="line"></span><br><span class="line"> private：只有在本类中可以看到</span><br><span class="line"> protected：在本类或者同一个包里可以看到  </span><br><span class="line"> public：对所有类都可见</span><br><span class="line"> 默认（无修饰符):在本类或者一个包里可以看到</span><br></pre></td></tr></table></figure>
+<p> 8.方法与主方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.方法   </span><br><span class="line">    如果方法没有返回值，则必须写void </span><br><span class="line">    方法返回值的类型必须和方法定义的类型一样</span><br><span class="line"></span><br><span class="line">主方法</span><br><span class="line"></span><br><span class="line"> public static void main(String[] args)&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>9.final关键字</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">final  修饰变量  </span><br><span class="line">    恒定不变的属性，可以使用final来修饰</span><br><span class="line">    变量名建议大写</span><br><span class="line">final修饰方法</span><br><span class="line">     任何覆盖类无法覆盖该方法</span><br><span class="line">     重载不会受到限制</span><br><span class="line">final修饰类</span><br><span class="line">     该类不能作为任何类的父类</span><br><span class="line">     类中的方法全部被自动定义为final类型</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1212,7 +867,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/HTML5总结-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/22/python基础2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="郭高勤">
@@ -1231,7 +886,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/05/HTML5总结-1/" itemprop="url">HTML5总结-1</a></h1>
+                <a class="post-title-link" href="/2019/06/22/python基础2/" itemprop="url">python基础2</a></h1>
         
 
         <div class="post-meta">
@@ -1243,8 +898,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-05T20:46:52+08:00">
-                2018-12-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-22T14:34:40+08:00">
+                2019-06-22
               </time>
             
 
@@ -1283,11 +938,12 @@
       
         
           
-            <h3 id="1-在-HTML5-中显示视频"><a href="#1-在-HTML5-中显示视频" class="headerlink" title="1.在 HTML5 中显示视频"></a>1.在 HTML5 中显示视频</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;video src=&quot;movie.ogg&quot;  width=&quot;320&quot; height=&quot;240&quot; controls=&quot;controls&quot;&gt;</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">controls 属性供添加播放、暂停和音量控件。</span><br><span class="line">包含宽度和高度属性也是不错的主意。</span><br><span class="line"></span><br><span class="line">&lt;video&gt; 与 &lt;/video&gt; 之间插入的内容是供不支持 video 元素的浏览器显示的</span><br><span class="line"></span><br><span class="line">video 元素允许多个 source 元素。source 元素可以链接不同的视频文件。</span><br><span class="line">浏览器将使用第一个可识别的格式：</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">实例</span><br><span class="line">&lt;video width=&quot;320&quot; height=&quot;240&quot; controls=&quot;controls&quot;&gt;</span><br><span class="line">  &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot;&gt;</span><br><span class="line">  &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot;&gt;</span><br><span class="line">Your browser does not support the video tag.</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;video&gt; 标签的属性</span><br><span class="line">属性	          值          	描述</span><br><span class="line">autoplay	autoplay	如果出现该属性，则视频在就绪后马上播放。</span><br><span class="line">controls	controls	如果出现该属性，则向用户显示控件，比如播放按钮。</span><br><span class="line"> loop	    loop	    如果出现该属性，则当媒介文件完成播放后再次开始播放。</span><br><span class="line">preload   	preload	     如果出现该属性，则视频在页面加载时进行加载，并预备播放。</span><br><span class="line">                         如果使用 &quot;autoplay&quot;,则忽略该属性。</span><br><span class="line">src	url	要播放的视频的 URL。</span><br></pre></td></tr></table></figure>
-<h3 id="2-在-HTML5-中播放音频"><a href="#2-在-HTML5-中播放音频" class="headerlink" title="2.在 HTML5 中播放音频"></a>2.在 HTML5 中播放音频</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio src=&quot;song.ogg&quot; controls=&quot;controls&quot;&gt;</span><br><span class="line">&lt;/audio&gt;</span><br><span class="line">control 属性供添加播放、暂停和音量控件。</span><br><span class="line">&lt;audio&gt; 与 &lt;/audio&gt; 之间插入的内容是供不支持 audio 元素的浏览器显示的：</span><br></pre></td></tr></table></figure>
+            <p>1.数据单位</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">bit  比特位</span><br><span class="line">1Byte = 8bit</span><br><span class="line">1KB = 1024Byte</span><br><span class="line">1MB = 1024KB</span><br><span class="line">1GB = 1024MB</span><br><span class="line">1TB = 1024GB</span><br></pre></td></tr></table></figure>
+<p>2.Python语言概述</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">历史</span><br><span class="line">作者：Guido van Rossum             语言诞生：1989    </span><br><span class="line"> 设计哲学与定位：优雅、明确、简单    </span><br><span class="line"> 优势：开发效率、可移植性、丰富的库、软件质量</span><br><span class="line"> Python语言能做什么？   系统编程、GUI、网络编程、Web编程、数据库编程、数学及科学计算、快速产品原型</span><br><span class="line"> 编程特性：面向过程、面向对象、函数式编程</span><br><span class="line"> 运行：1.REPL：a、Windows命令提示符  b、IDEL</span><br><span class="line">       2.运行脚本：C:&gt;python  file.py</span><br></pre></td></tr></table></figure>
+<p>3.数据类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">变量与存储</span><br><span class="line">   （1）变量：对象别名</span><br><span class="line">   命名规则：字母/数字/下划线</span><br><span class="line">            只能以字母或下划线开头</span><br><span class="line">            不能包含空格</span><br><span class="line">            避免Python关键字或函数名</span><br><span class="line">            简短且具有描述性</span><br><span class="line">            区分大小写</span><br><span class="line">    （2）类型</span><br><span class="line">      a、描述数据形态及支持操作</span><br><span class="line">      b、Python对象有类型态类型：变量无类型约束</span><br><span class="line">                                类型取决于关联对象</span><br><span class="line">     （3）存储</span><br><span class="line">       a、对象有类型，存储在内存区域</span><br><span class="line">       b、变量名指向实际对象，变量本身无类型</span><br><span class="line">       c、对象本身带有类型描述及引用计数器</span><br><span class="line">       d、共享引用：多个变量引用同一对象</span><br><span class="line">                    == 判断字面值是否相等</span><br><span class="line">                    is 判断引用对象地址是否相同</span><br><span class="line">                    0-255 Python自动缓存</span><br><span class="line">                    短字符串也可能被缓存</span><br><span class="line">                    id（obj）检测对象地址</span><br><span class="line">      （4）垃圾回收机制</span><br><span class="line">        a、Python自动释放未被引用的对象</span><br><span class="line">        b、通过对象引用计数器统计引用</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1336,7 +992,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/js基础-第八节/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/22/python基础1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="郭高勤">
@@ -1355,7 +1011,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/03/js基础-第八节/" itemprop="url">js基础-第八节</a></h1>
+                <a class="post-title-link" href="/2019/06/22/python基础1/" itemprop="url">python基础1</a></h1>
         
 
         <div class="post-meta">
@@ -1367,8 +1023,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-03T22:09:55+08:00">
-                2018-12-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-22T14:34:28+08:00">
+                2019-06-22
               </time>
             
 
@@ -1407,9 +1063,9 @@
       
         
           
-            <h4 id="1-一些广受欢迎的-JavaScript-框架："><a href="#1-一些广受欢迎的-JavaScript-框架：" class="headerlink" title="1.一些广受欢迎的 JavaScript 框架："></a>1.一些广受欢迎的 JavaScript 框架：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jQuery    Prototype   MooTools</span><br><span class="line">所有这些框架都提供针对常见 JavaScript 任务的函数，</span><br></pre></td></tr></table></figure>
-<h3 id="2-JavaScript-方式："><a href="#2-JavaScript-方式：" class="headerlink" title="2.JavaScript 方式："></a>2.JavaScript 方式：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function myFunction()</span><br><span class="line">&#123;</span><br><span class="line">var obj=document.getElementById(&quot;h01&quot;);</span><br><span class="line">obj.innerHTML=&quot;Hello jQuery&quot;;</span><br><span class="line">&#125;</span><br><span class="line">onload=myFunction;</span><br></pre></td></tr></table></figure>
-<h4 id="等价的-jQuery-是不同的："><a href="#等价的-jQuery-是不同的：" class="headerlink" title="等价的 jQuery 是不同的："></a>等价的 jQuery 是不同的：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">jQuery 方式：</span><br><span class="line">function myFunction()</span><br><span class="line">&#123;</span><br><span class="line">$(&quot;#h01&quot;).html(&quot;Hello jQuery&quot;);</span><br><span class="line">&#125;</span><br><span class="line">$(document).ready(myFunction);</span><br></pre></td></tr></table></figure>
+            <p>Python库之网络爬虫</p>
+<p>1.Requests：最友好的网络爬虫功能库<br>  提供了简单易用的类HTTP协议网络爬虫功能<br>  支持连接池、SSL、Cookies、HTTP（S）代理等<br>  Python最主要的页面级网络爬虫功能库<br>2.Scrapy：优秀的网络爬虫框架<br>  提供了构建网络爬虫系统的框架功能，功能半成品<br>  支持批量和定时网页爬取、提供数据处理流程等<br>  Python是最主要且最专业的网络爬虫框架</p>
+<p>  <a href="https://scrapy.org" target="_blank" rel="noopener">https://scrapy.org</a><br>3.pyspider:强大的Web页面爬取系统<br>  提供了完整的网页爬取系统构建功能<br>  支持数据库后端、消息队列、优先级、分布式架构等<br>  Python重要的网络爬虫类第三方库</p>
 
           
         
@@ -1458,7 +1114,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/js基础-第七节/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/22/git命令行从github或服务器上克隆、修改和更新项目/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="郭高勤">
@@ -1477,7 +1133,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/03/js基础-第七节/" itemprop="url">js基础-第七节</a></h1>
+                <a class="post-title-link" href="/2019/06/22/git命令行从github或服务器上克隆、修改和更新项目/" itemprop="url">git命令行从github或服务器上克隆、修改和更新项目</a></h1>
         
 
         <div class="post-meta">
@@ -1489,8 +1145,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-03T22:09:31+08:00">
-                2018-12-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-22T14:31:00+08:00">
+                2019-06-22
               </time>
             
 
@@ -1529,20 +1185,295 @@
       
         
           
-            <h2 id="cookie-用来识别用户"><a href="#cookie-用来识别用户" class="headerlink" title="cookie 用来识别用户"></a>cookie 用来识别用户</h2><h4 id="什么是cookie"><a href="#什么是cookie" class="headerlink" title="什么是cookie?"></a>什么是cookie?</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cookie 是存储于访问者的计算机中的变量。每当同一台计算机通过浏览器请求某个</span><br><span class="line">页面时，就会发送这个 cookie。你可以使用 JavaScript 来创建和取回 cookie 的值。</span><br></pre></td></tr></table></figure>
-<h5 id="有关cookie的例子："><a href="#有关cookie的例子：" class="headerlink" title="有关cookie的例子："></a>有关cookie的例子：</h5><h6 id="名字-cookie"><a href="#名字-cookie" class="headerlink" title="名字 cookie"></a>名字 cookie</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">当访问者首次访问页面时，他或她也许会填写他/她们的名字。名字会存储于 cookie 中。</span><br><span class="line">当访问者再次访问网站时，他们会收到类似 &quot;Welcome John Doe!&quot; 的欢迎词。</span><br><span class="line">而名字则是从 cookie 中取回的。</span><br></pre></td></tr></table></figure>
-<h6 id="密码-cookie"><a href="#密码-cookie" class="headerlink" title="密码 cookie"></a>密码 cookie</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">当访问者首次访问页面时，他或她也许会填写他/她们的密码。密码也可被存储于 cookie 中。</span><br><span class="line">当他们再次访问网站时，密码就会从 cookie 中取回。</span><br></pre></td></tr></table></figure>
-<h6 id="日期-cookie"><a href="#日期-cookie" class="headerlink" title="日期 cookie"></a>日期 cookie</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">当访问者首次访问你的网站时，当前的日期可存储于 cookie 中。当他们再次</span><br><span class="line">访问网站时，会收到类似这样的一条消息：&quot;Your last visit was on Tuesday August 11, 2005!&quot;。</span><br><span class="line">日期也是从 cookie 中取回的。</span><br></pre></td></tr></table></figure>
-<h4 id="创建和存储-cookie"><a href="#创建和存储-cookie" class="headerlink" title="创建和存储 cookie"></a>创建和存储 cookie</h4><p>在这个例子中我们要创建一个存储访问者名字的 cookie。当访问者首次访问网站时，</p>
-<p>他们会被要求填写姓名。名字会存储于 cookie 中。当访问者再次访问网站时，他们就会收到欢迎词。</p>
-<h6 id="首先，我们会创建一个可在-cookie-变量中存储访问者姓名的函数："><a href="#首先，我们会创建一个可在-cookie-变量中存储访问者姓名的函数：" class="headerlink" title="首先，我们会创建一个可在 cookie 变量中存储访问者姓名的函数："></a>首先，我们会创建一个可在 cookie 变量中存储访问者姓名的函数：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function setCookie(c_name,value,expiredays)</span><br><span class="line">&#123;</span><br><span class="line">var exdate=new Date()</span><br><span class="line">exdate.setDate(exdate.getDate()+expiredays)</span><br><span class="line">document.cookie=c_name+ &quot;=&quot; +escape(value)+</span><br><span class="line">((expiredays==null) ? &quot;&quot; : &quot;;expires=&quot;+exdate.toGMTString())</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>上面这个函数中的参数存有 cookie 的名称、值以及过期天数。</p>
-<p>在上面的函数中，我们首先将天数转换为有效的日期，然后，</p>
-<p>我们将 cookie 名称、值及其过期日期存入 document.cookie 对象。</p>
-<h6 id="之后，我们要创建另一个函数来检查是否已设置-cookie："><a href="#之后，我们要创建另一个函数来检查是否已设置-cookie：" class="headerlink" title="之后，我们要创建另一个函数来检查是否已设置 cookie："></a>之后，我们要创建另一个函数来检查是否已设置 cookie：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function getCookie(c_name)</span><br><span class="line">&#123;</span><br><span class="line">if (document.cookie.length&gt;0)</span><br><span class="line">  &#123;</span><br><span class="line">  c_start=document.cookie.indexOf(c_name + &quot;=&quot;)</span><br><span class="line">  if (c_start!=-1)</span><br><span class="line">    &#123; </span><br><span class="line">    c_start=c_start + c_name.length+1 </span><br><span class="line">    c_end=document.cookie.indexOf(&quot;;&quot;,c_start)</span><br><span class="line">    if (c_end==-1) c_end=document.cookie.length</span><br><span class="line">    return unescape(document.cookie.substring(c_start,c_end))</span><br><span class="line">    &#125; </span><br><span class="line">  &#125;</span><br><span class="line">return &quot;&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>上面的函数首先会检查 document.cookie 对象中是否存有 cookie。假如 document.cookie 对象存有某些 cookie，那么会继续检查我们指定的 cookie 是否已储存。如果找到了我们要的 cookie，就返回值，否则返回空字符串。</p>
-<h6 id="最后，我们要创建一个函数，这个函数的作用是：如果-cookie-已设置，"><a href="#最后，我们要创建一个函数，这个函数的作用是：如果-cookie-已设置，" class="headerlink" title="最后，我们要创建一个函数，这个函数的作用是：如果 cookie 已设置，"></a>最后，我们要创建一个函数，这个函数的作用是：如果 cookie 已设置，</h6><h6 id="则显示欢迎词，否则显示提示框来要求用户输入名字。"><a href="#则显示欢迎词，否则显示提示框来要求用户输入名字。" class="headerlink" title="则显示欢迎词，否则显示提示框来要求用户输入名字。"></a>则显示欢迎词，否则显示提示框来要求用户输入名字。</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function checkCookie()</span><br><span class="line">&#123;</span><br><span class="line">username=getCookie(&apos;username&apos;)</span><br><span class="line">if (username!=null &amp;&amp; username!=&quot;&quot;)</span><br><span class="line">  &#123;alert(&apos;Welcome again &apos;+username+&apos;!&apos;)&#125;</span><br><span class="line">else </span><br><span class="line">  &#123;</span><br><span class="line">  username=prompt(&apos;Please enter your name:&apos;,&quot;&quot;)</span><br><span class="line">  if (username!=null &amp;&amp; username!=&quot;&quot;)</span><br><span class="line">    &#123;</span><br><span class="line">    setCookie(&apos;username&apos;,username,365)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="这是所有的代码："><a href="#这是所有的代码：" class="headerlink" title="这是所有的代码："></a>这是所有的代码：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">function getCookie(c_name)</span><br><span class="line">&#123;</span><br><span class="line">if (document.cookie.length&gt;0)</span><br><span class="line">  &#123;</span><br><span class="line">  c_start=document.cookie.indexOf(c_name + &quot;=&quot;)</span><br><span class="line">  if (c_start!=-1)</span><br><span class="line">    &#123; </span><br><span class="line">    c_start=c_start + c_name.length+1 </span><br><span class="line">    c_end=document.cookie.indexOf(&quot;;&quot;,c_start)</span><br><span class="line">    if (c_end==-1) c_end=document.cookie.length</span><br><span class="line">    return unescape(document.cookie.substring(c_start,c_end))</span><br><span class="line">    &#125; </span><br><span class="line">  &#125;</span><br><span class="line">return &quot;&quot;</span><br><span class="line">&#125;</span><br><span class="line">function setCookie(c_name,value,expiredays)</span><br><span class="line">&#123;</span><br><span class="line">var exdate=new Date()</span><br><span class="line">exdate.setDate(exdate.getDate()+expiredays)</span><br><span class="line">document.cookie=c_name+ &quot;=&quot; +escape(value)+</span><br><span class="line">((expiredays==null) ? &quot;&quot; : &quot;;expires=&quot;+exdate.toGMTString())</span><br><span class="line">&#125;</span><br><span class="line">function checkCookie()</span><br><span class="line">&#123;</span><br><span class="line">username=getCookie(&apos;username&apos;)</span><br><span class="line">if (username!=null &amp;&amp; username!=&quot;&quot;)</span><br><span class="line">  &#123;alert(&apos;Welcome again &apos;+username+&apos;!&apos;)&#125;</span><br><span class="line">else </span><br><span class="line">  &#123;</span><br><span class="line">  username=prompt(&apos;Please enter your name:&apos;,&quot;&quot;)</span><br><span class="line">  if (username!=null &amp;&amp; username!=&quot;&quot;)</span><br><span class="line">    &#123;</span><br><span class="line">    setCookie(&apos;username&apos;,username,365)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body onLoad=&quot;checkCookie()&quot;&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+            <p><strong>git**</strong>命令行从github或服务器上克隆、修改和更新项目**</p>
+<p><strong>第一步：</strong>在本地新建一个文件夹，作为本地仓库，如“texzt”,直接打开该文件夹,并单击右键,选择git bash here 则可以直接进入到该文件夹目录下.</p>
+<p><strong>第二步：</strong>将本地仓库初始化，命令：git init。并克隆远程仓库项目地址url,命令:git clone url.如下图：</p>
+<p><img src="file:///C:/Users/郭高勤/AppData/Local/Temp/msohtmlclip1/01/clip_image002.gif" alt="IMG_256"></p>
+<p>这里写图片描述</p>
+<p><strong>第三步:</strong>定位到本地仓库文件夹下,查看其文件的状态,如下图</p>
+<p><img src="file:///C:/Users/郭高勤/AppData/Local/Temp/msohtmlclip1/01/clip_image004.gif" alt="IMG_257"></p>
+<p>这里写图片描述</p>
+<p><strong>第四步:</strong>查看修改的文件夹及其状态</p>
+<p><img src="file:///C:/Users/郭高勤/AppData/Local/Temp/msohtmlclip1/01/clip_image006.gif" alt="IMG_258"></p>
+<p>这里写图片描述</p>
+<p><strong>第五步:</strong>提交修改后的文件到本地缓存区</p>
+<p><img src="file:///C:/Users/郭高勤/AppData/Local/Temp/msohtmlclip1/01/clip_image008.gif" alt="IMG_259"></p>
+<p>这里写图片描述</p>
+<p><strong>第六步:</strong>提交更新后的文件,并添加备注说明</p>
+<p><img src="file:///C:/Users/郭高勤/AppData/Local/Temp/msohtmlclip1/01/clip_image010.gif" alt="IMG_260"></p>
+<p>这里写图片描述</p>
+<p><strong>第七步:</strong>将本地仓库修改后的文件推送到远程仓库,达到同步效果</p>
+<p><img src="file:///C:/Users/郭高勤/AppData/Local/Temp/msohtmlclip1/01/clip_image012.gif" alt="IMG_261"></p>
+<p>这里写图片描述</p>
+<p>以上:项目上传成功。</p>
+<p>另外，如果下次还要更新项目，直接git pull即可，因为本地空间和服务器或github的通道通过git clone已经建立</p>
+<p><strong>例如:我修改多个文件的名称,然后需要提交到远程仓库</strong>操作如下</p>
+<p><img src="file:///C:/Users/郭高勤/AppData/Local/Temp/msohtmlclip1/01/clip_image014.gif" alt="IMG_262"></p>
+<p>这里写图片描述</p>
+<p><strong>同时在上述的过程中,会出现弹出Vim,我们需要解决退出vim</strong>,操作如下</p>
+<p><img src="file:///C:/Users/郭高勤/AppData/Local/Temp/msohtmlclip1/01/clip_image016.gif" alt="IMG_263"></p>
+<p>这里写图片描述</p>
+<p><strong>注意:</strong> 命令行: git add . 是增加所有修改的文件 </p>
+<p>git add file 是增加具体的某个文件 </p>
+<p>git commit . 是提交所有的文件到暂存区 </p>
+<p>git commit -m”具体的说明” 是提交说明,必须要有</p>
+<p><strong>—————————————————————————————————————————————————————————————————–</strong></p>
+<p>更新项目到服务器：</p>
+<p><img src="file:///C:/Users/郭高勤/AppData/Local/Temp/msohtmlclip1/01/clip_image017.jpg" alt="IMG_264"></p>
+<p><img src="file:///C:/Users/郭高勤/AppData/Local/Temp/msohtmlclip1/01/clip_image018.jpg" alt="IMG_265"></p>
+<p><img src="file:///C:/Users/郭高勤/AppData/Local/Temp/msohtmlclip1/01/clip_image019.jpg" alt="IMG_266"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/22/PHP基础4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/22/PHP基础4/" itemprop="url">PHP基础4</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-22T14:12:01+08:00">
+                2019-06-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1.PHP 数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">数组是特殊的变量，它可以同时保存一个以上的值。</span><br><span class="line">  array() 函数用于创建数组：</span><br><span class="line">   array();</span><br><span class="line">在 PHP 中，有三种数组类型：</span><br><span class="line">索引数组 - 带有数字索引的数组</span><br><span class="line">关联数组 - 带有指定键的数组</span><br><span class="line">多维数组 - 包含一个或多个数组的数组</span><br><span class="line">   count() 函数用于返回数组的长度（元素数）</span><br><span class="line">  关联数组是使用您分配给数组的指定键的数组。</span><br><span class="line"></span><br><span class="line">有两种创建关联数组的方法：</span><br><span class="line"></span><br><span class="line">$age=array(&quot;Bill&quot;=&gt;&quot;35&quot;,&quot;Steve&quot;=&gt;&quot;37&quot;,&quot;Elon&quot;=&gt;&quot;43&quot;);</span><br><span class="line">或者：</span><br><span class="line"></span><br><span class="line">$age[&apos;Bill&apos;]=&quot;63&quot;;</span><br><span class="line">$age[&apos;Steve&apos;]=&quot;56&quot;;</span><br><span class="line">$age[&apos;Elon&apos;]=&quot;47&quot;;</span><br><span class="line">  遍历并输出关联数组的所有值，您可以使用 foreach 循环</span><br></pre></td></tr></table></figure>
+<p>2.PHP 数组排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  数组中的元素能够以字母或数字顺序进行升序或降序排序。</span><br><span class="line"> PHP 数组排序函数：</span><br><span class="line">sort() - 以升序对数组排序</span><br><span class="line">rsort() - 以降序对数组排序</span><br><span class="line">asort() - 根据值，以升序对关联数组进行排序</span><br><span class="line">ksort() - 根据键，以升序对关联数组进行排序</span><br><span class="line">arsort() - 根据值，以降序对关联数组进行排序</span><br><span class="line">krsort() - 根据键，以降序对关联数组进行排序</span><br></pre></td></tr></table></figure>
+<p>3.PHP 全局变量 - 超全局变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">超全局变量是：</span><br><span class="line"></span><br><span class="line">$GLOBALS</span><br><span class="line">$_SERVER</span><br><span class="line">$_REQUEST</span><br><span class="line">$_POST</span><br><span class="line">$_GET</span><br><span class="line">$_FILES</span><br><span class="line">$_ENV</span><br><span class="line">$_COOKIE</span><br><span class="line">$_SESSION</span><br><span class="line"></span><br><span class="line">$GLOBALS 这种全局变量用于在 PHP 脚本中的任意位置访问全局变量（从函数或方法中均可）。</span><br><span class="line">$_SERVER 这种超全局变量保存关于报头、路径和脚本位置的信息</span><br><span class="line">$_REQUEST 用于收集 HTML 表单提交的数据。</span><br><span class="line">$广泛用于收集提交的表单后的表单数据。_POST 广泛用于收集提交 method=&quot;post&quot; 的 HTML 表单后的表单数据。$_POST 也常用于传递变量</span><br><span class="line">$也可用于收集提交表单之后的表单数据。_GET 也可用于收集提交 HTML 表单 (method=&quot;get&quot;) 之后的表单数据。$_GET 也可以收集 URL 中的发送的数据。</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/22/PHP基础3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭高勤">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/22/PHP基础3/" itemprop="url">PHP基础3</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-22T14:11:52+08:00">
+                2019-06-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1.PHP 条件语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">条件语句：</span><br><span class="line">if 语句 - 如果指定条件为真，则执行代码</span><br><span class="line">if...else 语句 - 如果条件为 true，则执行代码；如果条件为 false，则执行另一端代码</span><br><span class="line">if...elseif....else 语句 - 根据两个以上的条件执行不同的代码块</span><br><span class="line">   switch 语句 - 选择多个代码块之一来执行</span><br><span class="line">   使用 Switch 语句可以避免冗长的 if..elseif..else 代码块。</span><br></pre></td></tr></table></figure>
+<p>2.循环语句：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while - 只要指定条件为真，则循环代码块</span><br><span class="line">do...while - 先执行一次代码块，然后只要指定条件为真则重复循环</span><br><span class="line">for - 循环代码块指定次数</span><br><span class="line">foreach - 遍历数组中的每个元素并循环代码块</span><br></pre></td></tr></table></figure>
+<p>3.for 循环</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">已经提前确定脚本运行的次数，可以使用 for 循环。</span><br><span class="line"> foreach 循环只适用于数组，并用于遍历数组中的每个键/值对。</span><br></pre></td></tr></table></figure>
+<p>4.PHP 函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">用户定义的函数声明以单词 &quot;function&quot; 开头：</span><br><span class="line">语法</span><br><span class="line">function functionName() &#123;</span><br><span class="line">  被执行的代码;</span><br><span class="line">&#125;</span><br><span class="line">注释：函数名能够以字母或下划线开头（而非数字）。</span><br><span class="line">注释：函数名对大小写不敏感。</span><br><span class="line">提示：函数名应该能够反映函数所执行的任务。</span><br><span class="line">  函数参数：可以通过参数向函数传递信息。参数类似变量。参数被定义在函数名之后，括号内部。您可以添加任意多参数，只要用逗号隔开即可。</span><br><span class="line">   例如：function familyName($fname) &#123;</span><br><span class="line">  echo &quot;$fname Zhang.&lt;br&gt;&quot;;</span><br><span class="line">&#125;</span><br><span class="line">familyName(&quot;Li&quot;); </span><br><span class="line">  默认参数。如果我们调用没有参数的 setHeight() 函数，它的参数会取默认值</span><br><span class="line">  函数 - 返回值    如需使函数返回值，请使用 return 语句。</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1582,7 +1513,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1628,7 +1559,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1669,7 +1600,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
